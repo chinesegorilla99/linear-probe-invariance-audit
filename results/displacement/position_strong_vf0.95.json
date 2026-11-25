@@ -1,0 +1,5221 @@
+{
+  "kind": "counterfactual_displacement_spectrum",
+  "dataset": "dsprites",
+  "cell": "position_strong_vf0.95",
+  "n_contexts": 512,
+  "reduction_control": null,
+  "reduction_control_note": "A15 (c): greyscale and value-channel REDUCE hue in the input, measurably but not to zero. Neither is a ground truth and neither sets a threshold.",
+  "m_star": 0.2888319636495567,
+  "unadjudicated_band": [
+    0.07987230638308719,
+    1.0444659357341872
+  ],
+  "m_star_source": "results/displacement/threshold_calibration.json",
+  "var_fraction": 0.95,
+  "context_seed": 20260813,
+  "alpha": 0.05,
+  "blind": {
+    "trained_roles_scored": true,
+    "amendment": "A11-2026-08-13",
+    "note": "random-encoder and pixel-reference values are disclosable (A4 precedent); trained-encoder targeted-factor values are not, and require the amendment named above"
+  },
+  "interpretation_pin": "prereg A4 (d)(2): each arm perturbs a SET of factors, so a displacement is read against the arm-to-factor map, never as 'the augmentation targeting F' alone",
+  "roles": {
+    "random": {
+      "seed0": {
+        "whitening": {
+          "rank": 3,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9612794146762415,
+          "condition_number": 55.73289644246224
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5667572612714556,
+            "rho": 0.7277648809119251,
+            "r_eff": 1.764582328062197,
+            "rho_in_sample": 0.7302248739477799,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.5429457820523579,
+                0.5899217402597023
+              ],
+              "rho": [
+                0.7108859433502257,
+                0.7449155223240104
+              ],
+              "r_eff": [
+                1.7017815460690364,
+                1.8273952707454804
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5667572612714556,
+            "m_shared": 0.4833252635415832,
+            "shared_direction_fraction": 0.6435240604304491,
+            "m_ctx": 2.1438173271854297,
+            "d_prime": 0.5667572612714556,
+            "shared_fraction": 0.8527905976136906,
+            "whitening_check": 0.8752097588902599,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5703098462096722,
+            "rho": 0.8134687500116851,
+            "r_eff": 1.4722691285682317,
+            "rho_in_sample": 0.803282176944963,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5603175824468019,
+                0.5801877046993532
+              ],
+              "rho": [
+                0.8037702562819252,
+                0.8230319146918329
+              ],
+              "r_eff": [
+                1.4427078416512256,
+                1.502871303002906
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5703098462096722,
+            "m_shared": 0.5174503303604399,
+            "shared_direction_fraction": 0.798334679352499,
+            "m_ctx": 1.7901763876929246,
+            "d_prime": 0.5703098462096722,
+            "shared_fraction": 0.9073143902379712,
+            "whitening_check": 0.7308364499044102,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.10099870425721967,
+            "rho": 0.4109838271704558,
+            "r_eff": 2.7603938844398823,
+            "rho_in_sample": 0.4157187852246259,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.09839058615489424,
+                0.10348512444051838
+              ],
+              "rho": [
+                0.3981524981206731,
+                0.4242714325651673
+              ],
+              "r_eff": [
+                2.7232889089826338,
+                2.7964168250418235
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.14526412992495308,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.10099870425721967,
+            "m_shared": 0.013329479660835516,
+            "shared_direction_fraction": 0.016862049058170386,
+            "m_ctx": 2.2258957260537544,
+            "d_prime": 0.10099870425721967,
+            "shared_fraction": 0.13197673929448148,
+            "whitening_check": 0.9087181249122644,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_x": {
+            "m": 0.14761417831612986,
+            "rho": 0.6765585936646132,
+            "r_eff": 1.9254047296239456,
+            "rho_in_sample": 0.6822563362068669,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.14329417428889266,
+                0.151708588105865
+              ],
+              "rho": [
+                0.6667385972785645,
+                0.6860330707993013
+              ],
+              "r_eff": [
+                1.8929108536601669,
+                1.9601501114236612
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.08203125,
+              "mean_abs_spearman": 0.9972908266129032,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.14761417831612986,
+            "m_shared": 0.11065029027888865,
+            "shared_direction_fraction": 0.45274329021230164,
+            "m_ctx": 1.6956647732451238,
+            "d_prime": 0.14761417831612986,
+            "shared_fraction": 0.7495912082504737,
+            "whitening_check": 0.6922522448771158,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.1550096462563918,
+            "rho": 0.6862485132557715,
+            "r_eff": 1.888507669683699,
+            "rho_in_sample": 0.6780904139207464,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.15120305048000912,
+                0.15903571339440048
+              ],
+              "rho": [
+                0.676614765226151,
+                0.6961570224061226
+              ],
+              "r_eff": [
+                1.8550744130528924,
+                1.9206060233593942
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.9853887921554252,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.1550096462563918,
+            "m_shared": 0.1057183593392537,
+            "shared_direction_fraction": 0.3818694334623538,
+            "m_ctx": 1.8899370898974073,
+            "d_prime": 0.1550096462563918,
+            "shared_fraction": 0.6820114869779882,
+            "whitening_check": 0.7715635860348647,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed1": {
+        "whitening": {
+          "rank": 3,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9597783101977622,
+          "condition_number": 47.47589638083584
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5621162496336249,
+            "rho": 0.7468258975360985,
+            "r_eff": 1.695366249180784,
+            "rho_in_sample": 0.7476055073239922,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.5405227366209484,
+                0.5842252441280872
+              ],
+              "rho": [
+                0.7293428510098874,
+                0.764959632639861
+              ],
+              "r_eff": [
+                1.6315727520408418,
+                1.7586755635922884
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5621162496336249,
+            "m_shared": 0.4865934295848506,
+            "shared_direction_fraction": 0.6718230708891122,
+            "m_ctx": 2.1458417263917706,
+            "d_prime": 0.5621162496336249,
+            "shared_fraction": 0.8656455491226264,
+            "whitening_check": 0.8760362164054649,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5688667646425689,
+            "rho": 0.8233059199256056,
+            "r_eff": 1.441990226394004,
+            "rho_in_sample": 0.8113252353808186,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5592082449401186,
+                0.5780919937168469
+              ],
+              "rho": [
+                0.8136273171802085,
+                0.8327703225863055
+              ],
+              "r_eff": [
+                1.4131220762317498,
+                1.471653120188892
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5688667646425689,
+            "m_shared": 0.5181698310797135,
+            "shared_direction_fraction": 0.8059964130543836,
+            "m_ctx": 1.7898445101406448,
+            "d_prime": 0.5688667646425689,
+            "shared_fraction": 0.910880830602383,
+            "whitening_check": 0.7307009614610487,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.0981534213286291,
+            "rho": 0.4056009543143153,
+            "r_eff": 2.800114512948608,
+            "rho_in_sample": 0.41296939051342285,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.09562221537670236,
+                0.10064600820597265
+              ],
+              "rho": [
+                0.39349221251516364,
+                0.41818652798804623
+              ],
+              "r_eff": [
+                2.761927109983608,
+                2.83524245500661
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.1441171728424015,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.0981534213286291,
+            "m_shared": 0.010984247989865973,
+            "shared_direction_fraction": 0.012267385561709487,
+            "m_ctx": 2.222127253169077,
+            "d_prime": 0.0981534213286291,
+            "shared_fraction": 0.11190896701490853,
+            "whitening_check": 0.9071796522994355,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_x": {
+            "m": 0.14813956626915978,
+            "rho": 0.6736648578069083,
+            "r_eff": 1.9358852048284005,
+            "rho_in_sample": 0.6731306763373723,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.14413502477975532,
+                0.1518982837467526
+              ],
+              "rho": [
+                0.663639258147588,
+                0.6832202290118592
+              ],
+              "r_eff": [
+                1.902633303054857,
+                1.970879729745051
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.015625,
+              "mean_abs_spearman": 0.9935206080461876,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.14813956626915978,
+            "m_shared": 0.10643490643322914,
+            "shared_direction_fraction": 0.41959359958113124,
+            "m_ctx": 1.7073172531196315,
+            "d_prime": 0.14813956626915978,
+            "shared_fraction": 0.718477238146114,
+            "whitening_check": 0.6970093498655481,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.14956616379337376,
+            "rho": 0.7129753533886809,
+            "r_eff": 1.805190603393057,
+            "rho_in_sample": 0.7057459641765662,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.1457222325600408,
+                0.15345288550351074
+              ],
+              "rho": [
+                0.7038821567251705,
+                0.7221178833128763
+              ],
+              "r_eff": [
+                1.7731929022745085,
+                1.8371693132432638
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.015625,
+              "mean_abs_spearman": 0.9950412962793256,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.14956616379337376,
+            "m_shared": 0.10819618414435157,
+            "shared_direction_fraction": 0.4199168439238186,
+            "m_ctx": 1.8761836669383958,
+            "d_prime": 0.14956616379337376,
+            "shared_fraction": 0.7234001421192097,
+            "whitening_check": 0.7659487746238219,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed2": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9524451691025856,
+          "condition_number": 51.91255036183296
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5267667876292569,
+            "rho": 0.8408919892084478,
+            "r_eff": 1.365346714947761,
+            "rho_in_sample": 0.8364750571144222,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.5054115384882749,
+                0.5476584338097815
+              ],
+              "rho": [
+                0.8237511231213401,
+                0.8578979762790364
+              ],
+              "r_eff": [
+                1.3224330955509598,
+                1.4091859035269574
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5267667876292569,
+            "m_shared": 0.48357799600155493,
+            "shared_direction_fraction": 0.7441958615941973,
+            "m_ctx": 1.68283277219336,
+            "d_prime": 0.5267667876292569,
+            "shared_fraction": 0.9180115515215462,
+            "whitening_check": 0.84141638609668,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5455493059418202,
+            "rho": 0.8898885011092244,
+            "r_eff": 1.243740740099229,
+            "rho_in_sample": 0.8857550599044228,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5350097095436419,
+                0.5557570990445958
+              ],
+              "rho": [
+                0.8800563096254769,
+                0.8999871310040773
+              ],
+              "r_eff": [
+                1.219542817765251,
+                1.2676109236541786
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5455493059418202,
+            "m_shared": 0.5189863839948877,
+            "shared_direction_fraction": 0.8764779603464643,
+            "m_ctx": 1.295992901446848,
+            "d_prime": 0.5455493059418202,
+            "shared_fraction": 0.9513097685990545,
+            "whitening_check": 0.647996450723424,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.06882444728976901,
+            "rho": 0.6486594738843797,
+            "r_eff": 1.8375621574321888,
+            "rho_in_sample": 0.6438744552290341,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.06732172874812037,
+                0.0703584303014909
+              ],
+              "rho": [
+                0.6310776285528227,
+                0.6646480039724066
+              ],
+              "r_eff": [
+                1.8043443654172915,
+                1.871388136579082
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2367891064727955,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.06882444728976901,
+            "m_shared": 0.012446215737419043,
+            "shared_direction_fraction": 0.029370756688589576,
+            "m_ctx": 1.7277621787063786,
+            "d_prime": 0.06882444728976901,
+            "shared_fraction": 0.18084003907822468,
+            "whitening_check": 0.8638810893531893,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.10527574287577769,
+            "rho": 0.8789063089695216,
+            "r_eff": 1.2704220633258048,
+            "rho_in_sample": 0.8842494170559018,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.1021473582488004,
+                0.10818935431348299
+              ],
+              "rho": [
+                0.8734738336311023,
+                0.884240201018461
+              ],
+              "r_eff": [
+                1.2574170882224096,
+                1.2837540521296427
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.9856408082844574,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.10527574287577769,
+            "m_shared": 0.08457482570788462,
+            "shared_direction_fraction": 0.462025920311966,
+            "m_ctx": 1.4097812924441828,
+            "d_prime": 0.10527574287577769,
+            "shared_fraction": 0.8033647960829917,
+            "whitening_check": 0.7048906462220914,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.09503251717335696,
+            "rho": 0.8454102841851443,
+            "r_eff": 1.3538825100057932,
+            "rho_in_sample": 0.8437443406028721,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.09250825765124596,
+                0.09766927937428597
+              ],
+              "rho": [
+                0.8382314550346104,
+                0.852302375430097
+              ],
+              "r_eff": [
+                1.3364804285007728,
+                1.3721166036701535
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.9663171852089443,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.09503251717335696,
+            "m_shared": 0.06917461675883789,
+            "shared_direction_fraction": 0.3917474562225688,
+            "m_ctx": 1.633537254353341,
+            "d_prime": 0.09503251717335696,
+            "shared_fraction": 0.727904709002399,
+            "whitening_check": 0.8167686271766705,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed3": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.950264119839845,
+          "condition_number": 49.00277300156446
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5272959294185847,
+            "rho": 0.8360978733074379,
+            "r_eff": 1.3775555084378854,
+            "rho_in_sample": 0.8367172309353317,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.5058146565840724,
+                0.5475266343235944
+              ],
+              "rho": [
+                0.8177056556894928,
+                0.8542571484116699
+              ],
+              "r_eff": [
+                1.3315645639369522,
+                1.4247576225424625
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5272959294185847,
+            "m_shared": 0.48298455771126114,
+            "shared_direction_fraction": 0.7431125009290377,
+            "m_ctx": 1.68507647115793,
+            "d_prime": 0.5272959294185847,
+            "shared_fraction": 0.915964889476422,
+            "whitening_check": 0.842538235578965,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5456032701353404,
+            "rho": 0.8910779855671164,
+            "r_eff": 1.2408734046635737,
+            "rho_in_sample": 0.8824707175795434,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5355889936737886,
+                0.5553128058150609
+              ],
+              "rho": [
+                0.8817093861004877,
+                0.9005675140206802
+              ],
+              "r_eff": [
+                1.2181623129524053,
+                1.2635769593438515
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5456032701353404,
+            "m_shared": 0.5183879276676476,
+            "shared_direction_fraction": 0.8727822104439896,
+            "m_ctx": 1.2993702169625359,
+            "d_prime": 0.5456032701353404,
+            "shared_fraction": 0.9501188061777163,
+            "whitening_check": 0.6496851084812679,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.07258799048111182,
+            "rho": 0.6258427554066406,
+            "r_eff": 1.880856051747276,
+            "rho_in_sample": 0.6274035673868144,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.07062144243327909,
+                0.07458829573086947
+              ],
+              "rho": [
+                0.6057354116957536,
+                0.6456559160575909
+              ],
+              "r_eff": [
+                1.8435514592064794,
+                1.9143887107422406
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.21624941369606004,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.07258799048111182,
+            "m_shared": 0.008795718837046199,
+            "shared_direction_fraction": 0.014463470308734613,
+            "m_ctx": 1.734349758427123,
+            "d_prime": 0.07258799048111182,
+            "shared_fraction": 0.12117319654047924,
+            "whitening_check": 0.8671748792135615,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.11007447469550571,
+            "rho": 0.8595536224334253,
+            "r_eff": 1.3182914263545824,
+            "rho_in_sample": 0.8573374940399467,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.10688786178106294,
+                0.11304681501208384
+              ],
+              "rho": [
+                0.8503835775941678,
+                0.86888282764808
+              ],
+              "r_eff": [
+                1.2950866931925562,
+                1.3413145072138164
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.9636180351906158,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.11007447469550571,
+            "m_shared": 0.0821208863347713,
+            "shared_direction_fraction": 0.41125631167849186,
+            "m_ctx": 1.427158703840591,
+            "d_prime": 0.11007447469550571,
+            "shared_fraction": 0.7460484055176169,
+            "whitening_check": 0.7135793519202955,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.10280826045254408,
+            "rho": 0.7983113084752052,
+            "r_eff": 1.4749713435865726,
+            "rho_in_sample": 0.7896626377216964,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.09977008997453561,
+                0.10572192104286383
+              ],
+              "rho": [
+                0.7872246273466471,
+                0.8089134198294193
+              ],
+              "r_eff": [
+                1.4474817396578203,
+                1.5037685045292613
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.969332787298387,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.10280826045254408,
+            "m_shared": 0.06993013378436834,
+            "shared_direction_fraction": 0.35013851910963273,
+            "m_ctx": 1.6352125095307262,
+            "d_prime": 0.10280826045254408,
+            "shared_fraction": 0.6801995625307543,
+            "whitening_check": 0.8176062547653631,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed4": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9566701312297876,
+          "condition_number": 51.77588254278366
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5194515709688196,
+            "rho": 0.8653975556864323,
+            "r_eff": 1.3037287010794185,
+            "rho_in_sample": 0.8566229201973132,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.499042678893804,
+                0.5389040232296487
+              ],
+              "rho": [
+                0.8504905235424843,
+                0.8798214306325636
+              ],
+              "r_eff": [
+                1.2681847575185834,
+                1.3410448524270422
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5194515709688196,
+            "m_shared": 0.48371169637575523,
+            "shared_direction_fraction": 0.7766647097900544,
+            "m_ctx": 1.6605907814720462,
+            "d_prime": 0.5194515709688196,
+            "shared_fraction": 0.931196907295118,
+            "whitening_check": 0.8302953907360231,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5401552771601287,
+            "rho": 0.8970781827161567,
+            "r_eff": 1.2264789449586555,
+            "rho_in_sample": 0.892201769543698,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5300071489503834,
+                0.5499835554225372
+              ],
+              "rho": [
+                0.8890572825446023,
+                0.9051559899319174
+              ],
+              "r_eff": [
+                1.2072880322718653,
+                1.245747116309339
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5401552771601287,
+            "m_shared": 0.5149104167351458,
+            "shared_direction_fraction": 0.8816893667185454,
+            "m_ctx": 1.2556115625756405,
+            "d_prime": 0.5401552771601287,
+            "shared_fraction": 0.9532636975098939,
+            "whitening_check": 0.6278057812878203,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.0582817113922186,
+            "rho": 0.6203133306490731,
+            "r_eff": 1.8905357311857927,
+            "rho_in_sample": 0.6022582350791772,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.05702065174902959,
+                0.05960078193090303
+              ],
+              "rho": [
+                0.5979712444336491,
+                0.641969941457028
+              ],
+              "r_eff": [
+                1.8507861809194561,
+                1.926052194133494
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2841074988273921,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.0582817113922186,
+            "m_shared": 0.007685730259367654,
+            "shared_direction_fraction": 0.016679480802663696,
+            "m_ctx": 1.7448243234403527,
+            "d_prime": 0.0582817113922186,
+            "shared_fraction": 0.1318720757467977,
+            "whitening_check": 0.8724121617201763,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.110098048622725,
+            "rho": 0.9088194987834045,
+            "r_eff": 1.1986573620669114,
+            "rho_in_sample": 0.910347176419649,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.10648494413588099,
+                0.11364335563050408
+              ],
+              "rho": [
+                0.9056848324306666,
+                0.9119708044853682
+              ],
+              "r_eff": [
+                1.1912705303813003,
+                1.2060393144413117
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.02734375,
+              "mean_abs_spearman": 0.993534927144428,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.110098048622725,
+            "m_shared": 0.09798117028424237,
+            "shared_direction_fraction": 0.5869581161637645,
+            "m_ctx": 1.247962972643763,
+            "d_prime": 0.110098048622725,
+            "shared_fraction": 0.8899446585106721,
+            "whitening_check": 0.6239814863218816,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.06757017895608979,
+            "rho": 0.7179128998890472,
+            "r_eff": 1.680751182644152,
+            "rho_in_sample": 0.705862779213691,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.06578887781400235,
+                0.06946086993838309
+              ],
+              "rho": [
+                0.7052690990487654,
+                0.7305776635514777
+              ],
+              "r_eff": [
+                1.6492611397381107,
+                1.7115351127934004
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.5828388471407625,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.06757017895608979,
+            "m_shared": 0.03882253849432618,
+            "shared_direction_fraction": 0.26734733163482577,
+            "m_ctx": 1.7912610328554393,
+            "d_prime": 0.06757017895608979,
+            "shared_fraction": 0.574551364138829,
+            "whitening_check": 0.8956305164277196,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          }
+        }
+      },
+      "seed5": {
+        "whitening": {
+          "rank": 3,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9608900614540175,
+          "condition_number": 49.59972485892707
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5609985123887966,
+            "rho": 0.7376286789712726,
+            "r_eff": 1.7284792872915031,
+            "rho_in_sample": 0.7496187945527715,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.5390334756520531,
+                0.5824524451066511
+              ],
+              "rho": [
+                0.7189301099451839,
+                0.7550761428169979
+              ],
+              "r_eff": [
+                1.6662881699947645,
+                1.79663522938486
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5609985123887966,
+            "m_shared": 0.4791574449124131,
+            "shared_direction_fraction": 0.6437134913602562,
+            "m_ctx": 2.1643346430080412,
+            "d_prime": 0.5609985123887966,
+            "shared_fraction": 0.8541153574046128,
+            "whitening_check": 0.8835859179997482,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5707525796127213,
+            "rho": 0.8177503728291947,
+            "r_eff": 1.4589427830279795,
+            "rho_in_sample": 0.8039296328025861,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5611665399138678,
+                0.5803018919948799
+              ],
+              "rho": [
+                0.8079454900224985,
+                0.8276333408713666
+              ],
+              "r_eff": [
+                1.4287065165466584,
+                1.4897145496740922
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5707525796127213,
+            "m_shared": 0.5179443116214957,
+            "shared_direction_fraction": 0.8003716669704032,
+            "m_ctx": 1.7956278272567647,
+            "d_prime": 0.5707525796127213,
+            "shared_fraction": 0.9074760765390527,
+            "whitening_check": 0.733061990786915,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.1035798430344277,
+            "rho": 0.4537810979136973,
+            "r_eff": 2.7310332315106214,
+            "rho_in_sample": 0.4512750786733281,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.10096061854652282,
+                0.10624287066042497
+              ],
+              "rho": [
+                0.44147755285662904,
+                0.4664550729257314
+              ],
+              "r_eff": [
+                2.692102726626484,
+                2.768837532870178
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.227890478424015,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.1035798430344277,
+            "m_shared": 0.01510206089715603,
+            "shared_direction_fraction": 0.02013355264157742,
+            "m_ctx": 2.2322217521665215,
+            "d_prime": 0.1035798430344277,
+            "shared_fraction": 0.14580115642902097,
+            "whitening_check": 0.9113007142582314,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_x": {
+            "m": 0.15024997982186403,
+            "rho": 0.7042355784361031,
+            "r_eff": 1.8271878607256375,
+            "rho_in_sample": 0.7054652034431109,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.14611528755654749,
+                0.15411261645215532
+              ],
+              "rho": [
+                0.694752833204826,
+                0.712606892905496
+              ],
+              "r_eff": [
+                1.7985662761615175,
+                1.8604224751890779
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.00390625,
+              "mean_abs_spearman": 0.9949553816898827,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.15024997982186403,
+            "m_shared": 0.11077781931186385,
+            "shared_direction_fraction": 0.4344482345807492,
+            "m_ctx": 1.712897421853316,
+            "d_prime": 0.15024997982186403,
+            "shared_fraction": 0.7372900777970269,
+            "whitening_check": 0.6992874442115747,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.15441341588328686,
+            "rho": 0.6749137122956564,
+            "r_eff": 1.9289599659178276,
+            "rho_in_sample": 0.6706312641287513,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.1503892713719487,
+                0.15864985772020115
+              ],
+              "rho": [
+                0.6641044963805565,
+                0.6855496361080052
+              ],
+              "r_eff": [
+                1.893325314371722,
+                1.9658892653072395
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.01953125,
+              "mean_abs_spearman": 0.994966836968475,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.15441341588328686,
+            "m_shared": 0.11091095751182507,
+            "shared_direction_fraction": 0.4168678767458025,
+            "m_ctx": 1.8877973303085067,
+            "d_prime": 0.15441341588328686,
+            "shared_fraction": 0.7182728060083649,
+            "whitening_check": 0.7706900328406925,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed6": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9590420649814351,
+          "condition_number": 50.89586412403015
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5209095007796364,
+            "rho": 0.8578653168878974,
+            "r_eff": 1.3225148618827982,
+            "rho_in_sample": 0.8563827354132135,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.500764992652113,
+                0.5408192173492383
+              ],
+              "rho": [
+                0.8386352366676211,
+                0.8754366392183064
+              ],
+              "r_eff": [
+                1.2789271910698585,
+                1.3710882651152465
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5209095007796364,
+            "m_shared": 0.4841094280353484,
+            "shared_direction_fraction": 0.7723747343052153,
+            "m_ctx": 1.6840428849902402,
+            "d_prime": 0.5209095007796364,
+            "shared_fraction": 0.9293541916797257,
+            "whitening_check": 0.8420214424951201,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5442829698751214,
+            "rho": 0.8939792092571185,
+            "r_eff": 1.2338988010955116,
+            "rho_in_sample": 0.8873663878275904,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5343701422628392,
+                0.5539704898029847
+              ],
+              "rho": [
+                0.8837967526921012,
+                0.9043050528730635
+              ],
+              "r_eff": [
+                1.2092992916632948,
+                1.2584950069034602
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5442829698751214,
+            "m_shared": 0.5168077976810694,
+            "shared_direction_fraction": 0.8773194328935878,
+            "m_ctx": 1.2932721126925124,
+            "d_prime": 0.5442829698751214,
+            "shared_fraction": 0.949520426478977,
+            "whitening_check": 0.6466360563462562,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.05892077679858376,
+            "rho": 0.6147667001711102,
+            "r_eff": 1.8999025297203411,
+            "rho_in_sample": 0.6148222736547463,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.05755950334697632,
+                0.06033978665029846
+              ],
+              "rho": [
+                0.5904719351571905,
+                0.6369854825546098
+              ],
+              "r_eff": [
+                1.8603611217205696,
+                1.9365945685012227
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2144765771575985,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.05892077679858376,
+            "m_shared": 0.008036044128235534,
+            "shared_direction_fraction": 0.01745544126377354,
+            "m_ctx": 1.7026889733519028,
+            "d_prime": 0.05892077679858376,
+            "shared_fraction": 0.1363872739781783,
+            "whitening_check": 0.8513444866759514,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.08808422989768974,
+            "rho": 0.8731299800172602,
+            "r_eff": 1.284600779851909,
+            "rho_in_sample": 0.8724485481563479,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.08539660942986883,
+                0.09066122280725894
+              ],
+              "rho": [
+                0.8674104482511835,
+                0.8782237736184638
+              ],
+              "r_eff": [
+                1.272092355044888,
+                1.298733556297964
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.9845969460227273,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.08808422989768974,
+            "m_shared": 0.0713101223305272,
+            "shared_direction_fraction": 0.4766711075419977,
+            "m_ctx": 1.4893380720431575,
+            "d_prime": 0.08808422989768974,
+            "shared_fraction": 0.8095674153404561,
+            "whitening_check": 0.7446690360215787,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.09862443387149655,
+            "rho": 0.8933202819824388,
+            "r_eff": 1.2354804966251678,
+            "rho_in_sample": 0.8858348552310148,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.09554579210293061,
+                0.10189054231104523
+              ],
+              "rho": [
+                0.8886836767195793,
+                0.8977121243124638
+              ],
+              "r_eff": [
+                1.2249649809002396,
+                1.2466496274224863
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.00390625,
+              "mean_abs_spearman": 0.9906138311033724,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.09862443387149655,
+            "m_shared": 0.08213475578832855,
+            "shared_direction_fraction": 0.5016356330835707,
+            "m_ctx": 1.5590481316277844,
+            "d_prime": 0.09862443387149655,
+            "shared_fraction": 0.832803318246132,
+            "whitening_check": 0.7795240658138922,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed7": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9529450336943716,
+          "condition_number": 45.87610427802325
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5205432228564426,
+            "rho": 0.8674758857833104,
+            "r_eff": 1.2985713517379456,
+            "rho_in_sample": 0.8577703029943918,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.4993458526939615,
+                0.5415396583894128
+              ],
+              "rho": [
+                0.8530273767892127,
+                0.8812298178086302
+              ],
+              "r_eff": [
+                1.264746392825054,
+                1.3346561421331302
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5205432228564426,
+            "m_shared": 0.4847038467615391,
+            "shared_direction_fraction": 0.7694123432067516,
+            "m_ctx": 1.6616461562662943,
+            "d_prime": 0.5205432228564426,
+            "shared_fraction": 0.9311500476401603,
+            "whitening_check": 0.8308230781331472,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5431879539975635,
+            "rho": 0.8988721006911746,
+            "r_eff": 1.222198191142018,
+            "rho_in_sample": 0.892213592468957,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5330995830459377,
+                0.5527061616391996
+              ],
+              "rho": [
+                0.8905153265301081,
+                0.9069375479727289
+              ],
+              "r_eff": [
+                1.2030851879503417,
+                1.2422291725658248
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5431879539975635,
+            "m_shared": 0.5171260353387435,
+            "shared_direction_fraction": 0.8821463293682082,
+            "m_ctx": 1.2772920561747538,
+            "d_prime": 0.5431879539975635,
+            "shared_fraction": 0.9520204406835264,
+            "whitening_check": 0.6386460280873769,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.06071097596047999,
+            "rho": 0.6507895705909881,
+            "r_eff": 1.8332646222152638,
+            "rho_in_sample": 0.6359422345248351,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.05937717407912688,
+                0.062130241286630965
+              ],
+              "rho": [
+                0.6299415943444209,
+                0.670906424832608
+              ],
+              "r_eff": [
+                1.7907731804674638,
+                1.8734673772410333
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.14577714587242027,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.06071097596047999,
+            "m_shared": 0.009447901228621743,
+            "shared_direction_fraction": 0.02217862774172449,
+            "m_ctx": 1.6993637057989872,
+            "d_prime": 0.06071097596047999,
+            "shared_fraction": 0.1556209742826715,
+            "whitening_check": 0.8496818528994936,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.06813452309295591,
+            "rho": 0.7784935666687642,
+            "r_eff": 1.5264441178554944,
+            "rho_in_sample": 0.7745945649648948,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.06624435395835354,
+                0.06996990223674622
+              ],
+              "rho": [
+                0.7673330691950496,
+                0.7890768937153855
+              ],
+              "r_eff": [
+                1.4989561996913747,
+                1.5553697481705662
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.6952580874266863,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.06813452309295591,
+            "m_shared": 0.03879623390522359,
+            "shared_direction_fraction": 0.261187931281602,
+            "m_ctx": 1.616129946485576,
+            "d_prime": 0.06813452309295591,
+            "shared_fraction": 0.5694064057995079,
+            "whitening_check": 0.808064973242788,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_y": {
+            "m": 0.11386219252925583,
+            "rho": 0.9245500908762895,
+            "r_eff": 1.1621345520116877,
+            "rho_in_sample": 0.9237753051574239,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.11024435539676912,
+                0.11769848151844546
+              ],
+              "rho": [
+                0.9216544997464371,
+                0.9274748834949147
+              ],
+              "r_eff": [
+                1.1554421500392265,
+                1.1687908974019872
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.00390625,
+              "mean_abs_spearman": 0.9923893992851907,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.11386219252925583,
+            "m_shared": 0.1000706568696287,
+            "shared_direction_fraction": 0.552227863108946,
+            "m_ctx": 1.310558478614779,
+            "d_prime": 0.11386219252925583,
+            "shared_fraction": 0.8788751968210736,
+            "whitening_check": 0.6552792393073895,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed8": {
+        "whitening": {
+          "rank": 3,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9621978281382488,
+          "condition_number": 51.2313921119882
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5587878912614445,
+            "rho": 0.7446635696184608,
+            "r_eff": 1.7025976975995587,
+            "rho_in_sample": 0.752015853841902,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.5363825266174764,
+                0.5807044578702507
+              ],
+              "rho": [
+                0.7288148855834378,
+                0.759328769760945
+              ],
+              "r_eff": [
+                1.6509828927200265,
+                1.7599495865699608
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5587878912614445,
+            "m_shared": 0.4813998646860869,
+            "shared_direction_fraction": 0.6604376782791069,
+            "m_ctx": 2.142819252319326,
+            "d_prime": 0.5587878912614445,
+            "shared_fraction": 0.861507330803721,
+            "whitening_check": 0.8748022965324181,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5713306795480989,
+            "rho": 0.8136143963679623,
+            "r_eff": 1.4720187751004579,
+            "rho_in_sample": 0.8045687709714231,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5615339911377875,
+                0.5811686208159217
+              ],
+              "rho": [
+                0.803020655520309,
+                0.8234846465577581
+              ],
+              "r_eff": [
+                1.4414052378656785,
+                1.5054488872419756
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5713306795480989,
+            "m_shared": 0.5181895928991891,
+            "shared_direction_fraction": 0.7986704612858031,
+            "m_ctx": 1.8047436021082017,
+            "d_prime": 0.5713306795480989,
+            "shared_fraction": 0.9069871642619605,
+            "whitening_check": 0.7367834902862677,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.09641907652872969,
+            "rho": 0.4340747407434421,
+            "r_eff": 2.7643947122772783,
+            "rho_in_sample": 0.425506764376182,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.09392722404571195,
+                0.09891233096679743
+              ],
+              "rho": [
+                0.4200394048342389,
+                0.44796645071478985
+              ],
+              "r_eff": [
+                2.7233927188248948,
+                2.8045208305771148
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.24410691252345218,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.09641907652872969,
+            "m_shared": 0.014377735227598491,
+            "shared_direction_fraction": 0.021740355346117384,
+            "m_ctx": 2.2307437480147905,
+            "d_prime": 0.09641907652872969,
+            "shared_fraction": 0.1491171223084096,
+            "whitening_check": 0.9106973215899887,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_x": {
+            "m": 0.14644549377869454,
+            "rho": 0.7097484188663282,
+            "r_eff": 1.808982278842432,
+            "rho_in_sample": 0.7077228593310699,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.14258673893532683,
+                0.15015378043922928
+              ],
+              "rho": [
+                0.699808144383381,
+                0.7183173854251581
+              ],
+              "r_eff": [
+                1.7799471576350325,
+                1.8423781942377588
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0078125,
+              "mean_abs_spearman": 0.9938384920271262,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.14644549377869454,
+            "m_shared": 0.10578304455970476,
+            "shared_direction_fraction": 0.4203861226460037,
+            "m_ctx": 1.7253748315849955,
+            "d_prime": 0.14644549377869454,
+            "shared_fraction": 0.7223373135643351,
+            "whitening_check": 0.70438132540395,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.14365436320805525,
+            "rho": 0.7158996778694845,
+            "r_eff": 1.7790734802914876,
+            "rho_in_sample": 0.7114107714984482,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.1397419356660128,
+                0.1477635997075288
+              ],
+              "rho": [
+                0.7077309050013091,
+                0.723936605287857
+              ],
+              "r_eff": [
+                1.7523859155299535,
+                1.805627225881115
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.05078125,
+              "mean_abs_spearman": 0.9969013471407624,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.14365436320805525,
+            "m_shared": 0.11086452400771536,
+            "shared_direction_fraction": 0.4779733745530873,
+            "m_ctx": 1.8631660950148219,
+            "d_prime": 0.14365436320805525,
+            "shared_fraction": 0.771744912802612,
+            "whitening_check": 0.7606343731400325,
+            "m_ctx_expected": 2.449489742783178,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed9": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9588351884904346,
+          "condition_number": 51.23070269416982
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5167959828645748,
+            "rho": 0.862455462275543,
+            "r_eff": 1.311049126697159,
+            "rho_in_sample": 0.8535553217983639,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.49720774973485987,
+                0.5358784961308847
+              ],
+              "rho": [
+                0.8453454319260097,
+                0.8778601246272099
+              ],
+              "r_eff": [
+                1.2729828338754694,
+                1.3540467563245477
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5167959828645748,
+            "m_shared": 0.48159344544045135,
+            "shared_direction_fraction": 0.7778945319804632,
+            "m_ctx": 1.6938390865488646,
+            "d_prime": 0.5167959828645748,
+            "shared_fraction": 0.9318831055361585,
+            "whitening_check": 0.8469195432744323,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5426202734372187,
+            "rho": 0.9014536318475771,
+            "r_eff": 1.2160567593891476,
+            "rho_in_sample": 0.8959625272637775,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5329836397060512,
+                0.552084283671146
+              ],
+              "rho": [
+                0.8918882278951114,
+                0.9114977168386494
+              ],
+              "r_eff": [
+                1.1923772629879688,
+                1.2389228430123083
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5426202734372187,
+            "m_shared": 0.5174945988941542,
+            "shared_direction_fraction": 0.8861628196362841,
+            "m_ctx": 1.30630897069883,
+            "d_prime": 0.5426202734372187,
+            "shared_fraction": 0.95369565832123,
+            "whitening_check": 0.653154485349415,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.0538547116724077,
+            "rho": 0.5825481850936371,
+            "r_eff": 1.946932819242024,
+            "rho_in_sample": 0.5633078957912966,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.05261609812713469,
+                0.055176911525423436
+              ],
+              "rho": [
+                0.5557426309182972,
+                0.6088648294728167
+              ],
+              "r_eff": [
+                1.909478855124134,
+                1.9754472376323753
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2206532891651032,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.0538547116724077,
+            "m_shared": 0.00809059479305497,
+            "shared_direction_fraction": 0.02005583456409452,
+            "m_ctx": 1.7141531675504609,
+            "d_prime": 0.0538547116724077,
+            "shared_fraction": 0.1502300270822945,
+            "whitening_check": 0.8570765837752304,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.08723573688936766,
+            "rho": 0.8618639287718963,
+            "r_eff": 1.3125236973084091,
+            "rho_in_sample": 0.8594614197350312,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.08436864250686683,
+                0.09011544489258497
+              ],
+              "rho": [
+                0.8570338077250915,
+                0.8664618271213465
+              ],
+              "r_eff": [
+                1.301086271843134,
+                1.324597559961052
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.04296875,
+              "mean_abs_spearman": 0.9951043003115836,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.08723573688936766,
+            "m_shared": 0.07696176735749952,
+            "shared_direction_fraction": 0.5891901292988593,
+            "m_ctx": 1.4818418213851112,
+            "d_prime": 0.08723573688936766,
+            "shared_fraction": 0.8822275147982347,
+            "whitening_check": 0.7409209106925556,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.09015106589380126,
+            "rho": 0.866756229186878,
+            "r_eff": 1.300355852413622,
+            "rho_in_sample": 0.8611634132859517,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.0874417286296039,
+                0.09306474829804587
+              ],
+              "rho": [
+                0.86161513663436,
+                0.8719791957934115
+              ],
+              "r_eff": [
+                1.2874369871692082,
+                1.3131441550020742
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.01953125,
+              "mean_abs_spearman": 0.9906553564882697,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.09015106589380126,
+            "m_shared": 0.07801438189508673,
+            "shared_direction_fraction": 0.5662618138253102,
+            "m_ctx": 1.5821955293348526,
+            "d_prime": 0.09015106589380126,
+            "shared_fraction": 0.8653739267707423,
+            "whitening_check": 0.7910977646674263,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed10": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9587835143034039,
+          "condition_number": 47.85847211800711
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5236826877912695,
+            "rho": 0.8592113622021683,
+            "r_eff": 1.3191470405515082,
+            "rho_in_sample": 0.8543841273105037,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.5024744952249283,
+                0.5454934881433481
+              ],
+              "rho": [
+                0.8409937089469478,
+                0.8757210553391142
+              ],
+              "r_eff": [
+                1.2782286857508707,
+                1.3650881620983726
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5236826877912695,
+            "m_shared": 0.4860115520341356,
+            "shared_direction_fraction": 0.7585532370882397,
+            "m_ctx": 1.682074038969148,
+            "d_prime": 0.5236826877912695,
+            "shared_fraction": 0.9280649587328942,
+            "whitening_check": 0.841037019484574,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5458666797651107,
+            "rho": 0.8905451624209806,
+            "r_eff": 1.2421572554392926,
+            "rho_in_sample": 0.8851300981602914,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5355154116620798,
+                0.5559707262278171
+              ],
+              "rho": [
+                0.8808564670353614,
+                0.9000881815210562
+              ],
+              "r_eff": [
+                1.2193023774336829,
+                1.2656572940992759
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5458666797651107,
+            "m_shared": 0.5192713966789648,
+            "shared_direction_fraction": 0.8766732595880505,
+            "m_ctx": 1.3064553521325788,
+            "d_prime": 0.5458666797651107,
+            "shared_fraction": 0.9512787937567649,
+            "whitening_check": 0.6532276760662894,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.06254152740184628,
+            "rho": 0.5811077863741234,
+            "r_eff": 1.9487215514745002,
+            "rho_in_sample": 0.5658141973602929,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.061149195515283535,
+                0.06405665636208029
+              ],
+              "rho": [
+                0.5579716470155839,
+                0.6022856565401954
+              ],
+              "r_eff": [
+                1.9196632041457764,
+                1.9734709312326069
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.21280487804878048,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.06254152740184628,
+            "m_shared": 0.007993097388742758,
+            "shared_direction_fraction": 0.014834677575484517,
+            "m_ctx": 1.7247574674957487,
+            "d_prime": 0.06254152740184628,
+            "shared_fraction": 0.12780463990565724,
+            "whitening_check": 0.8623787337478743,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.09564779211348874,
+            "rho": 0.8382004414135883,
+            "r_eff": 1.372195601210267,
+            "rho_in_sample": 0.8304312851687342,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.09298155748349157,
+                0.09823627661091898
+              ],
+              "rho": [
+                0.8304302147925338,
+                0.845417322181339
+              ],
+              "r_eff": [
+                1.353864686019336,
+                1.392043697456213
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.9659477524743403,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.09564779211348874,
+            "m_shared": 0.07333029854168605,
+            "shared_direction_fraction": 0.43409181730828866,
+            "m_ctx": 1.4744214493180159,
+            "d_prime": 0.09564779211348874,
+            "shared_fraction": 0.766670060242244,
+            "whitening_check": 0.7372107246590079,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.09851999709357133,
+            "rho": 0.86771141517251,
+            "r_eff": 1.2979876251601077,
+            "rho_in_sample": 0.8619735998827451,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.09579139121337427,
+                0.10147164608360132
+              ],
+              "rho": [
+                0.861637279032846,
+                0.8735326540820061
+              ],
+              "r_eff": [
+                1.2836092424964747,
+                1.3130889280581146
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.9604764250366569,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.09851999709357133,
+            "m_shared": 0.07884716110868281,
+            "shared_direction_fraction": 0.4663996105794637,
+            "m_ctx": 1.5643190676356222,
+            "d_prime": 0.09851999709357133,
+            "shared_fraction": 0.8003163158216108,
+            "whitening_check": 0.7821595338178111,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          }
+        }
+      },
+      "seed11": {
+        "whitening": {
+          "rank": 2,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9559123966223849,
+          "condition_number": 51.17182824078596
+        },
+        "factors": {
+          "shape": {
+            "m": 0.5095368298331846,
+            "rho": 0.8611598334536109,
+            "r_eff": 1.3142800393137974,
+            "rho_in_sample": 0.8607733722105532,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                0.4899988020431806,
+                0.5280923652705451
+              ],
+              "rho": [
+                0.8463757600526504,
+                0.8758612310022588
+              ],
+              "r_eff": [
+                1.2778845104430485,
+                1.3514384017168355
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5095368298331846,
+            "m_shared": 0.47426562844240944,
+            "shared_direction_fraction": 0.7770298973145295,
+            "m_ctx": 1.6631092949855084,
+            "d_prime": 0.5095368298331846,
+            "shared_fraction": 0.9307779156958634,
+            "whitening_check": 0.8315546474927542,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "scale": {
+            "m": 0.5355207798837832,
+            "rho": 0.9032831554394497,
+            "r_eff": 1.2117178834923619,
+            "rho_in_sample": 0.898922323943285,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                0.5261657598218505,
+                0.5446536579793478
+              ],
+              "rho": [
+                0.8951761814233095,
+                0.9111917411655027
+              ],
+              "r_eff": [
+                1.1930934739408607,
+                1.2310291806497915
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 1.0,
+              "mean_abs_spearman": 1.0,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.5355207798837832,
+            "m_shared": 0.5102220617809178,
+            "shared_direction_fraction": 0.8836898047799577,
+            "m_ctx": 1.2431565906534243,
+            "d_prime": 0.5355207798837832,
+            "shared_fraction": 0.9527586621225872,
+            "whitening_check": 0.6215782953267122,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "orientation": {
+            "m": 0.06057657639201461,
+            "rho": 0.6153644011807906,
+            "r_eff": 1.8989100422943876,
+            "rho_in_sample": 0.6019745039583574,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                0.05898559206583183,
+                0.062114449448969614
+              ],
+              "rho": [
+                0.5905155024426336,
+                0.6391058259276109
+              ],
+              "r_eff": [
+                1.8563178027613856,
+                1.9365354256840162
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.28391914868667917,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.06057657639201461,
+            "m_shared": 0.007910076641686683,
+            "shared_direction_fraction": 0.015559193191070745,
+            "m_ctx": 1.7470126514158675,
+            "d_prime": 0.06057657639201461,
+            "shared_fraction": 0.1305797902888651,
+            "whitening_check": 0.8735063257079337,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          },
+          "pos_x": {
+            "m": 0.11551155464763392,
+            "rho": 0.8955998196302196,
+            "r_eff": 1.230014668494422,
+            "rho_in_sample": 0.8954674985312614,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.11198168380859894,
+                0.11891620268876442
+              ],
+              "rho": [
+                0.8925549295035882,
+                0.898515843856189
+              ],
+              "r_eff": [
+                1.2230474651152965,
+                1.2373194164845487
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.03515625,
+              "mean_abs_spearman": 0.9968440707478006,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.11551155464763392,
+            "m_shared": 0.10418980089474943,
+            "shared_direction_fraction": 0.617559402447647,
+            "m_ctx": 1.223655367730294,
+            "d_prime": 0.11551155464763392,
+            "shared_fraction": 0.9019859633313627,
+            "whitening_check": 0.611827683865147,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 0.0665744057005831,
+            "rho": 0.5952103087275163,
+            "r_eff": 1.930017541644493,
+            "rho_in_sample": 0.6050058133883683,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                0.0648492596816211,
+                0.0682832381564938
+              ],
+              "rho": [
+                0.5812487291474374,
+                0.608863017717975
+              ],
+              "r_eff": [
+                1.9094817311501078,
+                1.9485477675643843
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.5861637417521994,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 0.0665744057005831,
+            "m_shared": 0.034159227417541696,
+            "shared_direction_fraction": 0.225210499519814,
+            "m_ctx": 1.8171672966204886,
+            "d_prime": 0.0665744057005831,
+            "shared_fraction": 0.5130984957067745,
+            "whitening_check": 0.9085836483102443,
+            "m_ctx_expected": 2.0,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "eps_destroyed"
+          }
+        }
+      }
+    },
+    "trained": {
+      "position_strong_seed0": {
+        "whitening": {
+          "rank": 94,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.950960675434366,
+          "condition_number": 52.10640361962992
+        },
+        "factors": {
+          "shape": {
+            "m": 12.570555854699357,
+            "rho": 0.023932017475965864,
+            "r_eff": 83.34003741844617,
+            "rho_in_sample": 0.04079592801447052,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.327218677702533,
+                12.805336537739706
+              ],
+              "rho": [
+                0.013888891996595105,
+                0.035738451892788396
+              ],
+              "r_eff": [
+                77.61430727785715,
+                85.39874810426483
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.1796875,
+              "mean_abs_spearman": 0.58984375,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.570555854699357,
+            "m_shared": 2.215759419147956,
+            "shared_direction_fraction": 0.03118088884472537,
+            "m_ctx": 12.799721219669715,
+            "d_prime": 12.570555854699357,
+            "shared_fraction": 0.17626582664756388,
+            "whitening_check": 0.9335156134412718,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.72551843702092,
+            "rho": 0.0248569937244206,
+            "r_eff": 57.33855169557636,
+            "rho_in_sample": 0.04087115535083699,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.302705156233404,
+                10.161771364746699
+              ],
+              "rho": [
+                0.01728461791836873,
+                0.03303774756299781
+              ],
+              "r_eff": [
+                54.485448287323216,
+                59.13308920089874
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.3176339285714286,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.72551843702092,
+            "m_shared": 2.0454564268537228,
+            "shared_direction_fraction": 0.03976904832187635,
+            "m_ctx": 12.244572229809258,
+            "d_prime": 9.72551843702092,
+            "shared_fraction": 0.21031849768209152,
+            "whitening_check": 0.8930272120982417,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.41467747384693,
+            "rho": 0.021105251796295754,
+            "r_eff": 66.17204641120786,
+            "rho_in_sample": 0.027847528979333337,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.726766638381644,
+                12.089402681180943
+              ],
+              "rho": [
+                0.015236613553861657,
+                0.027661613611292987
+              ],
+              "r_eff": [
+                63.18632907064287,
+                68.40239455931865
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.0889203212945591,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.41467747384693,
+            "m_shared": 3.8510857067376842,
+            "shared_direction_fraction": 0.08884006219996748,
+            "m_ctx": 12.468555578409289,
+            "d_prime": 11.41467747384693,
+            "shared_fraction": 0.3373801594973849,
+            "whitening_check": 0.9093628767178483,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.296862051782336,
+            "rho": 0.07895205184166702,
+            "r_eff": 48.01846013689956,
+            "rho_in_sample": 0.08888404852357973,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.2467199764356505,
+                1.3500318346410796
+              ],
+              "rho": [
+                0.0373107259464428,
+                0.13222701395310965
+              ],
+              "r_eff": [
+                32.37907770856609,
+                58.52895779308275
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2740689722324047,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.296862051782336,
+            "m_shared": 0.1289183356744295,
+            "shared_direction_fraction": 0.004851722624352419,
+            "m_ctx": 13.275566472945691,
+            "d_prime": 1.296862051782336,
+            "shared_fraction": 0.09940790194088202,
+            "whitening_check": 0.9682201953529787,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.2622571110957308,
+            "rho": 0.04012070275429539,
+            "r_eff": 61.04177269773676,
+            "rho_in_sample": 0.06511205678981405,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.2082474629102562,
+                1.3137821950300212
+              ],
+              "rho": [
+                0.024558651633518714,
+                0.05657539377039687
+              ],
+              "r_eff": [
+                51.01598952066722,
+                65.79743409058379
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.24522887646627567,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.2622571110957308,
+            "m_shared": 0.12092892602648933,
+            "shared_direction_fraction": 0.004764741533559793,
+            "m_ctx": 12.674443530173221,
+            "d_prime": 1.2622571110957308,
+            "shared_fraction": 0.09580371935596722,
+            "whitening_check": 0.9243787988846308,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed10": {
+        "whitening": {
+          "rank": 92,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9507858098975553,
+          "condition_number": 59.48089067823484
+        },
+        "factors": {
+          "shape": {
+            "m": 12.38781848664307,
+            "rho": 0.024684198772787106,
+            "r_eff": 82.95755651416731,
+            "rho_in_sample": 0.04130270484316359,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.167651329968233,
+                12.614698857485367
+              ],
+              "rho": [
+                0.015729005915710578,
+                0.03481913763866015
+              ],
+              "r_eff": [
+                77.82661997698483,
+                85.18187652422286
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.21875,
+              "mean_abs_spearman": 0.609375,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.38781848664307,
+            "m_shared": 2.222318963316361,
+            "shared_direction_fraction": 0.03212499578924389,
+            "m_ctx": 12.659897550537332,
+            "d_prime": 12.38781848664307,
+            "shared_fraction": 0.17939550581182104,
+            "whitening_check": 0.9333000297859074,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.577072363145092,
+            "rho": 0.03148943392325684,
+            "r_eff": 56.82873342415621,
+            "rho_in_sample": 0.04172154656411682,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.192640098644352,
+                9.958149515601539
+              ],
+              "rho": [
+                0.024603598967596316,
+                0.039070443036473786
+              ],
+              "r_eff": [
+                54.0252594625539,
+                58.48820724586692
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.25736607142857143,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.577072363145092,
+            "m_shared": 2.046563682382922,
+            "shared_direction_fraction": 0.0413830162850035,
+            "m_ctx": 12.248679164677638,
+            "d_prime": 9.577072363145092,
+            "shared_fraction": 0.21369408152940325,
+            "whitening_check": 0.9029846081769012,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.334603591545848,
+            "rho": 0.021625693933696233,
+            "r_eff": 65.47174072878495,
+            "rho_in_sample": 0.028496642365267874,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.693268598226435,
+                11.969759493783776
+              ],
+              "rho": [
+                0.015904461703390195,
+                0.027826337996488065
+              ],
+              "r_eff": [
+                62.75191109050692,
+                67.55223143607212
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.08011916627579738,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.334603591545848,
+            "m_shared": 3.885048569925607,
+            "shared_direction_fraction": 0.09419103035397934,
+            "m_ctx": 12.361292157003914,
+            "d_prime": 11.334603591545848,
+            "shared_fraction": 0.3427599861386729,
+            "whitening_check": 0.9112865481154225,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.3980167928739062,
+            "rho": 0.02805798935451055,
+            "r_eff": 58.47022304774249,
+            "rho_in_sample": 0.051673252301537645,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.3380165656956318,
+                1.4612696949856192
+              ],
+              "rho": [
+                0.013085957518312515,
+                0.04889460041867442
+              ],
+              "r_eff": [
+                53.027358443713574,
+                61.38876206824704
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2632895550769795,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.3980167928739062,
+            "m_shared": 0.13504878965533776,
+            "shared_direction_fraction": 0.004572252663913406,
+            "m_ctx": 13.087329928880784,
+            "d_prime": 1.3980167928739062,
+            "shared_fraction": 0.09660026284642666,
+            "whitening_check": 0.9648107627793568,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.3953705789068171,
+            "rho": 0.03591512217377858,
+            "r_eff": 60.18678429645931,
+            "rho_in_sample": 0.0641551705458712,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.3348803220269658,
+                1.4538419909825366
+              ],
+              "rho": [
+                0.023997770826199496,
+                0.048801862803945995
+              ],
+              "r_eff": [
+                55.549477726518695,
+                63.75210913348245
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.26265235520527863,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.3953705789068171,
+            "m_shared": 0.13295853471289584,
+            "shared_direction_fraction": 0.004566201989388854,
+            "m_ctx": 12.571303661083668,
+            "d_prime": 1.3953705789068171,
+            "shared_fraction": 0.09528546518234624,
+            "whitening_check": 0.926768801603698,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed11": {
+        "whitening": {
+          "rank": 92,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9504353056010757,
+          "condition_number": 58.64541564289566
+        },
+        "factors": {
+          "shape": {
+            "m": 12.387805125329082,
+            "rho": 0.02520007107794145,
+            "r_eff": 82.90641915953928,
+            "rho_in_sample": 0.04199056132953715,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.164551614861615,
+                12.6133188884765
+              ],
+              "rho": [
+                0.015615823990315235,
+                0.03670028499756439
+              ],
+              "r_eff": [
+                77.54181569838445,
+                85.26947540963754
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.20703125,
+              "mean_abs_spearman": 0.603515625,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.387805125329082,
+            "m_shared": 2.202268327333217,
+            "shared_direction_fraction": 0.03152434921225746,
+            "m_ctx": 12.654964694164901,
+            "d_prime": 12.387805125329082,
+            "shared_fraction": 0.1777771207290213,
+            "whitening_check": 0.9329363747894163,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.580775453002868,
+            "rho": 0.03144504232218346,
+            "r_eff": 57.06742368614687,
+            "rho_in_sample": 0.04219081820576319,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.197028443542132,
+                9.962708933769
+              ],
+              "rho": [
+                0.024295823690681156,
+                0.03936597580714498
+              ],
+              "r_eff": [
+                54.40982665646251,
+                58.72078722373402
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.25,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.580775453002868,
+            "m_shared": 2.013963875515226,
+            "shared_direction_fraction": 0.040008758843769573,
+            "m_ctx": 12.247734750254693,
+            "d_prime": 9.580775453002868,
+            "shared_fraction": 0.2102088589169467,
+            "whitening_check": 0.9029149850219312,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.32243343762873,
+            "rho": 0.021843478549172526,
+            "r_eff": 65.30213614675606,
+            "rho_in_sample": 0.0286005246108336,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.677379887607307,
+                11.963212394347643
+              ],
+              "rho": [
+                0.016118478388804723,
+                0.02805365203352741
+              ],
+              "r_eff": [
+                62.57975615576814,
+                67.37062563253849
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.07936356707317072,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.32243343762873,
+            "m_shared": 3.880034959276412,
+            "shared_direction_fraction": 0.09383993595951445,
+            "m_ctx": 12.371702380005862,
+            "d_prime": 11.32243343762873,
+            "shared_fraction": 0.3426856055855968,
+            "whitening_check": 0.9120539999371304,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.4005317930221266,
+            "rho": 0.028262483850547353,
+            "r_eff": 58.475339456539025,
+            "rho_in_sample": 0.05116839163055572,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.3397419482280186,
+                1.462683957967316
+              ],
+              "rho": [
+                0.009318658441738377,
+                0.054248943012455905
+              ],
+              "r_eff": [
+                52.388409958334535,
+                61.45333233505059
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.259460628207478,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.4005317930221266,
+            "m_shared": 0.13815113841266646,
+            "shared_direction_fraction": 0.0047732164779764955,
+            "m_ctx": 13.124906588462963,
+            "d_prime": 1.4005317930221266,
+            "shared_fraction": 0.0986419152360391,
+            "whitening_check": 0.9675809508766383,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.393485415841551,
+            "rho": 0.03316073986867257,
+            "r_eff": 61.329619973896634,
+            "rho_in_sample": 0.06357284283223402,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.332161550824178,
+                1.4523039607095087
+              ],
+              "rho": [
+                0.02246330438560429,
+                0.044968624590979916
+              ],
+              "r_eff": [
+                57.121066624987996,
+                64.60326075062068
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.27101327666788855,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.393485415841551,
+            "m_shared": 0.13245520666981994,
+            "shared_direction_fraction": 0.004557192890670959,
+            "m_ctx": 12.634400229432705,
+            "d_prime": 1.393485415841551,
+            "shared_fraction": 0.09505317039132975,
+            "whitening_check": 0.9314203423357196,
+            "m_ctx_expected": 13.564659966250536,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed1": {
+        "whitening": {
+          "rank": 95,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9509044042815349,
+          "condition_number": 72.19163840583863
+        },
+        "factors": {
+          "shape": {
+            "m": 12.495036202717387,
+            "rho": 0.025856122486509932,
+            "r_eff": 85.29700457575741,
+            "rho_in_sample": 0.05039526822416472,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.261183689249656,
+                12.725480016023582
+              ],
+              "rho": [
+                0.008058027272810549,
+                0.04613998914654159
+              ],
+              "r_eff": [
+                76.55660834314101,
+                87.54648576488741
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.26953125,
+              "mean_abs_spearman": 0.634765625,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.495036202717387,
+            "m_shared": 2.20288997703164,
+            "shared_direction_fraction": 0.03151252410756053,
+            "m_ctx": 12.744454813433336,
+            "d_prime": 12.495036202717387,
+            "shared_fraction": 0.17630120803912208,
+            "whitening_check": 0.9245799287746105,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.692486207409654,
+            "rho": 0.022176806638499195,
+            "r_eff": 58.48688509869978,
+            "rho_in_sample": 0.04350865082026633,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.255172748371484,
+                10.1507605722252
+              ],
+              "rho": [
+                0.013411768078399201,
+                0.03144461386942508
+              ],
+              "r_eff": [
+                55.47488165046206,
+                60.47442921590473
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.30937499999999996,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.692486207409654,
+            "m_shared": 2.0595808484454574,
+            "shared_direction_fraction": 0.03877235468258978,
+            "m_ctx": 12.269174283688647,
+            "d_prime": 9.692486207409654,
+            "shared_fraction": 0.2124925230093143,
+            "whitening_check": 0.8900994551276629,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.329352320139723,
+            "rho": 0.02075696892000379,
+            "r_eff": 68.14927152691128,
+            "rho_in_sample": 0.02795333625608262,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.609441549904336,
+                12.034169260589191
+              ],
+              "rho": [
+                0.014996035178132154,
+                0.027263145491555927
+              ],
+              "r_eff": [
+                65.28878888915379,
+                70.34604421971032
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.0748563555347092,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.329352320139723,
+            "m_shared": 3.952371279409856,
+            "shared_direction_fraction": 0.09389796297873727,
+            "m_ctx": 12.485590818627369,
+            "d_prime": 11.329352320139723,
+            "shared_fraction": 0.3488611853286519,
+            "whitening_check": 0.9057999607505774,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.3425644958085974,
+            "rho": 0.04122890058410149,
+            "r_eff": 53.47099437284428,
+            "rho_in_sample": 0.048500955817214045,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.2889154506632003,
+                1.3990072998966003
+              ],
+              "rho": [
+                0.019573322193522806,
+                0.06948041801824063
+              ],
+              "r_eff": [
+                46.8621394894041,
+                56.91163747795838
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2798581836510264,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.3425644958085974,
+            "m_shared": 0.13271239161588735,
+            "shared_direction_fraction": 0.004739906172624185,
+            "m_ctx": 13.338504135531087,
+            "d_prime": 1.3425644958085974,
+            "shared_fraction": 0.09884991896494147,
+            "whitening_check": 0.9676767962321976,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.3276234465970136,
+            "rho": 0.04191980287866577,
+            "r_eff": 55.32139040940679,
+            "rho_in_sample": 0.05559007456995601,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.2795820757711345,
+                1.373987648969144
+              ],
+              "rho": [
+                0.02470537881515909,
+                0.06187992954402427
+              ],
+              "r_eff": [
+                48.942191350423066,
+                59.81789404628423
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2593933284457478,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.3276234465970136,
+            "m_shared": 0.12713096429795953,
+            "shared_direction_fraction": 0.0045902391473420946,
+            "m_ctx": 12.598996209795606,
+            "d_prime": 1.3276234465970136,
+            "shared_fraction": 0.09575830000880425,
+            "whitening_check": 0.9140272525432767,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed2": {
+        "whitening": {
+          "rank": 94,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9505674425480827,
+          "condition_number": 86.11549242447347
+        },
+        "factors": {
+          "shape": {
+            "m": 12.481922848432188,
+            "rho": 0.02034416640171514,
+            "r_eff": 84.91533890836287,
+            "rho_in_sample": 0.04252641992999318,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.27151674391268,
+                12.698031500864523
+              ],
+              "rho": [
+                0.009878962738356603,
+                0.034103956052776975
+              ],
+              "r_eff": [
+                78.97612144508354,
+                86.86168802667072
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.24609375,
+              "mean_abs_spearman": 0.623046875,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.481922848432188,
+            "m_shared": 2.2680651547269335,
+            "shared_direction_fraction": 0.033914752934871284,
+            "m_ctx": 12.704822956763378,
+            "d_prime": 12.481922848432188,
+            "shared_fraction": 0.18170799341319574,
+            "whitening_check": 0.9265944462852729,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.43171568306307,
+            "rho": 0.028723613577077162,
+            "r_eff": 56.91738294323285,
+            "rho_in_sample": 0.043988006878585104,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.00935989709556,
+                9.868856110077804
+              ],
+              "rho": [
+                0.02110607383328293,
+                0.036647467319148114
+              ],
+              "r_eff": [
+                53.90910808208446,
+                58.76681617967395
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.29441964285714284,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.43171568306307,
+            "m_shared": 2.0184672059325366,
+            "shared_direction_fraction": 0.04046324032843718,
+            "m_ctx": 12.296467521775368,
+            "d_prime": 9.43171568306307,
+            "shared_fraction": 0.21400848729539032,
+            "whitening_check": 0.8968120652589503,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.161889354076692,
+            "rho": 0.020784634975325206,
+            "r_eff": 65.40987559570529,
+            "rho_in_sample": 0.027105486884131412,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.425334391296852,
+                11.857946608403646
+              ],
+              "rho": [
+                0.015746508350086588,
+                0.026270632864799272
+              ],
+              "r_eff": [
+                62.752776937383786,
+                67.47257554783184
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.06826629924953095,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.161889354076692,
+            "m_shared": 3.9265137192380464,
+            "shared_direction_fraction": 0.09443467824714623,
+            "m_ctx": 12.385315619291728,
+            "d_prime": 11.161889354076692,
+            "shared_fraction": 0.35177859183884075,
+            "whitening_check": 0.9032919787533643,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.2720133464565422,
+            "rho": 0.0440947770395357,
+            "r_eff": 53.59175811065458,
+            "rho_in_sample": 0.06068573379999891,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.2210780683280136,
+                1.3265212342696218
+              ],
+              "rho": [
+                0.0260404167582069,
+                0.06843037479463615
+              ],
+              "r_eff": [
+                46.67750056006679,
+                58.00745944732226
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.25738722278225806,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.2720133464565422,
+            "m_shared": 0.12236616063258537,
+            "shared_direction_fraction": 0.004685930309275798,
+            "m_ctx": 13.199815270095591,
+            "d_prime": 1.2720133464565422,
+            "shared_fraction": 0.09619880245239704,
+            "whitening_check": 0.9626954710731361,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.228473486080764,
+            "rho": 0.04255314914452496,
+            "r_eff": 58.05048670980824,
+            "rho_in_sample": 0.07685141025837584,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.1782105329465333,
+                1.2783938401586965
+              ],
+              "rho": [
+                0.0243009279909338,
+                0.06563732234639906
+              ],
+              "r_eff": [
+                51.25979980477282,
+                62.7545903954083
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.25669704224706746,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.228473486080764,
+            "m_shared": 0.11842375670617758,
+            "shared_direction_fraction": 0.004808013499569827,
+            "m_ctx": 12.574312057640583,
+            "d_prime": 1.228473486080764,
+            "shared_fraction": 0.09639911487547725,
+            "whitening_check": 0.9170759606898083,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed3": {
+        "whitening": {
+          "rank": 95,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9504087580070334,
+          "condition_number": 64.478622546068
+        },
+        "factors": {
+          "shape": {
+            "m": 12.476512079009211,
+            "rho": 0.02498726583209555,
+            "r_eff": 85.28156898425155,
+            "rho_in_sample": 0.04158747599523593,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.244087883580606,
+                12.713753521752134
+              ],
+              "rho": [
+                0.011578434492193883,
+                0.04049390521357494
+              ],
+              "r_eff": [
+                77.73914343447464,
+                87.60058574408265
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.34375,
+              "mean_abs_spearman": 0.671875,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.476512079009211,
+            "m_shared": 2.251987033307284,
+            "shared_direction_fraction": 0.03284533290002496,
+            "m_ctx": 12.769414240866965,
+            "d_prime": 12.476512079009211,
+            "shared_fraction": 0.18049812471997537,
+            "whitening_check": 0.9263906759565547,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.714028700917103,
+            "rho": 0.02859025225319001,
+            "r_eff": 58.57133287998619,
+            "rho_in_sample": 0.041419729699768364,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.312601967363905,
+                10.135515944658444
+              ],
+              "rho": [
+                0.02208575754496746,
+                0.03555791056581825
+              ],
+              "r_eff": [
+                55.56426344934674,
+                60.610925854375964
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.29107142857142854,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.714028700917103,
+            "m_shared": 2.018572432629064,
+            "shared_direction_fraction": 0.038073176179633905,
+            "m_ctx": 12.351536979769321,
+            "d_prime": 9.714028700917103,
+            "shared_fraction": 0.20779971881681697,
+            "whitening_check": 0.8960746731178186,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.386000387426881,
+            "rho": 0.02155359334460242,
+            "r_eff": 67.1979829142864,
+            "rho_in_sample": 0.027494825210195296,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.69515170697198,
+                12.057808375618725
+              ],
+              "rho": [
+                0.015858143984988145,
+                0.027709569299452987
+              ],
+              "r_eff": [
+                64.37265313985341,
+                69.40256739791027
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.07047300070356473,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.386000387426881,
+            "m_shared": 3.919434699924877,
+            "shared_direction_fraction": 0.09322489275847952,
+            "m_ctx": 12.534348962747265,
+            "d_prime": 11.386000387426881,
+            "shared_fraction": 0.3442327917231548,
+            "whitening_check": 0.90933724830642,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.3835082985426146,
+            "rho": 0.03844592344398736,
+            "r_eff": 56.56076091532189,
+            "rho_in_sample": 0.05425710362454541,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.3295182261658214,
+                1.4400175698886366
+              ],
+              "rho": [
+                0.013060349740044644,
+                0.07120146317743228
+              ],
+              "r_eff": [
+                48.46487783601583,
+                60.1868548948771
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2513517228739003,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.3835082985426146,
+            "m_shared": 0.14094676131243966,
+            "shared_direction_fraction": 0.0051579535372077755,
+            "m_ctx": 13.29893846718942,
+            "d_prime": 1.3835082985426146,
+            "shared_fraction": 0.10187633963664168,
+            "whitening_check": 0.9648064009620366,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.3571892064859885,
+            "rho": 0.03518556578958345,
+            "r_eff": 57.5353614542472,
+            "rho_in_sample": 0.057409696261850975,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.3027939237419506,
+                1.4129280080038027
+              ],
+              "rho": [
+                0.026206805009085902,
+                0.0444187905964602
+              ],
+              "r_eff": [
+                51.92340386162179,
+                61.4343884804682
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.261017114186217,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.3571892064859885,
+            "m_shared": 0.13048509973925848,
+            "shared_direction_fraction": 0.004635919548910354,
+            "m_ctx": 12.728797164992985,
+            "d_prime": 1.3571892064859885,
+            "shared_fraction": 0.0961436320858374,
+            "whitening_check": 0.9234440035670058,
+            "m_ctx_expected": 13.784048752090222,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed4": {
+        "whitening": {
+          "rank": 90,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9510480050244449,
+          "condition_number": 91.91948682918134
+        },
+        "factors": {
+          "shape": {
+            "m": 12.27163320962797,
+            "rho": 0.02383027896394982,
+            "r_eff": 80.05818992304316,
+            "rho_in_sample": 0.04431226444786908,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.047628762842207,
+                12.496441100355272
+              ],
+              "rho": [
+                0.014476510894882373,
+                0.03544399695148874
+              ],
+              "r_eff": [
+                74.63139652255471,
+                82.08033720786538
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.19921875,
+              "mean_abs_spearman": 0.599609375,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.27163320962797,
+            "m_shared": 2.291421668380237,
+            "shared_direction_fraction": 0.036727529983113606,
+            "m_ctx": 12.385470138394135,
+            "d_prime": 12.27163320962797,
+            "shared_fraction": 0.1867250780101913,
+            "whitening_check": 0.9231584387581004,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.087446331603612,
+            "rho": 0.029944406202275398,
+            "r_eff": 52.665587433699514,
+            "rho_in_sample": 0.04754878785067593,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                8.622471514347206,
+                9.56611087738222
+              ],
+              "rho": [
+                0.020782188881646926,
+                0.03934097320469036
+              ],
+              "r_eff": [
+                49.54463222406739,
+                54.8227449795566
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.00390625,
+              "mean_abs_spearman": 0.3196428571428571,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.087446331603612,
+            "m_shared": 2.220832320766953,
+            "shared_direction_fraction": 0.050833882799479,
+            "m_ctx": 11.78677471258752,
+            "d_prime": 9.087446331603612,
+            "shared_fraction": 0.24438464225571443,
+            "whitening_check": 0.8785343164273747,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 10.721037958139467,
+            "rho": 0.024066954203108063,
+            "r_eff": 61.5634146788336,
+            "rho_in_sample": 0.029807032835359355,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                9.955863875724617,
+                11.462219358235723
+              ],
+              "rho": [
+                0.01740648177755845,
+                0.030926243826686357
+              ],
+              "r_eff": [
+                58.76154811481462,
+                63.60602847980699
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.11055860107879925,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 10.721037958139467,
+            "m_shared": 3.8778851269474752,
+            "shared_direction_fraction": 0.09536568330378237,
+            "m_ctx": 12.051361005351373,
+            "d_prime": 10.721037958139467,
+            "shared_fraction": 0.36170799339474075,
+            "whitening_check": 0.8982554143118625,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.040650236771768,
+            "rho": 0.060774245728333745,
+            "r_eff": 50.259877988526455,
+            "rho_in_sample": 0.09313251757668653,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.0001864730666328,
+                1.0868542332018472
+              ],
+              "rho": [
+                0.022985545376067583,
+                0.1114639018993534
+              ],
+              "r_eff": [
+                36.350854407136886,
+                57.580307856513315
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.26710416284824046,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.040650236771768,
+            "m_shared": 0.11214006086434283,
+            "shared_direction_fraction": 0.00598705193375851,
+            "m_ctx": 12.928643266193951,
+            "d_prime": 1.040650236771768,
+            "shared_fraction": 0.10775960731265083,
+            "whitening_check": 0.9636441733351527,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "unadjudicated"
+          },
+          "pos_y": {
+            "m": 1.0444989778571014,
+            "rho": 0.05073676107113471,
+            "r_eff": 56.124507568249705,
+            "rho_in_sample": 0.08780945104815084,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.002128573571303,
+                1.0850026150472774
+              ],
+              "rho": [
+                0.03656556588472241,
+                0.06608357566048578
+              ],
+              "r_eff": [
+                50.787835405307774,
+                60.529920648055786
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.25239128940615835,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.0444989778571014,
+            "m_shared": 0.10696953289747825,
+            "shared_direction_fraction": 0.005697116033205887,
+            "m_ctx": 12.25163164855198,
+            "d_prime": 1.0444989778571014,
+            "shared_fraction": 0.1024122906438237,
+            "whitening_check": 0.9131827067150012,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed5": {
+        "whitening": {
+          "rank": 88,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.950043597634701,
+          "condition_number": 71.84105936624026
+        },
+        "factors": {
+          "shape": {
+            "m": 12.260578019055071,
+            "rho": 0.024134390839165312,
+            "r_eff": 77.5433885700476,
+            "rho_in_sample": 0.04590121046278093,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.046068485255944,
+                12.472905476074732
+              ],
+              "rho": [
+                0.012596196316421615,
+                0.03860731840279456
+              ],
+              "r_eff": [
+                72.12396523068945,
+                79.46425937502796
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.203125,
+              "mean_abs_spearman": 0.6015625,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.260578019055071,
+            "m_shared": 2.322782096627403,
+            "shared_direction_fraction": 0.03734779306950817,
+            "m_ctx": 12.350907211105545,
+            "d_prime": 12.260578019055071,
+            "shared_fraction": 0.1894512716298853,
+            "whitening_check": 0.9309846599939073,
+            "m_ctx_expected": 13.2664991614216,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 8.90629312066323,
+            "rho": 0.031494179006478225,
+            "r_eff": 51.33580383159764,
+            "rho_in_sample": 0.046359622464957104,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                8.500538860849927,
+                9.329280428717503
+              ],
+              "rho": [
+                0.023950715339102164,
+                0.03960174729584123
+              ],
+              "r_eff": [
+                48.725063896814405,
+                53.05752119136054
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.3026785714285714,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 8.90629312066323,
+            "m_shared": 1.9037488872475918,
+            "shared_direction_fraction": 0.040853443378989086,
+            "m_ctx": 11.846687110143227,
+            "d_prime": 8.90629312066323,
+            "shared_fraction": 0.21375322611275388,
+            "whitening_check": 0.8929776398428363,
+            "m_ctx_expected": 13.2664991614216,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 10.703255818573533,
+            "rho": 0.02439680958871844,
+            "r_eff": 59.67475678428936,
+            "rho_in_sample": 0.029498211626791768,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                9.998352838089618,
+                11.376263482679873
+              ],
+              "rho": [
+                0.01829903670373162,
+                0.03073494183385999
+              ],
+              "r_eff": [
+                57.21935834878279,
+                61.47902090780294
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.10643688438086304,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 10.703255818573533,
+            "m_shared": 3.888368319680391,
+            "shared_direction_fraction": 0.100037680543222,
+            "m_ctx": 11.903304226818472,
+            "d_prime": 10.703255818573533,
+            "shared_fraction": 0.3632883662308475,
+            "whitening_check": 0.8972453155865536,
+            "m_ctx_expected": 13.2664991614216,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.0693340268999878,
+            "rho": 0.04543042491076309,
+            "r_eff": 50.27259022211573,
+            "rho_in_sample": 0.061803949575076886,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.026026203664612,
+                1.112977383314141
+              ],
+              "rho": [
+                0.021402535209527153,
+                0.07475033098621413
+              ],
+              "r_eff": [
+                43.81949085840643,
+                53.62089535527842
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2815449734237537,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.0693340268999878,
+            "m_shared": 0.1047042538473616,
+            "shared_direction_fraction": 0.00489729825446935,
+            "m_ctx": 12.762802258906767,
+            "d_prime": 1.0693340268999878,
+            "shared_fraction": 0.09791538585085569,
+            "whitening_check": 0.9620324174157745,
+            "m_ctx_expected": 13.2664991614216,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.0949304568184024,
+            "rho": 0.04766344334818607,
+            "r_eff": 51.91484928110743,
+            "rho_in_sample": 0.08028428785579328,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.0516190122428637,
+                1.1371389806414267
+              ],
+              "rho": [
+                0.03357261544820512,
+                0.06210356236957248
+              ],
+              "r_eff": [
+                47.12426893159008,
+                55.67847926793828
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2646398460410557,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.0949304568184024,
+            "m_shared": 0.10719517910291301,
+            "shared_direction_fraction": 0.004977400401957016,
+            "m_ctx": 12.171376950458777,
+            "d_prime": 1.0949304568184024,
+            "shared_fraction": 0.09790135842453021,
+            "whitening_check": 0.9174520574239066,
+            "m_ctx_expected": 13.2664991614216,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed6": {
+        "whitening": {
+          "rank": 90,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9506036524771545,
+          "condition_number": 66.10042933407316
+        },
+        "factors": {
+          "shape": {
+            "m": 12.241702472502027,
+            "rho": 0.02097906142097349,
+            "r_eff": 82.08415358251551,
+            "rho_in_sample": 0.03883933378268344,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.05203164512656,
+                12.431468093431077
+              ],
+              "rho": [
+                0.01402329118390559,
+                0.02892052449329933
+              ],
+              "r_eff": [
+                77.85126315701017,
+                83.84648490524651
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.140625,
+              "mean_abs_spearman": 0.5703125,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.241702472502027,
+            "m_shared": 2.2833449836565665,
+            "shared_direction_fraction": 0.03612131314266279,
+            "m_ctx": 12.48464012533937,
+            "d_prime": 12.241702472502027,
+            "shared_fraction": 0.1865218492922483,
+            "whitening_check": 0.9305501331626774,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.158611808206034,
+            "rho": 0.035445546291777714,
+            "r_eff": 53.0706012796895,
+            "rho_in_sample": 0.04462900220282347,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                8.7709775050862,
+                9.54972018092033
+              ],
+              "rho": [
+                0.028994560670967638,
+                0.042286503008904484
+              ],
+              "r_eff": [
+                50.67525442238599,
+                54.660404986542176
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2533482142857143,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.158611808206034,
+            "m_shared": 2.036827571071883,
+            "shared_direction_fraction": 0.044519577231710225,
+            "m_ctx": 12.079230289359424,
+            "d_prime": 9.158611808206034,
+            "shared_fraction": 0.2223947923250665,
+            "whitening_check": 0.9003326680960708,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 10.973265740767811,
+            "rho": 0.02391310600817331,
+            "r_eff": 61.48304226681963,
+            "rho_in_sample": 0.02904659867737497,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.284154127220077,
+                11.644497800637847
+              ],
+              "rho": [
+                0.01818040874359289,
+                0.030056863498798974
+              ],
+              "r_eff": [
+                58.95295439274998,
+                63.328782990665104
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.09222047959662288,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 10.973265740767811,
+            "m_shared": 3.8868225457088625,
+            "shared_direction_fraction": 0.09735922481764443,
+            "m_ctx": 12.098515472154869,
+            "d_prime": 10.973265740767811,
+            "shared_fraction": 0.3542083676392309,
+            "whitening_check": 0.901770100752375,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.2216063983992713,
+            "rho": 0.04682407185304699,
+            "r_eff": 50.459053077752394,
+            "rho_in_sample": 0.06510674361701503,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.1735554117770837,
+                1.2704918241207912
+              ],
+              "rho": [
+                0.02174393091463579,
+                0.07942089958693138
+              ],
+              "r_eff": [
+                42.34643023715591,
+                54.98446636790996
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.24441411977639294,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.2216063983992713,
+            "m_shared": 0.12818304976154865,
+            "shared_direction_fraction": 0.005517353880905043,
+            "m_ctx": 12.955182026724007,
+            "d_prime": 1.2216063983992713,
+            "shared_fraction": 0.10492991026366018,
+            "whitening_check": 0.9656222557546125,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.1846840942496462,
+            "rho": 0.04059486367572167,
+            "r_eff": 56.24191755003386,
+            "rho_in_sample": 0.06232011456257874,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.1389422408297278,
+                1.2300854225505098
+              ],
+              "rho": [
+                0.027153010372307145,
+                0.057733685911086075
+              ],
+              "r_eff": [
+                51.16939283959598,
+                60.23196467206127
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.24337025751466274,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.1846840942496462,
+            "m_shared": 0.11630019429855096,
+            "shared_direction_fraction": 0.005038328082949774,
+            "m_ctx": 12.336379506949868,
+            "d_prime": 1.1846840942496462,
+            "shared_fraction": 0.09816979468455939,
+            "whitening_check": 0.9194994391258414,
+            "m_ctx_expected": 13.416407864998739,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed7": {
+        "whitening": {
+          "rank": 96,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9505077369460408,
+          "condition_number": 62.918292904884865
+        },
+        "factors": {
+          "shape": {
+            "m": 12.678937219954967,
+            "rho": 0.02163166724570811,
+            "r_eff": 87.24870791456081,
+            "rho_in_sample": 0.03736295486686654,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.463022348326042,
+                12.902172366536748
+              ],
+              "rho": [
+                0.012414616875107356,
+                0.03240662596683884
+              ],
+              "r_eff": [
+                81.77095083040943,
+                89.12885500105389
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.25,
+              "mean_abs_spearman": 0.625,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.678937219954967,
+            "m_shared": 2.1857519121247737,
+            "shared_direction_fraction": 0.029865074887624268,
+            "m_ctx": 12.884790861253714,
+            "d_prime": 12.678937219954967,
+            "shared_fraction": 0.17239236019598628,
+            "whitening_check": 0.9298796840246077,
+            "m_ctx_expected": 13.856406460551018,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.69073755084374,
+            "rho": 0.024925993035614814,
+            "r_eff": 59.29968188514008,
+            "rho_in_sample": 0.04163985241687346,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.291136390495256,
+                10.109958518995038
+              ],
+              "rho": [
+                0.01688179755504831,
+                0.033960987075663446
+              ],
+              "r_eff": [
+                56.31995228281255,
+                60.80139075329234
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.28794642857142855,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.69073755084374,
+            "m_shared": 1.970883812027365,
+            "shared_direction_fraction": 0.03641559124404668,
+            "m_ctx": 12.410044413423842,
+            "d_prime": 9.69073755084374,
+            "shared_fraction": 0.2033781022019079,
+            "whitening_check": 0.8956178103431833,
+            "m_ctx_expected": 13.856406460551018,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.456219956526736,
+            "rho": 0.022583917654343682,
+            "r_eff": 67.54760868508095,
+            "rho_in_sample": 0.027769024544925483,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.74925320211538,
+                12.135172254257235
+              ],
+              "rho": [
+                0.016399919972469847,
+                0.028956554824740306
+              ],
+              "r_eff": [
+                64.51635293639184,
+                69.8243979031333
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.08808557106003753,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.456219956526736,
+            "m_shared": 3.9122378518734444,
+            "shared_direction_fraction": 0.09093150387622052,
+            "m_ctx": 12.569779949499102,
+            "d_prime": 11.456219956526736,
+            "shared_fraction": 0.3414946524001225,
+            "whitening_check": 0.9071457296872084,
+            "m_ctx_expected": 13.856406460551018,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.2997103813935942,
+            "rho": 0.07030019002627184,
+            "r_eff": 49.816778062679816,
+            "rho_in_sample": 0.08965994276369461,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.249098309960653,
+                1.353562153895923
+              ],
+              "rho": [
+                0.027716148960558313,
+                0.1233427874701639
+              ],
+              "r_eff": [
+                34.367214819617935,
+                58.58426273684605
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2729735612170088,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.2997103813935942,
+            "m_shared": 0.13054658126098548,
+            "shared_direction_fraction": 0.0049576994780261225,
+            "m_ctx": 13.474657581212615,
+            "d_prime": 1.2997103813935942,
+            "shared_fraction": 0.10044282413210313,
+            "whitening_check": 0.9724496477188919,
+            "m_ctx_expected": 13.856406460551018,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.271343661561187,
+            "rho": 0.028371897609143194,
+            "r_eff": 62.831022511184784,
+            "rho_in_sample": 0.06539375351412682,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.2162066030560092,
+                1.3244717010293003
+              ],
+              "rho": [
+                0.013807844793361067,
+                0.04561293067187898
+              ],
+              "r_eff": [
+                57.13754097082622,
+                65.96226879633234
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.28401788168988273,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.271343661561187,
+            "m_shared": 0.12361855162012883,
+            "shared_direction_fraction": 0.004838709402479961,
+            "m_ctx": 12.900593329983382,
+            "d_prime": 1.271343661561187,
+            "shared_fraction": 0.09723456792817725,
+            "whitening_check": 0.9310201289714746,
+            "m_ctx_expected": 13.856406460551018,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed8": {
+        "whitening": {
+          "rank": 94,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.9507127080197901,
+          "condition_number": 69.22069940726165
+        },
+        "factors": {
+          "shape": {
+            "m": 12.659023718474245,
+            "rho": 0.0231387833408225,
+            "r_eff": 85.10395721236598,
+            "rho_in_sample": 0.03667081125908391,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.458973243571366,
+                12.863156690804677
+              ],
+              "rho": [
+                0.014902811855911826,
+                0.033032268662244416
+              ],
+              "r_eff": [
+                79.94742578399494,
+                87.09391792466361
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.1640625,
+              "mean_abs_spearman": 0.58203125,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.659023718474245,
+            "m_shared": 2.317334462174082,
+            "shared_direction_fraction": 0.03497289331850901,
+            "m_ctx": 12.739615332495324,
+            "d_prime": 12.659023718474245,
+            "shared_fraction": 0.183057912972564,
+            "whitening_check": 0.9291319410804388,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.481140485102092,
+            "rho": 0.026417774356640233,
+            "r_eff": 55.39891907293642,
+            "rho_in_sample": 0.042744675542690444,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.039139041950119,
+                9.934449438290896
+              ],
+              "rho": [
+                0.017452397436819228,
+                0.03571148303287012
+              ],
+              "r_eff": [
+                52.39615193288649,
+                57.04301394566738
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.00390625,
+              "mean_abs_spearman": 0.3426339285714286,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.481140485102092,
+            "m_shared": 2.0695384127671916,
+            "shared_direction_fraction": 0.04184448778897837,
+            "m_ctx": 12.259266381533385,
+            "d_prime": 9.481140485102092,
+            "shared_fraction": 0.21827947977557122,
+            "whitening_check": 0.8940988932563959,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.127557724759594,
+            "rho": 0.023063778027478048,
+            "r_eff": 64.92439287207841,
+            "rho_in_sample": 0.028248776689811794,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.393392425187194,
+                11.84067390711302
+              ],
+              "rho": [
+                0.01694060618390087,
+                0.029453541777308734
+              ],
+              "r_eff": [
+                62.01563249600841,
+                67.0597648843259
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.0953330206378987,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.127557724759594,
+            "m_shared": 3.9118204953145326,
+            "shared_direction_fraction": 0.09363437785289493,
+            "m_ctx": 12.351298007967479,
+            "d_prime": 11.127557724759594,
+            "shared_fraction": 0.3515434915795097,
+            "whitening_check": 0.9008109894600692,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.1781388977740033,
+            "rho": 0.04993970769561741,
+            "r_eff": 55.549318437784265,
+            "rho_in_sample": 0.06809065526240594,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.1341794596534307,
+                1.224391081798812
+              ],
+              "rho": [
+                0.02187353869952792,
+                0.08688733721254528
+              ],
+              "r_eff": [
+                44.76194243427757,
+                60.686370561742365
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.26693519748900296,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.1781388977740033,
+            "m_shared": 0.12277936719212891,
+            "shared_direction_fraction": 0.005571329022198855,
+            "m_ctx": 13.19262631786517,
+            "d_prime": 1.1781388977740033,
+            "shared_fraction": 0.10421467912154539,
+            "whitening_check": 0.9621711628451515,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.1797081917162495,
+            "rho": 0.04510438925466857,
+            "r_eff": 58.80867117592527,
+            "rho_in_sample": 0.08395441378434955,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.1333835200254052,
+                1.2242511711779829
+              ],
+              "rho": [
+                0.024020999354302908,
+                0.06759596369060845
+              ],
+              "r_eff": [
+                52.174015556232696,
+                63.44804437928714
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2538274949596774,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.1797081917162495,
+            "m_shared": 0.12028018401809584,
+            "shared_direction_fraction": 0.005431779419818188,
+            "m_ctx": 12.670357391957836,
+            "d_prime": 1.1797081917162495,
+            "shared_fraction": 0.10195757295124924,
+            "whitening_check": 0.9240807866266076,
+            "m_ctx_expected": 13.711309200802088,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      },
+      "position_strong_seed9": {
+        "whitening": {
+          "rank": 93,
+          "d": 512,
+          "var_fraction": 0.95,
+          "variance_retained": 0.950576055951965,
+          "condition_number": 63.564243316577276
+        },
+        "factors": {
+          "shape": {
+            "m": 12.472569363489114,
+            "rho": 0.023915926672538158,
+            "r_eff": 84.06712426671068,
+            "rho_in_sample": 0.04142186568848878,
+            "n_fit": 512,
+            "n_eval": 512,
+            "ci": {
+              "m": [
+                12.24849998662761,
+                12.688045774106827
+              ],
+              "rho": [
+                0.013545469927557268,
+                0.03545747521740745
+              ],
+              "r_eff": [
+                78.65161632753022,
+                85.94051956413925
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.20703125,
+              "mean_abs_spearman": 0.603515625,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 12.472569363489114,
+            "m_shared": 2.2594274649120427,
+            "shared_direction_fraction": 0.033344923892601144,
+            "m_ctx": 12.65893278894753,
+            "d_prime": 12.472569363489114,
+            "shared_fraction": 0.1811517257643844,
+            "whitening_check": 0.9281979863741845,
+            "m_ctx_expected": 13.638181696985855,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "scale": {
+            "m": 9.575277993047754,
+            "rho": 0.024946310629771318,
+            "r_eff": 55.724600680515756,
+            "rho_in_sample": 0.04195869172514228,
+            "n_fit": 1280,
+            "n_eval": 1280,
+            "ci": {
+              "m": [
+                9.157953919850119,
+                10.00735624343412
+              ],
+              "rho": [
+                0.017159452473730887,
+                0.03436186208807277
+              ],
+              "r_eff": [
+                52.94451455806635,
+                57.48943478038602
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.3703125,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 9.575277993047754,
+            "m_shared": 2.024609771958285,
+            "shared_direction_fraction": 0.039790351324132237,
+            "m_ctx": 12.257172608629453,
+            "d_prime": 9.575277993047754,
+            "shared_fraction": 0.21144135694319033,
+            "whitening_check": 0.8987395006871323,
+            "m_ctx_expected": 13.638181696985855,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "orientation": {
+            "m": 11.192198653746095,
+            "rho": 0.022636692976084092,
+            "r_eff": 64.32953690702077,
+            "rho_in_sample": 0.028366006509207863,
+            "n_fit": 9984,
+            "n_eval": 9984,
+            "ci": {
+              "m": [
+                10.481920292562336,
+                11.884737381511428
+              ],
+              "rho": [
+                0.01683372972406837,
+                0.028778216931997697
+              ],
+              "r_eff": [
+                61.5317853199372,
+                66.37888869354079
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.07840129573170732,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 11.192198653746095,
+            "m_shared": 3.863472122073641,
+            "shared_direction_fraction": 0.09213225818998129,
+            "m_ctx": 12.349567976073393,
+            "d_prime": 11.192198653746095,
+            "shared_fraction": 0.34519331202011094,
+            "whitening_check": 0.9055142577256281,
+            "m_ctx_expected": 13.638181696985855,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_x": {
+            "m": 1.1914550185567607,
+            "rho": 0.03941005018416387,
+            "r_eff": 56.70568634400256,
+            "rho_in_sample": 0.049980055463068974,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.150152190585966,
+                1.232959116488744
+              ],
+              "rho": [
+                0.02627715249799992,
+                0.05382090355721653
+              ],
+              "r_eff": [
+                51.58892196043929,
+                60.01329073658038
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.24893895482038125,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.1914550185567607,
+            "m_shared": 0.11932037849361242,
+            "shared_direction_fraction": 0.005348823114197487,
+            "m_ctx": 13.198336423755443,
+            "d_prime": 1.1914550185567607,
+            "shared_fraction": 0.10014677569460254,
+            "whitening_check": 0.9677489798124905,
+            "m_ctx_expected": 13.638181696985855,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          },
+          "pos_y": {
+            "m": 1.2063713746338212,
+            "rho": 0.03903309446435273,
+            "r_eff": 56.11310495234896,
+            "rho_in_sample": 0.07975582716393934,
+            "n_fit": 7936,
+            "n_eval": 7936,
+            "ci": {
+              "m": [
+                1.1575911613652912,
+                1.2503767969887822
+              ],
+              "rho": [
+                0.01480697745344167,
+                0.07111761977286754
+              ],
+              "r_eff": [
+                47.72920902439189,
+                60.795821937495575
+              ]
+            },
+            "monotonicity": {
+              "monotone_fraction": 0.0,
+              "mean_abs_spearman": 0.2581633179068915,
+              "note": "rho_F bounds linear decodability, it does not imply it: a single-direction but non-monotone projection defeats a linear probe"
+            },
+            "m_total": 1.2063713746338212,
+            "m_shared": 0.11783614011383427,
+            "shared_direction_fraction": 0.004896554248408171,
+            "m_ctx": 12.595303790742651,
+            "d_prime": 1.2063713746338212,
+            "shared_fraction": 0.09767816328500165,
+            "whitening_check": 0.9235324818649624,
+            "m_ctx_expected": 13.638181696985855,
+            "m_star": 0.2888319636495567,
+            "unadjudicated_band": [
+              0.07987230638308719,
+              1.0444659357341872
+            ],
+            "verdict": "moves"
+          }
+        }
+      }
+    }
+  },
+  "epsilon_m": {
+    "shape": 0.04976596873776004,
+    "scale": 0.03274907460681143,
+    "orientation": 0.04455996817644774,
+    "pos_x": 0.07410437055359692,
+    "pos_y": 0.08578408024773529
+  },
+  "epsilon_m_note": "epsilon_m is the 97.5th percentile of the random-vs-random null on the m_F deficit, the estimator A8 (a) fixed for epsilon_G and A10 (c) for epsilon_D. REDUCTION TEST ONLY: m_F(random) - m_F(trained) > epsilon_m says this encoder moves less than an untrained one, nothing more. A12 (a) retired it as a destruction rule after it returned DESTROYED for a factor that is a perfect linear ramp. Destruction is adjudicated by the m_total / m_star certificate (A15 b), reported per factor as 'verdict'."
+}

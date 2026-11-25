@@ -1,0 +1,502 @@
+{
+  "alpha": 0.05,
+  "continuous_readouts_voided_by_A10": [
+    "orientation_strong",
+    "scale_strong"
+  ],
+  "description": "Holm over the maximal designed H2 family: the five strong cells as specified before any exclusion.",
+  "designed": {
+    "pairs": 43,
+    "survivors": 29
+  },
+  "family_size_the_floor_survives": 102,
+  "n_seeds": 12,
+  "realized": {
+    "pairs": 23,
+    "survivors": 12
+  },
+  "realized_survivors_lost_under_designed": [],
+  "source_dirs": {
+    "color_strong": "results/probes_pinned/color_strong",
+    "control_strong": "results/probes_pinned/control_strong",
+    "orientation_strong": "results/probes_excluded/orientation_strong",
+    "position_strong": "results/probes_pinned/position_strong",
+    "scale_strong": "results/probes_excluded/scale_strong"
+  },
+  "tests": [
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "color_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "wall_hue",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.38037109375,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "color_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "color_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "scale",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.26611328125,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "color_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.67724609375,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "color_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "color_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "scale",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.4697265625,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "color_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 0.70361328125,
+      "p_holm_realized": 0.6396484375,
+      "p_raw": 0.06396484375,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "color_strong",
+      "factor_a": "object_hue",
+      "factor_b": "scale",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "color_strong",
+      "factor_a": "object_hue",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "color_strong",
+      "factor_a": "scale",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "position_strong",
+      "factor_a": "scale",
+      "factor_b": "pos_x",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "position_strong",
+      "factor_a": "scale",
+      "factor_b": "pos_y",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "position_strong",
+      "factor_a": "pos_x",
+      "factor_b": "pos_y",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.2333984375,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "orientation_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "wall_hue",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "orientation_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "orientation_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "scale",
+      "in_realized_family": false,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": null,
+      "p_raw": 0.2333984375,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "orientation_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "orientation_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "orientation_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "scale",
+      "in_realized_family": false,
+      "p_holm_designed": 0.04150390625,
+      "p_holm_realized": null,
+      "p_raw": 0.00244140625,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "orientation_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "orientation_strong",
+      "factor_a": "object_hue",
+      "factor_b": "scale",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "orientation_strong",
+      "factor_a": "object_hue",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "orientation_strong",
+      "factor_a": "scale",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.4443359375,
+      "p_holm_realized": null,
+      "p_raw": 0.0341796875,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "wall_hue",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "scale_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "scale",
+      "in_realized_family": false,
+      "p_holm_designed": 0.4443359375,
+      "p_holm_realized": null,
+      "p_raw": 0.0341796875,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "scale",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "object_hue",
+      "factor_b": "scale",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "object_hue",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "scale_strong",
+      "factor_a": "scale",
+      "factor_b": "orientation",
+      "in_realized_family": false,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": null,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "control_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "wall_hue",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "control_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.791015625,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "control_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "scale",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.38037109375,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "control_strong",
+      "factor_a": "floor_hue",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 0.2939453125,
+      "p_holm_realized": 0.23095703125,
+      "p_raw": 0.02099609375,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "control_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "object_hue",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "control_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "scale",
+      "in_realized_family": true,
+      "p_holm_designed": 0.04150390625,
+      "p_holm_realized": 0.03173828125,
+      "p_raw": 0.00244140625,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": true,
+      "cell": "control_strong",
+      "factor_a": "wall_hue",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 0.02099609375,
+      "p_holm_realized": 0.01123046875,
+      "p_raw": 0.00048828125,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "control_strong",
+      "factor_a": "object_hue",
+      "factor_b": "scale",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.85009765625,
+      "survives_designed": false
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "control_strong",
+      "factor_a": "object_hue",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 0.04150390625,
+      "p_holm_realized": 0.03173828125,
+      "p_raw": 0.00244140625,
+      "survives_designed": true
+    },
+    {
+      "at_wilcoxon_floor": false,
+      "cell": "control_strong",
+      "factor_a": "scale",
+      "factor_b": "orientation",
+      "in_realized_family": true,
+      "p_holm_designed": 1.0,
+      "p_holm_realized": 1.0,
+      "p_raw": 0.38037109375,
+      "survives_designed": false
+    }
+  ],
+  "wilcoxon_floor_two_sided": 0.00048828125
+}

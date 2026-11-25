@@ -1,0 +1,32 @@
+panel,series,factor,var_fraction,n_seeds,m_total_mean,m_total_min,m_total_max,verdicts
+Shapes3D,random encoder (null),floor_hue,0.99,12,4.8891,2.97,6.1175,moves=12
+Shapes3D,random encoder (null),wall_hue,0.99,12,6.0138,4.0741,7.6505,moves=12
+Shapes3D,random encoder (null),object_hue,0.99,12,4.3951,2.34,5.8764,moves=12
+Shapes3D,random encoder (null),scale,0.99,12,3.147,1.1795,5.2681,moves=12
+Shapes3D,random encoder (null),shape,0.99,12,4.6757,2.1009,6.9629,moves=12
+Shapes3D,random encoder (null),orientation,0.99,12,2.1099,0.8158,3.3487,moves=11; unadjudicated=1
+Shapes3D,control_strong,floor_hue,0.99,12,17.6266,16.0932,19.0176,moves=12
+Shapes3D,control_strong,wall_hue,0.99,12,23.6087,23.0705,24.0207,moves=12
+Shapes3D,control_strong,object_hue,0.99,12,21.0975,20.4705,21.9234,moves=12
+Shapes3D,control_strong,scale,0.99,12,5.1557,4.7297,5.5078,moves=12
+Shapes3D,control_strong,shape,0.99,12,18.0419,17.2771,18.7208,moves=12
+Shapes3D,control_strong,orientation,0.99,12,4.1244,3.3915,5.0182,moves=12
+Shapes3D,color_strong,floor_hue,0.99,12,0.0597,0.0487,0.0728,eps_destroyed=12
+Shapes3D,color_strong,wall_hue,0.99,12,0.0766,0.0665,0.0884,eps_destroyed=7; unadjudicated=5
+Shapes3D,color_strong,object_hue,0.99,12,0.0617,0.0522,0.0734,eps_destroyed=12
+Shapes3D,color_strong,scale,0.99,12,11.6974,10.5537,13.2515,moves=12
+Shapes3D,color_strong,shape,0.99,12,12.3685,11.1808,13.8319,moves=12
+Shapes3D,color_strong,orientation,0.99,12,8.5432,7.2299,10.2654,moves=12
+Shapes3D,color_strong (sensitivity),floor_hue,0.999,12,0.2571,0.2282,0.2832,unadjudicated=12
+Shapes3D,color_strong (sensitivity),wall_hue,0.999,12,0.3298,0.2881,0.3771,unadjudicated=12
+Shapes3D,color_strong (sensitivity),object_hue,0.999,12,0.2576,0.229,0.2848,unadjudicated=12
+dSprites,random encoder (null),shape,0.99,12,8.0344,4.9195,10.8362,moves=12
+dSprites,random encoder (null),scale,0.99,12,5.76,2.8123,8.662,moves=12
+dSprites,random encoder (null),orientation,0.99,12,4.3834,1.6748,6.9298,moves=12
+dSprites,random encoder (null),pos_x,0.99,12,5.1255,2.297,7.6756,moves=12
+dSprites,random encoder (null),pos_y,0.99,12,5.1388,2.2824,8.0204,moves=12
+dSprites,position_strong,shape,0.99,12,18.0423,17.5169,18.3752,moves=12
+dSprites,position_strong,scale,0.99,12,15.5806,14.7195,16.0537,moves=12
+dSprites,position_strong,orientation,0.99,12,16.573,15.6924,17.0504,moves=12
+dSprites,position_strong,pos_x,0.99,12,2.4114,1.9774,2.6888,moves=12
+dSprites,position_strong,pos_y,0.99,12,2.3853,1.9575,2.6775,moves=12

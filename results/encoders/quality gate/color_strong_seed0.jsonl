@@ -1,0 +1,114 @@
+{
+  "device": "cuda",
+  "config": "configs/run/color_strong.yaml",
+  "table": {
+    "random": {
+      "floor_hue": {
+        "recoverability": 0.988969087600708,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "wall_hue": {
+        "recoverability": 0.9892357587814331,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "object_hue": {
+        "recoverability": 0.9274975657463074,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "scale": {
+        "recoverability": 0.9121686220169067,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "shape": {
+        "recoverability": 0.9081777777777779,
+        "raw_test_acc": 0.9311333333333334,
+        "chance": 0.25,
+        "best_hparam": 1.0,
+        "metric": "norm_acc"
+      },
+      "orientation": {
+        "recoverability": 0.980368435382843,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      }
+    },
+    "simclr": {
+      "floor_hue": {
+        "recoverability": 0.24784785509109497,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "wall_hue": {
+        "recoverability": 0.17833280563354492,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "object_hue": {
+        "recoverability": 0.006353557109832764,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "scale": {
+        "recoverability": 0.9999759197235107,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "shape": {
+        "recoverability": 1.0,
+        "raw_test_acc": 1.0,
+        "chance": 0.25,
+        "best_hparam": 0.1,
+        "metric": "norm_acc"
+      },
+      "orientation": {
+        "recoverability": 0.9999788403511047,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      }
+    }
+  },
+  "gate": {
+    "passed": true,
+    "structure_ok": true,
+    "structure_factor": "shape",
+    "structure_recoverability": 1.0,
+    "structure_random": 0.9081777777777779,
+    "invariance_ok": true,
+    "invariant_factors": [
+      "floor_hue",
+      "wall_hue",
+      "object_hue"
+    ],
+    "n_invariant": 3,
+    "criteria": {
+      "shape_abs_min": 0.9,
+      "structure_margin": 0.02,
+      "invariance_margin": 0.02,
+      "min_invariant_factors": 2
+    },
+    "repro_ok": true,
+    "passed_overall": true
+  },
+  "reproducibility": {
+    "shape_recoverability_by_ckpt": {
+      "results/encoders/color_strong_seed0/backbone.pt": 1.0
+    },
+    "shape_spread": 0.0,
+    "n_seeds": 1,
+    "repro_ok": true
+  }
+}

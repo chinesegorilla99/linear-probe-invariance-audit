@@ -1,0 +1,13 @@
+{
+  "run_id": "standard_strong_seed1",
+  "seed": 1,
+  "final_loss": 4.9874601625416375,
+  "nan_aborted": false,
+  "diagnostics": {
+    "feat_std": 0.0782819539308548,
+    "eff_rank": 109.9640884399414,
+    "alignment": 0.010669078677892685,
+    "uniformity": -3.6909852027893066
+  },
+  "epochs_run": 100
+}

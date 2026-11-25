@@ -1,0 +1,2042 @@
+{
+  "alpha": 0.05,
+  "cells": [
+    "color_strong",
+    "control_strong",
+    "position_strong"
+  ],
+  "missing_expected_cells": [],
+  "provisional": false,
+  "holm_family": {
+    "designed_strong_cells": [
+      "color_strong",
+      "position_strong",
+      "orientation_strong",
+      "scale_strong",
+      "control_strong"
+    ],
+    "realized_cells": [
+      "color_strong",
+      "control_strong",
+      "position_strong"
+    ],
+    "missing_expected_cells": [],
+    "pre_verdict_exclusions": {
+      "scale_strong": "Amendment A7 (2026-08-07): the bounded (0.75, 1.25) retrain scored 0/12 on the \u00a75 shape gate (linear-rung anchor 0.464-0.507 vs a 0.90 threshold and a ~0.829 floor), which is the <6/12 branch of the rule pre-committed in A6(d) on 2026-07-28, BEFORE the retrain ran. The anchor deficit does not close with probe capacity (0.483 -> 0.609 against a floor rising 0.829 -> 0.986), so the gate reads FAIL-DESTROYED under A8(b) and the exclusion is gate-licensed (arm-level, pre-verdict, gate orthogonal to H1-H4). A7(d) freezes the realized grid at three cells: no further cell may be excluded for any reason.",
+      "orientation_strong": "Amendment A5 (2026-07-28): 2D in-plane rotation (SO(2)) is construct-invalid for the Shapes3D 3D-azimuth (SO(3)) factor and drives the shape anchor below the random-encoder floor, so no \u00a75-gate-passing encoder exists (arm-level exclusion, pre-verdict, gate orthogonal to H1-H4).",
+      "(dsprites, orientation)": "Amendment A3 (2026-07-15): non-identifiable readout for symmetric shapes; excluded from confirmatory families everywhere, retained as a tagged diagnostic (readout-level exclusion, pre-verdict)."
+    },
+    "note": "Holm is applied over the realized factor x condition family; every cell/readout removed from it was removed pre-verdict on a shape-gate or construct/identifiability basis (logged above), never to lift power on survivors \u2014 a disclosed consequence of dropping untrustworthy cells, not a post-hoc power adjustment."
+  },
+  "headline_flip_count": {
+    "two_sided": {
+      "n_flips": 1,
+      "flips": [
+        {
+          "cell": "control_strong",
+          "factor": "shape"
+        }
+      ]
+    },
+    "two_sided_excl_null_saturated": {
+      "n_flips": 1,
+      "flips": [
+        {
+          "cell": "control_strong",
+          "factor": "shape"
+        }
+      ]
+    },
+    "primary": {
+      "n_flips": 0,
+      "flips": []
+    },
+    "fixed_0.05": {
+      "n_flips": 0,
+      "flips": []
+    },
+    "primary_excl_null_saturated": {
+      "n_flips": 0,
+      "flips": []
+    },
+    "fixed_0.05_excl_null_saturated": {
+      "n_flips": 0,
+      "flips": []
+    },
+    "headline_for_claims": {
+      "variant": "two_sided_excl_null_saturated",
+      "n_flips": 1,
+      "note": "A10 \u00a7c: the flip count quoted in prose is the TWO-SIDED deficit flip (suppressed at the linear rung, recovered at the top), with the A6 null-saturation exclusion still applied. The frozen one-sided flip variants (primary epsilon_G and fixed 0.05, each all-factor and saturation-excluded) are co-reported as sensitivities. Quote them together, never one alone."
+    },
+    "uncertainty": {
+      "two_sided": {
+        "n_flips_mean": 0.196,
+        "n_flips_ci95": [
+          0.0,
+          1.0
+        ],
+        "note": "seed bootstrap at fixed epsilon; threshold uncertainty is carried by the epsilon_G diagnostics"
+      },
+      "two_sided_excl_null_saturated": {
+        "n_flips_mean": 0.196,
+        "n_flips_ci95": [
+          0.0,
+          1.0
+        ],
+        "note": "seed bootstrap at fixed epsilon; threshold uncertainty is carried by the epsilon_G diagnostics"
+      },
+      "primary": {
+        "n_flips_mean": 0.0,
+        "n_flips_ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "seed bootstrap at fixed epsilon; threshold uncertainty is carried by the epsilon_G diagnostics"
+      },
+      "fixed_0.05": {
+        "n_flips_mean": 0.0,
+        "n_flips_ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "seed bootstrap at fixed epsilon; threshold uncertainty is carried by the epsilon_G diagnostics"
+      },
+      "primary_excl_null_saturated": {
+        "n_flips_mean": 0.0,
+        "n_flips_ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "seed bootstrap at fixed epsilon; threshold uncertainty is carried by the epsilon_G diagnostics"
+      },
+      "fixed_0.05_excl_null_saturated": {
+        "n_flips_mean": 0.0,
+        "n_flips_ci95": [
+          0.0,
+          0.0
+        ],
+        "note": "seed bootstrap at fixed epsilon; threshold uncertainty is carried by the epsilon_G diagnostics"
+      }
+    }
+  },
+  "verdict_table": [
+    {
+      "cell": "color_strong",
+      "factor": "floor_hue",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "color_strong",
+      "factor": "wall_hue",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "color_strong",
+      "factor": "object_hue",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "color_strong",
+      "factor": "scale",
+      "case_linear": "recovered",
+      "case_top": "recovered",
+      "flip_two_sided": false,
+      "verdict": "recovered_at_all_capacities",
+      "case_linear_frozen": "genuine",
+      "case_top_frozen": "genuine",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "recovered_at_all_capacities",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "color_strong",
+      "factor": "shape",
+      "case_linear": "recovered",
+      "case_top": "recovered",
+      "flip_two_sided": false,
+      "verdict": "recovered_at_all_capacities",
+      "case_linear_frozen": "dead_zone",
+      "case_top_frozen": "dead_zone",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "inconclusive_probe_driven",
+      "diagnostic_only": false,
+      "null_saturated": false
+    },
+    {
+      "cell": "color_strong",
+      "factor": "orientation",
+      "case_linear": "recovered",
+      "case_top": "recovered",
+      "flip_two_sided": false,
+      "verdict": "recovered_at_all_capacities",
+      "case_linear_frozen": "genuine",
+      "case_top_frozen": "genuine",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "recovered_at_all_capacities",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "control_strong",
+      "factor": "floor_hue",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "control_strong",
+      "factor": "wall_hue",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "control_strong",
+      "factor": "object_hue",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "control_strong",
+      "factor": "scale",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "control_strong",
+      "factor": "shape",
+      "case_linear": "suppressed",
+      "case_top": "recovered",
+      "flip_two_sided": true,
+      "verdict": "linear_invariance_artifact",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": false
+    },
+    {
+      "cell": "control_strong",
+      "factor": "orientation",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "position_strong",
+      "factor": "shape",
+      "case_linear": "recovered",
+      "case_top": "recovered",
+      "flip_two_sided": false,
+      "verdict": "recovered_at_all_capacities",
+      "case_linear_frozen": "dead_zone",
+      "case_top_frozen": "genuine",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "inconclusive_probe_driven",
+      "diagnostic_only": false,
+      "null_saturated": false
+    },
+    {
+      "cell": "position_strong",
+      "factor": "scale",
+      "case_linear": "recovered",
+      "case_top": "recovered",
+      "flip_two_sided": false,
+      "verdict": "recovered_at_all_capacities",
+      "case_linear_frozen": "genuine",
+      "case_top_frozen": "genuine",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "recovered_at_all_capacities",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "position_strong",
+      "factor": "orientation",
+      "case_linear": "recovered",
+      "case_top": "recovered",
+      "flip_two_sided": false,
+      "verdict": "recovered_at_all_capacities",
+      "case_linear_frozen": "dead_zone",
+      "case_top_frozen": "dead_zone",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "inconclusive_probe_driven",
+      "diagnostic_only": true,
+      "null_saturated": false
+    },
+    {
+      "cell": "position_strong",
+      "factor": "pos_x",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    },
+    {
+      "cell": "position_strong",
+      "factor": "pos_y",
+      "case_linear": "suppressed",
+      "case_top": "suppressed",
+      "flip_two_sided": false,
+      "verdict": "suppressed_across_ladder",
+      "case_linear_frozen": "suppressed",
+      "case_top_frozen": "suppressed",
+      "flip_primary": false,
+      "flip_fixed_0.05": false,
+      "verdict_frozen": "invariant_across_ladder",
+      "diagnostic_only": false,
+      "null_saturated": true
+    }
+  ],
+  "headline_contrast": {
+    "object_hue_color": "suppressed_across_ladder",
+    "position_crop": [
+      "suppressed_across_ladder",
+      "suppressed_across_ladder"
+    ],
+    "object_hue_color_frozen": "invariant_across_ladder",
+    "position_crop_frozen": [
+      "invariant_across_ladder",
+      "invariant_across_ladder"
+    ],
+    "complete": true
+  },
+  "hypotheses": {
+    "H1": {
+      "statement": "G rises materially above the linear rung for >=1 factor",
+      "family": "factor x condition cells (Holm on supporting Wilcoxon only; the confirm rule is the CI conjunction of prereg \u00a76 H1)",
+      "confirmed_cells_factors": [
+        [
+          "control_strong",
+          "floor_hue"
+        ],
+        [
+          "control_strong",
+          "wall_hue"
+        ],
+        [
+          "control_strong",
+          "object_hue"
+        ],
+        [
+          "control_strong",
+          "scale"
+        ],
+        [
+          "control_strong",
+          "orientation"
+        ],
+        [
+          "position_strong",
+          "pos_x"
+        ],
+        [
+          "position_strong",
+          "pos_y"
+        ]
+      ],
+      "confirmed_fixed_0.05": [
+        [
+          "control_strong",
+          "floor_hue"
+        ],
+        [
+          "control_strong",
+          "wall_hue"
+        ],
+        [
+          "control_strong",
+          "object_hue"
+        ],
+        [
+          "control_strong",
+          "scale"
+        ],
+        [
+          "control_strong",
+          "orientation"
+        ],
+        [
+          "position_strong",
+          "pos_x"
+        ],
+        [
+          "position_strong",
+          "pos_y"
+        ]
+      ],
+      "per_factor": [
+        {
+          "cell": "color_strong",
+          "factor": "floor_hue",
+          "delta_g": -0.021436115105946858,
+          "delta_g_ci": [
+            -0.0785683948546648,
+            0.043506714204947027
+          ],
+          "delta_g_per_seed": [
+            -0.08702433109283447,
+            -0.14897775650024414,
+            -0.10308486223220825,
+            0.1844090223312378,
+            -0.023164868354797363,
+            -0.09870344400405884,
+            -0.06785720586776733,
+            -0.029822051525115967,
+            -0.11467403173446655,
+            0.1185464859008789,
+            -0.05607295036315918,
+            0.1691926121711731
+          ],
+          "epsilon_delta_g": 0.0340117037296295,
+          "s_top_ci_lo": 0.0983881783982118,
+          "p_wilcoxon_greater": 0.71533203125,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": 1.0543257345755894,
+          "deficit_top": 1.0757618496815364,
+          "closure_fraction_kappa": -0.020331586722177386,
+          "suppressed_at_linear": true,
+          "closure_reading": "does not close (destroyed)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "factor": "wall_hue",
+          "delta_g": -0.06848463912804921,
+          "delta_g_ci": [
+            -0.1024515355626742,
+            -0.03362183831632137
+          ],
+          "delta_g_per_seed": [
+            -0.0674557089805603,
+            -0.05788218975067139,
+            -0.1531435251235962,
+            -0.050924479961395264,
+            0.01453310251235962,
+            -0.06700360774993896,
+            -0.17039555311203003,
+            -0.10512125492095947,
+            0.03678309917449951,
+            -0.0710340142250061,
+            0.010781407356262207,
+            -0.1409529447555542
+          ],
+          "epsilon_delta_g": 0.023321935534477235,
+          "s_top_ci_lo": 0.034693164626757304,
+          "p_wilcoxon_greater": 0.99755859375,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": 1.0690534263849258,
+          "deficit_top": 1.137538065512975,
+          "closure_fraction_kappa": -0.06406100709076301,
+          "suppressed_at_linear": true,
+          "closure_reading": "does not close (destroyed)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "factor": "object_hue",
+          "delta_g": -0.24098492165406546,
+          "delta_g_ci": [
+            -0.25753585795561473,
+            -0.22688551420966785
+          ],
+          "delta_g_per_seed": [
+            -0.21992069482803345,
+            -0.3052831292152405,
+            -0.2071358561515808,
+            -0.23811691999435425,
+            -0.22146469354629517,
+            -0.22668707370758057,
+            -0.2713612914085388,
+            -0.23900556564331055,
+            -0.2030467391014099,
+            -0.2441999912261963,
+            -0.2561776041984558,
+            -0.2594195008277893
+          ],
+          "epsilon_delta_g": 0.07106276750564573,
+          "s_top_ci_lo": 0.009497322142124176,
+          "p_wilcoxon_greater": 1.0,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": 0.9892937988042831,
+          "deficit_top": 1.2302787204583485,
+          "closure_fraction_kappa": -0.2435928759943038,
+          "suppressed_at_linear": true,
+          "closure_reading": "does not close (destroyed)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "factor": "scale",
+          "delta_g": -0.07976816594600677,
+          "delta_g_ci": [
+            -0.0847441321859757,
+            -0.07444829332331818
+          ],
+          "delta_g_per_seed": [
+            -0.060695767402648926,
+            -0.0915873646736145,
+            -0.07312256097793579,
+            -0.06982874870300293,
+            -0.0770714282989502,
+            -0.09477251768112183,
+            -0.08070647716522217,
+            -0.09075087308883667,
+            -0.08226633071899414,
+            -0.07898509502410889,
+            -0.07768470048904419,
+            -0.07974612712860107
+          ],
+          "epsilon_delta_g": 0.024290935695171337,
+          "s_top_ci_lo": 1.5510618686676027e-05,
+          "p_wilcoxon_greater": 1.0,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": -0.1457382986942927,
+          "deficit_top": -0.06597013274828593,
+          "closure_fraction_kappa": NaN,
+          "suppressed_at_linear": false,
+          "closure_reading": "undefined (no deficit at the linear rung to close)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "factor": "shape",
+          "delta_g": -0.03508517146110535,
+          "delta_g_ci": [
+            -0.040978589778145155,
+            -0.02897397838532925
+          ],
+          "delta_g_per_seed": [
+            -0.037022173404693604,
+            -0.04631108045578003,
+            -0.02062225341796875,
+            -0.014755547046661377,
+            -0.036044418811798096,
+            -0.04871112108230591,
+            -0.047777771949768066,
+            -0.02395552396774292,
+            -0.029555559158325195,
+            -0.03653329610824585,
+            -0.03297775983810425,
+            -0.04675555229187012
+          ],
+          "epsilon_delta_g": 0.030602200329303723,
+          "s_top_ci_lo": 0.0,
+          "p_wilcoxon_greater": 1.0,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": -0.21098147829373678,
+          "deficit_top": -0.17589630683263144,
+          "closure_fraction_kappa": NaN,
+          "suppressed_at_linear": false,
+          "closure_reading": "undefined (no deficit at the linear rung to close)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "factor": "orientation",
+          "delta_g": -0.020426784952481587,
+          "delta_g_ci": [
+            -0.02261648972829183,
+            -0.01841363174219926
+          ],
+          "delta_g_per_seed": [
+            -0.016617953777313232,
+            -0.027045607566833496,
+            -0.01729816198348999,
+            -0.021232783794403076,
+            -0.01724797487258911,
+            -0.023249149322509766,
+            -0.020953714847564697,
+            -0.01899784803390503,
+            -0.0173494815826416,
+            -0.01841837167739868,
+            -0.028344273567199707,
+            -0.018366098403930664
+          ],
+          "epsilon_delta_g": 0.010796241462230679,
+          "s_top_ci_lo": 2.3809199531873068e-05,
+          "p_wilcoxon_greater": 1.0,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": -0.0321747362613678,
+          "deficit_top": -0.01174795130888621,
+          "closure_fraction_kappa": NaN,
+          "suppressed_at_linear": false,
+          "closure_reading": "undefined (no deficit at the linear rung to close)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "control_strong",
+          "factor": "floor_hue",
+          "delta_g": 0.22436449925104776,
+          "delta_g_ci": [
+            0.2086195317407449,
+            0.2407725788652897
+          ],
+          "delta_g_per_seed": [
+            0.2386380434036255,
+            0.2495861053466797,
+            0.26629847288131714,
+            0.1788691282272339,
+            0.20030558109283447,
+            0.21743708848953247,
+            0.27810823917388916,
+            0.2084178328514099,
+            0.19437682628631592,
+            0.2196752429008484,
+            0.23838281631469727,
+            0.20227861404418945
+          ],
+          "epsilon_delta_g": 0.0340117037296295,
+          "s_top_ci_lo": 0.08658341926832994,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": true,
+          "confirmed": true,
+          "confirmed_fixed_0.05": true,
+          "deficit_linear": 0.2860391189654668,
+          "deficit_top": 0.061674619714419045,
+          "closure_fraction_kappa": 0.784383968397466,
+          "suppressed_at_linear": true,
+          "closure_reading": "closes with capacity (inaccessible, not absent)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 0.00390625
+        },
+        {
+          "cell": "control_strong",
+          "factor": "wall_hue",
+          "delta_g": 0.11526013910770416,
+          "delta_g_ci": [
+            0.10081631392240524,
+            0.13173994347453116
+          ],
+          "delta_g_per_seed": [
+            0.11197757720947266,
+            0.08564448356628418,
+            0.14015400409698486,
+            0.166459858417511,
+            0.09177827835083008,
+            0.10980981588363647,
+            0.07938146591186523,
+            0.09942364692687988,
+            0.15447747707366943,
+            0.09672069549560547,
+            0.10566955804824829,
+            0.1416248083114624
+          ],
+          "epsilon_delta_g": 0.023321935534477235,
+          "s_top_ci_lo": 0.0017491170515616735,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": true,
+          "confirmed": true,
+          "confirmed_fixed_0.05": true,
+          "deficit_linear": 0.1280108392238617,
+          "deficit_top": 0.012750700116157532,
+          "closure_fraction_kappa": 0.9003935901563814,
+          "suppressed_at_linear": true,
+          "closure_reading": "closes with capacity (inaccessible, not absent)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 0.00390625
+        },
+        {
+          "cell": "control_strong",
+          "factor": "object_hue",
+          "delta_g": 0.20453927914301553,
+          "delta_g_ci": [
+            0.1793033684293429,
+            0.22832025984923043
+          ],
+          "delta_g_per_seed": [
+            0.25369155406951904,
+            0.13038486242294312,
+            0.267856240272522,
+            0.22964614629745483,
+            0.19970375299453735,
+            0.22025662660598755,
+            0.1269683837890625,
+            0.16614657640457153,
+            0.24334555864334106,
+            0.17159134149551392,
+            0.23188912868499756,
+            0.21299117803573608
+          ],
+          "epsilon_delta_g": 0.07106276750564573,
+          "s_top_ci_lo": 0.041606020803252854,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": true,
+          "confirmed": true,
+          "confirmed_fixed_0.05": true,
+          "deficit_linear": 0.27550236880779266,
+          "deficit_top": 0.07096308966477712,
+          "closure_fraction_kappa": 0.7424229418721067,
+          "suppressed_at_linear": true,
+          "closure_reading": "closes with capacity (inaccessible, not absent)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 0.00390625
+        },
+        {
+          "cell": "control_strong",
+          "factor": "scale",
+          "delta_g": 0.20432849725087485,
+          "delta_g_ci": [
+            0.16719428474704426,
+            0.2374682834992806
+          ],
+          "delta_g_per_seed": [
+            0.23455500602722168,
+            0.19532662630081177,
+            0.1489412784576416,
+            0.2734965682029724,
+            0.19667285680770874,
+            0.2705495357513428,
+            0.2050929069519043,
+            0.041852593421936035,
+            0.155556321144104,
+            0.19447964429855347,
+            0.2625690698623657,
+            0.27284955978393555
+          ],
+          "epsilon_delta_g": 0.024290935695171337,
+          "s_top_ci_lo": 0.9165658295154571,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": false,
+          "confirmed": true,
+          "confirmed_fixed_0.05": true,
+          "deficit_linear": 0.5328402072191238,
+          "deficit_top": 0.328511709968249,
+          "closure_fraction_kappa": 0.38347049355989626,
+          "suppressed_at_linear": true,
+          "closure_reading": "partial closure",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 0.00390625
+        },
+        {
+          "cell": "control_strong",
+          "factor": "shape",
+          "delta_g": -0.006255542238553365,
+          "delta_g_ci": [
+            -0.01253998080889384,
+            0.0003379608194033254
+          ],
+          "delta_g_per_seed": [
+            0.0036000609397888184,
+            -0.01448887586593628,
+            0.000888824462890625,
+            0.01662224531173706,
+            -0.0021777749061584473,
+            -0.021777808666229248,
+            -0.023288846015930176,
+            0.0015111565589904785,
+            -0.00697779655456543,
+            -0.0059999823570251465,
+            -0.0028888583183288574,
+            -0.02008885145187378
+          ],
+          "epsilon_delta_g": 0.030602200329303723,
+          "s_top_ci_lo": -0.0009962918857733408,
+          "p_wilcoxon_greater": 0.96142578125,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": 0.0519703725973765,
+          "deficit_top": 0.05822591483592987,
+          "closure_fraction_kappa": -0.12036746950067378,
+          "suppressed_at_linear": true,
+          "closure_reading": "does not close (destroyed)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "control_strong",
+          "factor": "orientation",
+          "delta_g": 0.1682648460070292,
+          "delta_g_ci": [
+            0.13855633834997813,
+            0.199435040106376
+          ],
+          "delta_g_per_seed": [
+            0.19281291961669922,
+            0.09279555082321167,
+            0.2533012628555298,
+            0.20069992542266846,
+            0.1006324291229248,
+            0.15992647409439087,
+            0.1158410906791687,
+            0.11968618631362915,
+            0.2602282166481018,
+            0.14126110076904297,
+            0.1864599585533142,
+            0.19553303718566895
+          ],
+          "epsilon_delta_g": 0.010796241462230679,
+          "s_top_ci_lo": 1.192747699469328,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": true,
+          "confirmed": true,
+          "confirmed_fixed_0.05": true,
+          "deficit_linear": 0.21616903940836588,
+          "deficit_top": 0.04790419340133667,
+          "closure_fraction_kappa": 0.7783947528635651,
+          "suppressed_at_linear": true,
+          "closure_reading": "closes with capacity (inaccessible, not absent)",
+          "delta_g_upper_bias_a8e": 0.009925925925925783,
+          "p_wilcoxon_holm": 0.00390625
+        },
+        {
+          "cell": "position_strong",
+          "factor": "shape",
+          "delta_g": -0.3243291626373927,
+          "delta_g_ci": [
+            -0.33915948700159787,
+            -0.309774880670011
+          ],
+          "delta_g_per_seed": [
+            -0.3382999897003174,
+            -0.2728999853134155,
+            -0.32604995369911194,
+            -0.33149999380111694,
+            -0.28769999742507935,
+            -0.3250999450683594,
+            -0.32715001702308655,
+            -0.309300035238266,
+            -0.3736000657081604,
+            -0.32330000400543213,
+            -0.3197999596595764,
+            -0.35725000500679016
+          ],
+          "epsilon_delta_g": 0.06996247172355646,
+          "s_top_ci_lo": -3.333898882071177e-05,
+          "p_wilcoxon_greater": 1.0,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": -0.5213291694720587,
+          "deficit_top": -0.19700000683466592,
+          "closure_fraction_kappa": NaN,
+          "suppressed_at_linear": false,
+          "closure_reading": "undefined (no deficit at the linear rung to close)",
+          "delta_g_upper_bias_a8e": 0.011283333333333312,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "position_strong",
+          "factor": "scale",
+          "delta_g": -0.035419538617134094,
+          "delta_g_ci": [
+            -0.04356533388296763,
+            -0.028330683832367264
+          ],
+          "delta_g_per_seed": [
+            -0.02081364393234253,
+            -0.029267728328704834,
+            -0.039806067943573,
+            -0.021647632122039795,
+            -0.03676813840866089,
+            -0.02815800905227661,
+            -0.023366689682006836,
+            -0.022534608840942383,
+            -0.040858685970306396,
+            -0.0655013918876648,
+            -0.050377845764160156,
+            -0.04593402147293091
+          ],
+          "epsilon_delta_g": 0.03834323436021803,
+          "s_top_ci_lo": 0.018096494053800902,
+          "p_wilcoxon_greater": 1.0,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": -0.12134132285912831,
+          "deficit_top": -0.08592178424199422,
+          "closure_fraction_kappa": NaN,
+          "suppressed_at_linear": false,
+          "closure_reading": "undefined (no deficit at the linear rung to close)",
+          "delta_g_upper_bias_a8e": 0.011283333333333312,
+          "p_wilcoxon_holm": 1.0
+        },
+        {
+          "cell": "position_strong",
+          "factor": "orientation",
+          "delta_g": 0.21319646636644998,
+          "delta_g_ci": [
+            0.1936600661526124,
+            0.234353319555521
+          ],
+          "delta_g_per_seed": [
+            0.21254080533981323,
+            0.24200713634490967,
+            0.17643815279006958,
+            0.19186139106750488,
+            0.2808554768562317,
+            0.20230311155319214,
+            0.2712029218673706,
+            0.2188396453857422,
+            0.15718519687652588,
+            0.21454691886901855,
+            0.16391056776046753,
+            0.22666627168655396
+          ],
+          "epsilon_delta_g": 0.07743753492832184,
+          "s_top_ci_lo": -0.2494504113992055,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": false,
+          "confirmed": false,
+          "confirmed_fixed_0.05": false,
+          "deficit_linear": -0.2621339460213979,
+          "deficit_top": -0.4753304123878479,
+          "closure_fraction_kappa": NaN,
+          "suppressed_at_linear": false,
+          "closure_reading": "undefined (no deficit at the linear rung to close)",
+          "delta_g_upper_bias_a8e": 0.011283333333333312,
+          "diagnostic_only": true
+        },
+        {
+          "cell": "position_strong",
+          "factor": "pos_x",
+          "delta_g": 0.1344735026359558,
+          "delta_g_ci": [
+            0.11646615328888098,
+            0.15072962852815788
+          ],
+          "delta_g_per_seed": [
+            0.12173318862915039,
+            0.08376282453536987,
+            0.1120501160621643,
+            0.137457013130188,
+            0.17377638816833496,
+            0.15976887941360474,
+            0.08195638656616211,
+            0.15923911333084106,
+            0.17101573944091797,
+            0.16450107097625732,
+            0.14050841331481934,
+            0.10791289806365967
+          ],
+          "epsilon_delta_g": 0.015790367126464838,
+          "s_top_ci_lo": 0.9636145316064358,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": false,
+          "confirmed": true,
+          "confirmed_fixed_0.05": true,
+          "deficit_linear": 0.8190686603387197,
+          "deficit_top": 0.6845951577027639,
+          "closure_fraction_kappa": 0.16417854710781543,
+          "suppressed_at_linear": true,
+          "closure_reading": "partial closure",
+          "delta_g_upper_bias_a8e": 0.011283333333333312,
+          "p_wilcoxon_holm": 0.00390625
+        },
+        {
+          "cell": "position_strong",
+          "factor": "pos_y",
+          "delta_g": 0.11704915761947632,
+          "delta_g_ci": [
+            0.10110859237611293,
+            0.13452559237678846
+          ],
+          "delta_g_per_seed": [
+            0.13742011785507202,
+            0.11003273725509644,
+            0.15169841051101685,
+            0.08260053396224976,
+            0.15944814682006836,
+            0.15269190073013306,
+            0.08689838647842407,
+            0.09409844875335693,
+            0.14897501468658447,
+            0.08311861753463745,
+            0.08965688943862915,
+            0.10795068740844727
+          ],
+          "epsilon_delta_g": 0.01119811534881591,
+          "s_top_ci_lo": 0.8893958176175754,
+          "p_wilcoxon_greater": 0.000244140625,
+          "g_non_decreasing": false,
+          "confirmed": true,
+          "confirmed_fixed_0.05": true,
+          "deficit_linear": 0.7980749954779943,
+          "deficit_top": 0.681025837858518,
+          "closure_fraction_kappa": 0.14666435896713137,
+          "suppressed_at_linear": true,
+          "closure_reading": "partial closure",
+          "delta_g_upper_bias_a8e": 0.011283333333333312,
+          "p_wilcoxon_holm": 0.00390625
+        }
+      ],
+      "a8e_upper_bias_by_cell": {
+        "color_strong": {
+          "available": true,
+          "pin": [
+            "interpolation",
+            2000,
+            1000
+          ],
+          "source": "results/calibration/calibration_shapes3d.json",
+          "delta_g_upper_bias": 0.009925925925925783,
+          "linear_rung_ladder_adam": 0.7826962962962963,
+          "linear_rung_closed_form": 0.7926222222222221,
+          "n_seeds": 3,
+          "note": "A14 (g): upper bias on Delta_G in the H1-confirming direction. The Adam linear rung underfits the convex solver by this much at the pin; the 4000-step rows close it to ~0.001, so it is an optimizer-budget artifact, bounded, and stated with every Delta_G"
+        },
+        "control_strong": {
+          "available": true,
+          "pin": [
+            "interpolation",
+            2000,
+            1000
+          ],
+          "source": "results/calibration/calibration_shapes3d.json",
+          "delta_g_upper_bias": 0.009925925925925783,
+          "linear_rung_ladder_adam": 0.7826962962962963,
+          "linear_rung_closed_form": 0.7926222222222221,
+          "n_seeds": 3,
+          "note": "A14 (g): upper bias on Delta_G in the H1-confirming direction. The Adam linear rung underfits the convex solver by this much at the pin; the 4000-step rows close it to ~0.001, so it is an optimizer-budget artifact, bounded, and stated with every Delta_G"
+        },
+        "position_strong": {
+          "available": true,
+          "pin": [
+            "interpolation",
+            2000,
+            1000
+          ],
+          "source": "results/calibration/calibration_dsprites.json",
+          "delta_g_upper_bias": 0.011283333333333312,
+          "linear_rung_ladder_adam": 0.4598166666666667,
+          "linear_rung_closed_form": 0.4711,
+          "n_seeds": 3,
+          "note": "A14 (g): upper bias on Delta_G in the H1-confirming direction. The Adam linear rung underfits the convex solver by this much at the pin; the 4000-step rows close it to ~0.001, so it is an optimizer-budget artifact, bounded, and stated with every Delta_G"
+        }
+      },
+      "status": "confirmed"
+    },
+    "H2": {
+      "statement": "the capacity effect Delta_G differs across within-type factor pairs",
+      "family": "within-type factor pairs x condition cells (Holm)",
+      "significant_pairs": [
+        [
+          "color_strong",
+          "floor_hue",
+          "object_hue"
+        ],
+        [
+          "color_strong",
+          "wall_hue",
+          "object_hue"
+        ],
+        [
+          "color_strong",
+          "object_hue",
+          "scale"
+        ],
+        [
+          "color_strong",
+          "object_hue",
+          "orientation"
+        ],
+        [
+          "color_strong",
+          "scale",
+          "orientation"
+        ],
+        [
+          "control_strong",
+          "floor_hue",
+          "wall_hue"
+        ],
+        [
+          "control_strong",
+          "wall_hue",
+          "object_hue"
+        ],
+        [
+          "control_strong",
+          "wall_hue",
+          "scale"
+        ],
+        [
+          "control_strong",
+          "wall_hue",
+          "orientation"
+        ],
+        [
+          "control_strong",
+          "object_hue",
+          "orientation"
+        ],
+        [
+          "position_strong",
+          "scale",
+          "pos_x"
+        ],
+        [
+          "position_strong",
+          "scale",
+          "pos_y"
+        ]
+      ],
+      "pairs": [
+        {
+          "cell": "color_strong",
+          "pair": [
+            "floor_hue",
+            "wall_hue"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.047048524022102356,
+          "ci": [
+            -0.024691755945483843,
+            0.11934919866422807
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.38037109375,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "floor_hue",
+            "object_hue"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.2195488065481186,
+          "ci": [
+            0.15920435289541882,
+            0.2863412085920572
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "floor_hue",
+            "scale"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.058332050840059914,
+          "ci": [
+            0.0030797346184651057,
+            0.12210712110002826
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.26611328125,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "floor_hue",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.001009330153465271,
+          "ci": [
+            -0.05814362317323685,
+            0.0635129043211539
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.67724609375,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "wall_hue",
+            "object_hue"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.17250028252601624,
+          "ci": [
+            0.13691582170625527,
+            0.2074398803214232
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "wall_hue",
+            "scale"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.01128352681795756,
+          "ci": [
+            -0.022348746036489803,
+            0.046364313984910636
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.4697265625,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "wall_hue",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.04805785417556763,
+          "ci": [
+            -0.08228338286280631,
+            -0.012546243146061897
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.06396484375,
+          "p_holm_cell": 0.31982421875,
+          "p_holm": 0.6396484375
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "object_hue",
+            "scale"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.16121675570805868,
+          "ci": [
+            -0.1761856973171234,
+            -0.14779706646998722
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "object_hue",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.22055813670158386,
+          "ci": [
+            -0.23570591111977895,
+            -0.20752650871872902
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "color_strong",
+          "pair": [
+            "scale",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.059341380993525185,
+          "ci": [
+            -0.06384882566829522,
+            -0.05447247177362442
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "floor_hue",
+            "wall_hue"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.10910436014334361,
+          "ci": [
+            0.08117023929953576,
+            0.13418918301661809
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "floor_hue",
+            "object_hue"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.019825220108032227,
+          "ci": [
+            -0.010196519394715628,
+            0.054930687944094336
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.791015625,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "floor_hue",
+            "scale"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.020036002000172932,
+          "ci": [
+            -0.018421645835041998,
+            0.06064054196079571
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.38037109375,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "floor_hue",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.056099653244018555,
+          "ci": [
+            0.018948314835627873,
+            0.0917835786938667
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.02099609375,
+          "p_holm_cell": 0.10498046875,
+          "p_holm": 0.23095703125
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "wall_hue",
+            "object_hue"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.08927914003531139,
+          "ci": [
+            -0.10677959981064002,
+            -0.07215409042934579
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "wall_hue",
+            "scale"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.08906835814317067,
+          "ci": [
+            -0.12287314000229041,
+            -0.050824139018853506
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00244140625,
+          "p_holm_cell": 0.01708984375,
+          "p_holm": 0.03173828125
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "wall_hue",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.05300470689932505,
+          "ci": [
+            -0.07344310246407985,
+            -0.03459200238188109
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0048828125,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "object_hue",
+            "scale"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.0002107818921407064,
+          "ci": [
+            -0.036548568432529766,
+            0.039644883200526226
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.85009765625,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "object_hue",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.03627443313598633,
+          "ci": [
+            0.020086536556482317,
+            0.05222835205495357
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00244140625,
+          "p_holm_cell": 0.01708984375,
+          "p_holm": 0.03173828125
+        },
+        {
+          "cell": "control_strong",
+          "pair": [
+            "scale",
+            "orientation"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.03606365124384562,
+          "ci": [
+            -0.010297613963484763,
+            0.07688551718990007
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.38037109375,
+          "p_holm_cell": 1.0,
+          "p_holm": 1.0
+        },
+        {
+          "cell": "position_strong",
+          "pair": [
+            "scale",
+            "pos_x"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.1698930412530899,
+          "ci": [
+            -0.18999333170553048,
+            -0.14859923782447973
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0029296875,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "position_strong",
+          "pair": [
+            "scale",
+            "pos_y"
+          ],
+          "kind": "continuous",
+          "mean_diff": -0.1524686962366104,
+          "ci": [
+            -0.16946208613614241,
+            -0.1353508811444044
+          ],
+          "ci_excludes_0": true,
+          "p_raw": 0.00048828125,
+          "p_holm_cell": 0.0029296875,
+          "p_holm": 0.01123046875
+        },
+        {
+          "cell": "position_strong",
+          "pair": [
+            "pos_x",
+            "pos_y"
+          ],
+          "kind": "continuous",
+          "mean_diff": 0.017424345016479492,
+          "ci": [
+            -0.003129046161969503,
+            0.037189262981216095
+          ],
+          "ci_excludes_0": false,
+          "p_raw": 0.2333984375,
+          "p_holm_cell": 0.2333984375,
+          "p_holm": 1.0
+        }
+      ],
+      "status": "confirmed",
+      "note": "R^2 and normalized-accuracy factors are never pooled (FIX 1); CI-excludes-0 co-reported per pair"
+    },
+    "H3": {
+      "statement": "some NON-null-saturated factor stays epsilon-invariant (SUPPRESSED, D > epsilon_D) at every capacity",
+      "confirmed_cells_factors": [],
+      "invariant_but_null_saturated": [
+        [
+          "color_strong",
+          "floor_hue"
+        ],
+        [
+          "color_strong",
+          "wall_hue"
+        ],
+        [
+          "color_strong",
+          "object_hue"
+        ],
+        [
+          "control_strong",
+          "floor_hue"
+        ],
+        [
+          "control_strong",
+          "wall_hue"
+        ],
+        [
+          "control_strong",
+          "object_hue"
+        ],
+        [
+          "control_strong",
+          "scale"
+        ],
+        [
+          "control_strong",
+          "orientation"
+        ],
+        [
+          "position_strong",
+          "pos_x"
+        ],
+        [
+          "position_strong",
+          "pos_y"
+        ]
+      ],
+      "status": "refuted",
+      "confirmed_cells_factors_frozen": [
+        [
+          "control_strong",
+          "shape"
+        ]
+      ],
+      "invariant_but_null_saturated_frozen": [
+        [
+          "color_strong",
+          "floor_hue"
+        ],
+        [
+          "color_strong",
+          "wall_hue"
+        ],
+        [
+          "color_strong",
+          "object_hue"
+        ],
+        [
+          "control_strong",
+          "floor_hue"
+        ],
+        [
+          "control_strong",
+          "wall_hue"
+        ],
+        [
+          "control_strong",
+          "object_hue"
+        ],
+        [
+          "control_strong",
+          "scale"
+        ],
+        [
+          "control_strong",
+          "orientation"
+        ],
+        [
+          "position_strong",
+          "pos_x"
+        ],
+        [
+          "position_strong",
+          "pos_y"
+        ]
+      ],
+      "status_frozen": "confirmed",
+      "confirmed_fixed_0.05": [
+        [
+          "control_strong",
+          "shape"
+        ]
+      ],
+      "note": "A10 \u00a7c primary: epsilon-invariance requires a training-induced deficit above the random-vs-random null at every rung; a readout sitting AT the untrained floor is 'recovered', not invariant. A6 null-saturation gate applied unchanged; the frozen one-sided rule and its suppressed / noise-band sub-cases are co-reported"
+    },
+    "H4": {
+      "statement": "invariance concentrates in the projector (test of Cosentino et al. 2022)",
+      "family": "targeted factor x rung x condition cells (Holm)",
+      "sign_component": {
+        "status": "confirmed",
+        "significant": [
+          [
+            "color_strong",
+            "floor_hue",
+            "mlp_small"
+          ],
+          [
+            "color_strong",
+            "floor_hue",
+            "mlp_large"
+          ],
+          [
+            "color_strong",
+            "floor_hue",
+            "mlp_deep"
+          ],
+          [
+            "color_strong",
+            "wall_hue",
+            "mlp_small"
+          ],
+          [
+            "color_strong",
+            "wall_hue",
+            "mlp_large"
+          ],
+          [
+            "color_strong",
+            "wall_hue",
+            "mlp_deep"
+          ],
+          [
+            "position_strong",
+            "pos_x",
+            "linear"
+          ],
+          [
+            "position_strong",
+            "pos_x",
+            "mlp_small"
+          ],
+          [
+            "position_strong",
+            "pos_x",
+            "mlp_large"
+          ],
+          [
+            "position_strong",
+            "pos_x",
+            "mlp_deep"
+          ],
+          [
+            "position_strong",
+            "pos_y",
+            "linear"
+          ],
+          [
+            "position_strong",
+            "pos_y",
+            "mlp_small"
+          ],
+          [
+            "position_strong",
+            "pos_y",
+            "mlp_large"
+          ],
+          [
+            "position_strong",
+            "pos_y",
+            "mlp_deep"
+          ]
+        ],
+        "tests": [
+          {
+            "cell": "color_strong",
+            "factor": "floor_hue",
+            "rung": "linear",
+            "mean_diff": -0.10894154012203217,
+            "ci": [
+              -0.12751255432764688,
+              -0.08985014595091344
+            ],
+            "p_raw": 1.0,
+            "p_holm_cell": 1.0,
+            "p_holm": 1.0
+          },
+          {
+            "cell": "color_strong",
+            "factor": "floor_hue",
+            "rung": "mlp_small",
+            "mean_diff": 0.14881584544976553,
+            "ci": [
+              0.09399047655363878,
+              0.20658841604987777
+            ],
+            "p_raw": 0.00048828125,
+            "p_holm_cell": 0.00439453125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "color_strong",
+            "factor": "floor_hue",
+            "rung": "mlp_large",
+            "mean_diff": 0.14622541765371957,
+            "ci": [
+              0.09383678672214349,
+              0.20482528433203692
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.0029296875,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "color_strong",
+            "factor": "floor_hue",
+            "rung": "mlp_deep",
+            "mean_diff": 0.13940481344858804,
+            "ci": [
+              0.08089324807127317,
+              0.20606299353142576
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.0029296875,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "color_strong",
+            "factor": "wall_hue",
+            "rung": "linear",
+            "mean_diff": -0.09784833590189616,
+            "ci": [
+              -0.10737667369345824,
+              -0.08650302278498809
+            ],
+            "p_raw": 1.0,
+            "p_holm_cell": 1.0,
+            "p_holm": 1.0
+          },
+          {
+            "cell": "color_strong",
+            "factor": "wall_hue",
+            "rung": "mlp_small",
+            "mean_diff": 0.11466898024082184,
+            "ci": [
+              0.06762753625710806,
+              0.16470232668022314
+            ],
+            "p_raw": 0.001220703125,
+            "p_holm_cell": 0.009765625,
+            "p_holm": 0.009765625
+          },
+          {
+            "cell": "color_strong",
+            "factor": "wall_hue",
+            "rung": "mlp_large",
+            "mean_diff": 0.11305047074953715,
+            "ci": [
+              0.06561655600865682,
+              0.16469428477187953
+            ],
+            "p_raw": 0.00244140625,
+            "p_holm_cell": 0.01708984375,
+            "p_holm": 0.01708984375
+          },
+          {
+            "cell": "color_strong",
+            "factor": "wall_hue",
+            "rung": "mlp_deep",
+            "mean_diff": 0.1202676792939504,
+            "ci": [
+              0.0820300625016292,
+              0.15917396371563275
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.0029296875,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "color_strong",
+            "factor": "object_hue",
+            "rung": "linear",
+            "mean_diff": -0.23686280846595764,
+            "ci": [
+              -0.25344274863600735,
+              -0.22106367001930874
+            ],
+            "p_raw": 1.0,
+            "p_holm_cell": 1.0,
+            "p_holm": 1.0
+          },
+          {
+            "cell": "color_strong",
+            "factor": "object_hue",
+            "rung": "mlp_small",
+            "mean_diff": -0.08979964752991994,
+            "ci": [
+              -0.10103916563093662,
+              -0.08021753057837486
+            ],
+            "p_raw": 1.0,
+            "p_holm_cell": 1.0,
+            "p_holm": 1.0
+          },
+          {
+            "cell": "color_strong",
+            "factor": "object_hue",
+            "rung": "mlp_large",
+            "mean_diff": -0.08765182892481486,
+            "ci": [
+              -0.09987635153035322,
+              -0.07725030407309533
+            ],
+            "p_raw": 1.0,
+            "p_holm_cell": 1.0,
+            "p_holm": 1.0
+          },
+          {
+            "cell": "color_strong",
+            "factor": "object_hue",
+            "rung": "mlp_deep",
+            "mean_diff": -0.0713858852783839,
+            "ci": [
+              -0.08093588923414549,
+              -0.0628905308743318
+            ],
+            "p_raw": 1.0,
+            "p_holm_cell": 1.0,
+            "p_holm": 1.0
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_x",
+            "rung": "linear",
+            "mean_diff": 0.1702372431755066,
+            "ci": [
+              0.14858040163914363,
+              0.19379614281157653
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_x",
+            "rung": "mlp_small",
+            "mean_diff": 0.6897925734519958,
+            "ci": [
+              0.6593505874276162,
+              0.717509554947416
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_x",
+            "rung": "mlp_large",
+            "mean_diff": 0.7175861746072769,
+            "ci": [
+              0.6872279984255633,
+              0.74368275826176
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_x",
+            "rung": "mlp_deep",
+            "mean_diff": 0.917490616440773,
+            "ci": [
+              0.8889391976098219,
+              0.9437385375301043
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_y",
+            "rung": "linear",
+            "mean_diff": 0.18792690833409628,
+            "ci": [
+              0.16684440275033316,
+              0.20883079854150613
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_y",
+            "rung": "mlp_small",
+            "mean_diff": 0.6998318880796432,
+            "ci": [
+              0.6788040249298016,
+              0.7266996486733357
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_y",
+            "rung": "mlp_large",
+            "mean_diff": 0.7266955822706223,
+            "ci": [
+              0.7027675489584605,
+              0.7551192765434582
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          },
+          {
+            "cell": "position_strong",
+            "factor": "pos_y",
+            "rung": "mlp_deep",
+            "mean_diff": 0.9414798219998678,
+            "ci": [
+              0.9200944614907106,
+              0.9622930074731509
+            ],
+            "p_raw": 0.000244140625,
+            "p_holm_cell": 0.001953125,
+            "p_holm": 0.0048828125
+          }
+        ]
+      },
+      "widening_component": {
+        "status": "not_testable",
+        "tests": [],
+        "note": "needs >=2 strengths of one condition with shared seeds"
+      },
+      "status": "partial",
+      "note": "single-strength grid (Amendment A1): the sign component is DESCRIPTIVE only; the prereg \u00a76 widening rule is not evaluable, so H4 is neither confirmed nor refuted"
+    }
+  },
+  "notes": [
+    "color_strong: Delta_G carries an A8 (e) upper bias of +0.0099 in the H1-confirming direction (A14 g); quote it wherever Delta_G is quoted",
+    "color_strong: null-saturated readouts ['floor_hue', 'wall_hue', 'object_hue', 'scale', 'orientation'] (random floor >= 0.9 at a flip endpoint, A4) \u2014 quote the saturation-excluded flip count alongside the primary",
+    "control_strong: control-aug: 12 encoder(s) below the shape gate RETAINED (gate exempt per Amendment A2); near-random recoverability is the baseline datum",
+    "control_strong: Delta_G carries an A8 (e) upper bias of +0.0099 in the H1-confirming direction (A14 g); quote it wherever Delta_G is quoted",
+    "control_strong: null-saturated readouts ['floor_hue', 'wall_hue', 'object_hue', 'scale', 'orientation'] (random floor >= 0.9 at a flip endpoint, A4) \u2014 quote the saturation-excluded flip count alongside the primary",
+    "position_strong: Delta_G carries an A8 (e) upper bias of +0.0113 in the H1-confirming direction (A14 g); quote it wherever Delta_G is quoted",
+    "position_strong: null-saturated readouts ['scale', 'pos_x', 'pos_y'] (random floor >= 0.9 at a flip endpoint, A4) \u2014 quote the saturation-excluded flip count alongside the primary",
+    "H3 (A6): 10 epsilon-invariant readout(s) ['color_strong:floor_hue', 'color_strong:wall_hue', 'color_strong:object_hue', 'control_strong:floor_hue', 'control_strong:wall_hue', 'control_strong:object_hue', 'control_strong:scale', 'control_strong:orientation', 'position_strong:pos_x', 'position_strong:pos_y'] are NULL-SATURATED and EXCLUDED from the genuine-invariance verdict as vacuous (random floor near ceiling; no headroom) \u2014 retained as diagnostics",
+    "H3 (A6, frozen sensitivity): 10 readout(s) ['color_strong:floor_hue', 'color_strong:wall_hue', 'color_strong:object_hue', 'control_strong:floor_hue', 'control_strong:wall_hue', 'control_strong:object_hue', 'control_strong:scale', 'control_strong:orientation', 'position_strong:pos_x', 'position_strong:pos_y'] are invariant under the frozen one-sided rule AND NULL-SATURATED \u2014 excluded from that sensitivity's confirmed set as vacuous (random floor near ceiling, no headroom for G to exceed epsilon_G)",
+    "H3 (A10 \u00a7c): 1 readout(s) ['control_strong:shape'] are invariant under the FROZEN one-sided rule but not under the two-sided primary \u2014 they sit at the untrained floor rather than below it, so they are 'recovered', not suppressed. Both readings are reported; the primary is the two-sided one",
+    "headline flip count (A10 \u00a7c): two-sided primary = 1, frozen one-sided sensitivity = 0; both are reported and any headline sentence quotes them together"
+  ]
+}

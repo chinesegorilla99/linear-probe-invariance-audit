@@ -1,0 +1,149 @@
+{
+  "device": "cuda",
+  "config": "configs/run/reference_cuda.yaml",
+  "table": {
+    "random": {
+      "floor_hue": {
+        "recoverability": 0.988969087600708,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "wall_hue": {
+        "recoverability": 0.9892357587814331,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "object_hue": {
+        "recoverability": 0.9274975657463074,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "scale": {
+        "recoverability": 0.9121686220169067,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "shape": {
+        "recoverability": 0.9081777777777779,
+        "raw_test_acc": 0.9311333333333334,
+        "chance": 0.25,
+        "best_hparam": 1.0,
+        "metric": "norm_acc"
+      },
+      "orientation": {
+        "recoverability": 0.980368435382843,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      }
+    },
+    "simclr": {
+      "floor_hue": {
+        "recoverability": 0.8191792964935303,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "wall_hue": {
+        "recoverability": 0.903327226638794,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "object_hue": {
+        "recoverability": 0.6591836810112,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "scale": {
+        "recoverability": 0.995520830154419,
+        "raw_test_acc": NaN,
+        "best_hparam": 1.0,
+        "metric": "r2"
+      },
+      "shape": {
+        "recoverability": 0.9986666666666667,
+        "raw_test_acc": 0.999,
+        "chance": 0.25,
+        "best_hparam": 1.0,
+        "metric": "norm_acc"
+      },
+      "orientation": {
+        "recoverability": 0.852968692779541,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      }
+    },
+    "supervised": {
+      "floor_hue": {
+        "recoverability": 0.9979189038276672,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "wall_hue": {
+        "recoverability": 0.9997169971466064,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "object_hue": {
+        "recoverability": 0.993824303150177,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "scale": {
+        "recoverability": 0.9935415983200073,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      },
+      "shape": {
+        "recoverability": 0.9999555555555556,
+        "raw_test_acc": 0.9999666666666667,
+        "chance": 0.25,
+        "best_hparam": 0.1,
+        "metric": "norm_acc"
+      },
+      "orientation": {
+        "recoverability": 0.9987368583679199,
+        "raw_test_acc": NaN,
+        "best_hparam": 0.1,
+        "metric": "r2"
+      }
+    }
+  },
+  "gate": {
+    "passed": false,
+    "shape_ok": false,
+    "shape_recoverability": 0.9986666666666667,
+    "shape_random": 0.9081777777777779,
+    "factors_above_random": [
+      "scale",
+      "shape"
+    ],
+    "n_above_random": 2,
+    "above_ok": false,
+    "criteria": {
+      "shape_pass": 0.9,
+      "shape_margin_over_random": 0.3,
+      "above_random_margin": 0.05,
+      "min_factors_above": 3
+    }
+  },
+  "reproducibility": {
+    "shape_recoverability_by_ckpt": {
+      "results/encoders/standard_strong_seed0/backbone.pt": 0.9986666666666667,
+      "results/encoders/standard_strong_seed1/backbone.pt": 0.9946666666666667
+    },
+    "shape_spread": 0.0040000000000000036,
+    "n_seeds": 2
+  }
+}

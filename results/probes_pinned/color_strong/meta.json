@@ -1,0 +1,357 @@
+{
+  "dataset": "shapes3d",
+  "condition": "color",
+  "strength": "strong",
+  "encoder_ckpts": [
+    {
+      "path": "results/encoders/color_strong_seed0/backbone.pt",
+      "seed": 0,
+      "sha256": "10c915ad46e2a7c631742a8fe4f2778aa08962cf2ff7b3982ca9bf0e08974929"
+    },
+    {
+      "path": "results/encoders/color_strong_seed1/backbone.pt",
+      "seed": 1,
+      "sha256": "631b491b237ff91b7a31e80e3e9e12a224be6cb9390fc6af68d86821b816a0c7"
+    },
+    {
+      "path": "results/encoders/color_strong_seed2/backbone.pt",
+      "seed": 2,
+      "sha256": "b6234f38c2647fd3bf9115196080750abbda7f99174d1332646870a9c88756f2"
+    },
+    {
+      "path": "results/encoders/color_strong_seed3/backbone.pt",
+      "seed": 3,
+      "sha256": "14958376910a07700e5650c73b1d6c4b724710df2311d98400e17dd2671a2992"
+    },
+    {
+      "path": "results/encoders/color_strong_seed4/backbone.pt",
+      "seed": 4,
+      "sha256": "f8ab135bc6c76d6e9fdeda1b43b3af6b37c837c8ad3650bfc13c318c0cd23d36"
+    },
+    {
+      "path": "results/encoders/color_strong_seed5/backbone.pt",
+      "seed": 5,
+      "sha256": "c76887f799772fdef14fd90ec3fbf15703669cd47a88b5c4cbea1f4c478f66b3"
+    },
+    {
+      "path": "results/encoders/color_strong_seed6/backbone.pt",
+      "seed": 6,
+      "sha256": "edc692b2929c90454ec2f0e3e72f374b3d7935dee0cbba052e636ed23a80d49c"
+    },
+    {
+      "path": "results/encoders/color_strong_seed7/backbone.pt",
+      "seed": 7,
+      "sha256": "92870abcf6c5ffbd37c1e3d41197f384fb0a45ae72252e8bd7a881e74e01133d"
+    },
+    {
+      "path": "results/encoders/color_strong_seed8/backbone.pt",
+      "seed": 8,
+      "sha256": "628c9e0f246fa41a7ff9ef5bdf48fd89ea0e5bee677b5a13815986bfa38b266a"
+    },
+    {
+      "path": "results/encoders/color_strong_seed9/backbone.pt",
+      "seed": 9,
+      "sha256": "29e2d603188288dc4dc869c7d1312fc091b87f2372f2be981c15a0b88035ad87"
+    },
+    {
+      "path": "results/encoders/color_strong_seed10/backbone.pt",
+      "seed": 10,
+      "sha256": "3605e8261449834e093387b151b7fbbd22d12108fa64481b6ec6dd25fe305bae"
+    },
+    {
+      "path": "results/encoders/color_strong_seed11/backbone.pt",
+      "seed": 11,
+      "sha256": "b6d17d7cffa09aaa9881917193e19316d70a8e2a9b6d158f76e46313e580bbcd"
+    }
+  ],
+  "factors": [
+    {
+      "name": "floor_hue",
+      "kind": "continuous",
+      "index": 0,
+      "n_values": 10,
+      "cyclic": false
+    },
+    {
+      "name": "wall_hue",
+      "kind": "continuous",
+      "index": 1,
+      "n_values": 10,
+      "cyclic": false
+    },
+    {
+      "name": "object_hue",
+      "kind": "continuous",
+      "index": 2,
+      "n_values": 10,
+      "cyclic": false
+    },
+    {
+      "name": "scale",
+      "kind": "continuous",
+      "index": 3,
+      "n_values": 8,
+      "cyclic": false
+    },
+    {
+      "name": "shape",
+      "kind": "categorical",
+      "index": 4,
+      "n_values": 4,
+      "cyclic": false
+    },
+    {
+      "name": "orientation",
+      "kind": "continuous",
+      "index": 5,
+      "n_values": 15,
+      "cyclic": true
+    }
+  ],
+  "rungs": [
+    "linear",
+    "mlp_small",
+    "mlp_large",
+    "mlp_deep"
+  ],
+  "rung_params_h": {
+    "floor_hue": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "wall_hue": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "object_hue": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "scale": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "shape": [
+      2052,
+      33092,
+      132356,
+      164740
+    ],
+    "orientation": [
+      513,
+      32897,
+      131585,
+      164353
+    ]
+  },
+  "rung_params_projector": {
+    "floor_hue": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "wall_hue": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "object_hue": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "scale": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "shape": [
+      516,
+      8516,
+      34052,
+      66436
+    ],
+    "orientation": [
+      129,
+      8321,
+      33281,
+      66049
+    ]
+  },
+  "projector_dim": 128,
+  "seeds": {
+    "trained": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "random": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "probe_train_size": 2000,
+  "probe_steps": 1000,
+  "probe_regime": "interpolation",
+  "quality_gate": {
+    "criteria": {
+      "shape_abs_min": 0.9,
+      "structure_margin": 0.02
+    },
+    "n_encoders": 12,
+    "n_passed": 12,
+    "failed_seed_indices": [],
+    "all_passed": true,
+    "per_seed": [
+      {
+        "seed_index": 0,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 1,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 2,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 3,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 4,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 5,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 6,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 7,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 8,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 9,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 10,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      },
+      {
+        "seed_index": 11,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.7890185185185187,
+        "passed": true
+      }
+    ]
+  },
+  "schema": {
+    "stacks.npz": {
+      "trained": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "random": [
+        "S_random",
+        "F",
+        "R"
+      ],
+      "perm": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "projector": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "random_projector": [
+        "S_random",
+        "F",
+        "R"
+      ]
+    },
+    "axis_order": {
+      "F": "meta.factors order",
+      "R": "meta.rungs order (linear->mlp_deep)"
+    },
+    "recoverability": "norm-acc (categorical) | unclipped R^2 (continuous)"
+  }
+}

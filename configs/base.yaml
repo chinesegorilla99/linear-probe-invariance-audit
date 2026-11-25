@@ -1,0 +1,46 @@
+
+data:
+  path: data/raw/3dshapes.h5
+  n_total: 480000
+  subset: null
+  in_memory: false
+
+
+split:
+  split_seed: 1234
+  sizes:
+    encoder_train: 400000
+    probe_train: 40000
+    probe_val: 10000
+    probe_test: 30000
+
+backbone:
+  name: resnet18cifar
+
+projector:
+  hidden_dim: 512
+  out_dim: 128
+
+simclr:
+  temperature: 0.5
+
+augmentation:
+  condition: standard
+  strength: strong
+
+run:
+  seed: 0
+  device: null
+  amp: true
+  deterministic: true
+  compile: null
+  resume: true
+  num_workers: 4
+  batch_size: 512
+  epochs: 100
+  warmup_epochs: 10
+  lr: 0.001
+  weight_decay: 1.0e-6
+
+output:
+  dir: results/encoders

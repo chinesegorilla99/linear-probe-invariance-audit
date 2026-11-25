@@ -1,0 +1,12 @@
+_base_: ../base.yaml
+
+data:
+  subset: 150000
+
+run:
+  device: cuda
+  amp: true
+  batch_size: 512
+  epochs: 100
+  warmup_epochs: 10
+  seed: 0

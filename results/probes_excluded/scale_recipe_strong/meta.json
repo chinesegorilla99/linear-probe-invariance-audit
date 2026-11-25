@@ -1,0 +1,205 @@
+{
+  "dataset": "shapes3d",
+  "condition": "scale_recipe",
+  "strength": "strong",
+  "encoder_ckpts": [
+    {
+      "path": "results/encoders/scale_recipe_strong_seed0/backbone.pt",
+      "seed": 0,
+      "sha256": "f64ad86b499d5494f98b45ae79b9cf860287f252f6015e18e523ae994a056567"
+    }
+  ],
+  "factors": [
+    {
+      "name": "floor_hue",
+      "kind": "continuous",
+      "index": 0,
+      "n_values": 10,
+      "cyclic": false
+    },
+    {
+      "name": "wall_hue",
+      "kind": "continuous",
+      "index": 1,
+      "n_values": 10,
+      "cyclic": false
+    },
+    {
+      "name": "object_hue",
+      "kind": "continuous",
+      "index": 2,
+      "n_values": 10,
+      "cyclic": false
+    },
+    {
+      "name": "scale",
+      "kind": "continuous",
+      "index": 3,
+      "n_values": 8,
+      "cyclic": false
+    },
+    {
+      "name": "shape",
+      "kind": "categorical",
+      "index": 4,
+      "n_values": 4,
+      "cyclic": false
+    },
+    {
+      "name": "orientation",
+      "kind": "continuous",
+      "index": 5,
+      "n_values": 15,
+      "cyclic": true
+    }
+  ],
+  "rungs": [
+    "linear",
+    "mlp_small",
+    "mlp_large",
+    "mlp_deep"
+  ],
+  "rung_params_h": {
+    "floor_hue": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "wall_hue": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "object_hue": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "scale": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "shape": [
+      2052,
+      33092,
+      132356,
+      164740
+    ],
+    "orientation": [
+      513,
+      32897,
+      131585,
+      164353
+    ]
+  },
+  "rung_params_projector": {
+    "floor_hue": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "wall_hue": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "object_hue": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "scale": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "shape": [
+      516,
+      8516,
+      34052,
+      66436
+    ],
+    "orientation": [
+      129,
+      8321,
+      33281,
+      66049
+    ]
+  },
+  "projector_dim": 128,
+  "seeds": {
+    "trained": [
+      0
+    ],
+    "random": [
+      0,
+      1,
+      2
+    ]
+  },
+  "probe_train_size": 40000,
+  "probe_steps": 1000,
+  "probe_regime": "interpolation",
+  "quality_gate": {
+    "criteria": {
+      "shape_abs_min": 0.9,
+      "structure_margin": 0.02
+    },
+    "n_encoders": 1,
+    "n_passed": 1,
+    "failed_seed_indices": [],
+    "all_passed": true,
+    "per_seed": [
+      {
+        "seed_index": 0,
+        "structure_factor": "shape",
+        "shape_recoverability": 1.0,
+        "floor": 0.8284592592592593,
+        "passed": true
+      }
+    ]
+  },
+  "schema": {
+    "stacks.npz": {
+      "trained": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "random": [
+        "S_random",
+        "F",
+        "R"
+      ],
+      "perm": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "projector": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "random_projector": [
+        "S_random",
+        "F",
+        "R"
+      ]
+    },
+    "axis_order": {
+      "F": "meta.factors order",
+      "R": "meta.rungs order (linear->mlp_deep)"
+    },
+    "recoverability": "norm-acc (categorical) | unclipped R^2 (continuous)"
+  }
+}

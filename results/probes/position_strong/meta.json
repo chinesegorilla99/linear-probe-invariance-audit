@@ -1,0 +1,269 @@
+{
+  "dataset": "dsprites",
+  "condition": "position",
+  "strength": "strong",
+  "factors": [
+    {
+      "name": "shape",
+      "kind": "categorical",
+      "index": 1,
+      "n_values": 3,
+      "cyclic": false
+    },
+    {
+      "name": "scale",
+      "kind": "continuous",
+      "index": 2,
+      "n_values": 6,
+      "cyclic": false
+    },
+    {
+      "name": "orientation",
+      "kind": "continuous",
+      "index": 3,
+      "n_values": 40,
+      "cyclic": true
+    },
+    {
+      "name": "pos_x",
+      "kind": "continuous",
+      "index": 4,
+      "n_values": 32,
+      "cyclic": false
+    },
+    {
+      "name": "pos_y",
+      "kind": "continuous",
+      "index": 5,
+      "n_values": 32,
+      "cyclic": false
+    }
+  ],
+  "rungs": [
+    "linear",
+    "mlp_small",
+    "mlp_large",
+    "mlp_deep"
+  ],
+  "rung_params_h": {
+    "shape": [
+      1539,
+      33027,
+      132099,
+      164611
+    ],
+    "scale": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "orientation": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "pos_x": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "pos_y": [
+      513,
+      32897,
+      131585,
+      164353
+    ]
+  },
+  "rung_params_projector": {
+    "shape": [
+      387,
+      8451,
+      33795,
+      66307
+    ],
+    "scale": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "orientation": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "pos_x": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "pos_y": [
+      129,
+      8321,
+      33281,
+      66049
+    ]
+  },
+  "projector_dim": 128,
+  "seeds": {
+    "trained": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "random": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "probe_train_size": 40000,
+  "quality_gate": {
+    "criteria": {
+      "shape_abs_min": 0.9,
+      "structure_margin": 0.02
+    },
+    "n_encoders": 12,
+    "n_passed": 12,
+    "failed_seed_indices": [],
+    "all_passed": true,
+    "per_seed": [
+      {
+        "seed_index": 0,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9951499999999999,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 1,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9898499999999998,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 2,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9956499999999998,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 3,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9916499999999999,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 4,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9991499999999998,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 5,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9986499999999998,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 6,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9956499999999998,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 7,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9952499999999999,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 8,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9981999999999999,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 9,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9981999999999999,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 10,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9937,
+        "floor": 0.5210374999999999,
+        "passed": true
+      },
+      {
+        "seed_index": 11,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9939,
+        "floor": 0.5210374999999999,
+        "passed": true
+      }
+    ]
+  },
+  "schema": {
+    "stacks.npz": {
+      "trained": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "random": [
+        "S_random",
+        "F",
+        "R"
+      ],
+      "perm": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "projector": [
+        "S_trained",
+        "F",
+        "R"
+      ]
+    },
+    "axis_order": {
+      "F": "meta.factors order",
+      "R": "meta.rungs order (linear->mlp_deep)"
+    },
+    "recoverability": "norm-acc (categorical) | unclipped R^2 (continuous)"
+  }
+}

@@ -1,0 +1,37 @@
+factor,series,rung,mean,lo,hi
+floor_hue,h,linear,-0.0835,-0.0884,-0.0785
+floor_hue,h,mlp_small,-0.0552,-0.1117,0.0032
+floor_hue,h,mlp_large,-0.0578,-0.1106,0.0014
+floor_hue,h,mlp_deep,-0.0793,-0.1381,-0.0125
+floor_hue,projector,linear,-0.0672,-0.0717,-0.0626
+floor_hue,projector,mlp_small,-0.2209,-0.2218,-0.2201
+floor_hue,projector,mlp_large,-0.2218,-0.2226,-0.2211
+floor_hue,projector,mlp_deep,-0.2286,-0.2295,-0.2279
+floor_hue,random floor,linear,0.9708,0.9643,0.9774
+floor_hue,random floor,mlp_small,0.9929,0.9914,0.9943
+floor_hue,random floor,mlp_large,0.9933,0.9918,0.9947
+floor_hue,random floor,mlp_deep,0.9965,0.9957,0.9972
+wall_hue,h,linear,-0.0952,-0.102,-0.0883
+wall_hue,h,mlp_small,-0.1284,-0.1757,-0.079
+wall_hue,h,mlp_large,-0.1315,-0.1775,-0.0796
+wall_hue,h,mlp_deep,-0.1402,-0.1785,-0.101
+wall_hue,projector,linear,-0.0666,-0.069,-0.0636
+wall_hue,projector,mlp_small,-0.2553,-0.2562,-0.2543
+wall_hue,projector,mlp_large,-0.2563,-0.257,-0.2556
+wall_hue,projector,mlp_deep,-0.2667,-0.2673,-0.266
+wall_hue,random floor,linear,0.9738,0.969,0.9786
+wall_hue,random floor,mlp_small,0.994,0.9931,0.9949
+wall_hue,random floor,mlp_large,0.9942,0.9933,0.9949
+wall_hue,random floor,mlp_deep,0.9973,0.9969,0.9977
+object_hue,h,linear,-0.1056,-0.111,-0.1002
+object_hue,h,mlp_small,-0.2504,-0.2514,-0.2494
+object_hue,h,mlp_large,-0.2508,-0.252,-0.2496
+object_hue,h,mlp_deep,-0.2546,-0.2566,-0.2518
+object_hue,projector,linear,-0.0624,-0.0655,-0.059
+object_hue,projector,mlp_small,-0.2409,-0.2422,-0.2399
+object_hue,projector,mlp_large,-0.2419,-0.2428,-0.2412
+object_hue,projector,mlp_deep,-0.2495,-0.2502,-0.2489
+object_hue,random floor,linear,0.8837,0.8659,0.8996
+object_hue,random floor,mlp_small,0.9558,0.9485,0.9624
+object_hue,random floor,mlp_large,0.956,0.9486,0.9629
+object_hue,random floor,mlp_deep,0.9757,0.9697,0.9807

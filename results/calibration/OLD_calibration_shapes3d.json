@@ -1,0 +1,738 @@
+{
+  "kind": "instrument_calibration",
+  "dataset": "shapes3d",
+  "amendment": "A8 §c (headroom) + A8 §e (capacity axis)",
+  "role": "diagnostic only — no decision rule, no confirmatory family",
+  "blind_guard": "scored on the 'shape' anchor only (§5 gate factor)",
+  "run": "first execution, pre-A9 (probe budget in epochs, not gradient steps)",
+  "status": "VOID — does not pin a probe configuration",
+  "anchor": {
+    "name": "shape",
+    "n_values": 4,
+    "chance": 0.25,
+    "metric": "normalized accuracy (acc - chance) / (1 - chance)",
+    "zero_accuracy_floor": -0.3333
+  },
+  "rungs": [
+    "linear",
+    "mlp_small",
+    "mlp_large",
+    "mlp_deep"
+  ],
+  "saturation_level": 0.9,
+  "probe_budget_pre_a9": {
+    "epochs": 100,
+    "batch": 4096,
+    "steps_by_probe_train_size": {
+      "2000": 100,
+      "5000": 200,
+      "10000": 300,
+      "40000": 1000
+    }
+  },
+  "invalidations": [
+    {
+      "id": "A9",
+      "scope": "cross-n comparison, both regimes",
+      "finding": "the epoch-based budget gave 100 steps at n=2000 and 1000 at n=40000, so probe-train size and optimizer budget moved together; a floor that falls at small n cannot be separated from a probe that did not converge",
+      "status": "amended — ladder.DEFAULT_STEPS = 1000 pins the step budget; re-run required"
+    },
+    {
+      "id": "extrapolation-construct-validity",
+      "scope": "all 8 extrapolation rows",
+      "finding": "make_value_holdout_splits withholds whole values of the anchor factor, which is well-posed for a continuous factor but not for a class label: probe-test contains only unseen classes, so every cell returns the zero-accuracy floor regardless of encoder, probe capacity or probe-train size",
+      "status": "unamended — the regime measures nothing on a categorical anchor"
+    },
+    {
+      "id": "recommended-config-selection",
+      "scope": "recommended_config / verdict emitted by the run",
+      "finding": "the selector keeps rows with saturated_at_top == False and sorts extrapolation first, largest n first; the extrapolation rows are unsaturated precisely because they fail, so the output is fixed by the code and independent of the data",
+      "status": "unamended — recommendation withheld, see instrument_calibration.py:155-166"
+    }
+  ],
+  "results": [
+    {
+      "regime": "interpolation",
+      "probe_train_size": 2000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "HEADROOM",
+      "gradient_steps_pre_a9": 100,
+      "recoverability_by_rung": {
+        "linear": 0.6318,
+        "mlp_small": 0.7475,
+        "mlp_large": 0.7783,
+        "mlp_deep": 0.7872
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.7239,
+        "mlp_small": 0.8106,
+        "mlp_large": 0.8337,
+        "mlp_deep": 0.8404
+      },
+      "top_rung_floor": 0.7872,
+      "headroom_at_top": 0.2128,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": 0.6318,
+      "linear_rung_closed_form": 0.7926,
+      "linear_rung_gap": 0.1608,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          0.6554,
+          0.7664,
+          0.7969,
+          0.8113
+        ],
+        [
+          0.5962,
+          0.73,
+          0.7654,
+          0.7745
+        ],
+        [
+          0.6439,
+          0.7462,
+          0.7725,
+          0.7756
+        ]
+      ]
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 2000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "REFERENCE",
+      "gradient_steps_pre_a9": 100,
+      "recoverability_by_rung": {
+        "linear": 0.9239,
+        "mlp_small": 0.9688,
+        "mlp_large": 0.9585,
+        "mlp_deep": 0.9842
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.9429,
+        "mlp_small": 0.9766,
+        "mlp_large": 0.9689,
+        "mlp_deep": 0.9882
+      },
+      "top_rung_floor": 0.9842,
+      "headroom_at_top": 0.0158,
+      "saturated_at_linear": true,
+      "saturated_at_top": true,
+      "linear_rung_ladder_adam": 0.9239,
+      "linear_rung_closed_form": 0.9982,
+      "linear_rung_gap": 0.0743,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          0.9239,
+          0.9688,
+          0.9585,
+          0.9842
+        ]
+      ]
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 5000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "HEADROOM",
+      "gradient_steps_pre_a9": 200,
+      "recoverability_by_rung": {
+        "linear": 0.7066,
+        "mlp_small": 0.8331,
+        "mlp_large": 0.8697,
+        "mlp_deep": 0.8762
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.78,
+        "mlp_small": 0.8748,
+        "mlp_large": 0.9023,
+        "mlp_deep": 0.9071
+      },
+      "top_rung_floor": 0.8762,
+      "headroom_at_top": 0.1238,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": 0.7066,
+      "linear_rung_closed_form": 0.8517,
+      "linear_rung_gap": 0.1451,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          0.7287,
+          0.8535,
+          0.8891,
+          0.8927
+        ],
+        [
+          0.6674,
+          0.8131,
+          0.8533,
+          0.8618
+        ],
+        [
+          0.7237,
+          0.8326,
+          0.8666,
+          0.8741
+        ]
+      ]
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 5000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "REFERENCE",
+      "gradient_steps_pre_a9": 200,
+      "recoverability_by_rung": {
+        "linear": 0.9872,
+        "mlp_small": 0.9956,
+        "mlp_large": 0.9944,
+        "mlp_deep": 0.9974
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.9904,
+        "mlp_small": 0.9967,
+        "mlp_large": 0.9958,
+        "mlp_deep": 0.9981
+      },
+      "top_rung_floor": 0.9974,
+      "headroom_at_top": 0.0026,
+      "saturated_at_linear": true,
+      "saturated_at_top": true,
+      "linear_rung_ladder_adam": 0.9872,
+      "linear_rung_closed_form": 1.0,
+      "linear_rung_gap": 0.0127,
+      "capacity_axis_flag": false,
+      "recoverability_per_seed": [
+        [
+          0.9872,
+          0.9956,
+          0.9944,
+          0.9974
+        ]
+      ]
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 10000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "SATURATED",
+      "gradient_steps_pre_a9": 300,
+      "recoverability_by_rung": {
+        "linear": 0.758,
+        "mlp_small": 0.8992,
+        "mlp_large": 0.9278,
+        "mlp_deep": 0.9313
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.8185,
+        "mlp_small": 0.9244,
+        "mlp_large": 0.9458,
+        "mlp_deep": 0.9485
+      },
+      "top_rung_floor": 0.9313,
+      "headroom_at_top": 0.0687,
+      "saturated_at_linear": false,
+      "saturated_at_top": true,
+      "linear_rung_ladder_adam": 0.758,
+      "linear_rung_closed_form": 0.8748,
+      "linear_rung_gap": 0.1168,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          0.7802,
+          0.9144,
+          0.9425,
+          0.9432
+        ],
+        [
+          0.7241,
+          0.8829,
+          0.9102,
+          0.9186
+        ],
+        [
+          0.7698,
+          0.9002,
+          0.9307,
+          0.9321
+        ]
+      ]
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 10000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "REFERENCE",
+      "gradient_steps_pre_a9": 300,
+      "recoverability_by_rung": {
+        "linear": 0.998,
+        "mlp_small": 0.9996,
+        "mlp_large": 0.9994,
+        "mlp_deep": 0.9995
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.9985,
+        "mlp_small": 0.9997,
+        "mlp_large": 0.9996,
+        "mlp_deep": 0.9996
+      },
+      "top_rung_floor": 0.9995,
+      "headroom_at_top": 0.0005,
+      "saturated_at_linear": true,
+      "saturated_at_top": true,
+      "linear_rung_ladder_adam": 0.998,
+      "linear_rung_closed_form": 1.0,
+      "linear_rung_gap": 0.002,
+      "capacity_axis_flag": false,
+      "recoverability_per_seed": [
+        [
+          0.998,
+          0.9996,
+          0.9994,
+          0.9995
+        ]
+      ]
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 40000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "SATURATED",
+      "gradient_steps_pre_a9": 1000,
+      "recoverability_by_rung": {
+        "linear": 0.8285,
+        "mlp_small": 0.9755,
+        "mlp_large": 0.9851,
+        "mlp_deep": 0.9838
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.8713,
+        "mlp_small": 0.9816,
+        "mlp_large": 0.9888,
+        "mlp_deep": 0.9879
+      },
+      "top_rung_floor": 0.9838,
+      "headroom_at_top": 0.0162,
+      "saturated_at_linear": false,
+      "saturated_at_top": true,
+      "linear_rung_ladder_adam": 0.8285,
+      "linear_rung_closed_form": 0.8935,
+      "linear_rung_gap": 0.0651,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          0.8504,
+          0.98,
+          0.9884,
+          0.9866
+        ],
+        [
+          0.8048,
+          0.968,
+          0.9797,
+          0.9794
+        ],
+        [
+          0.8302,
+          0.9783,
+          0.9873,
+          0.9855
+        ]
+      ]
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 40000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "REFERENCE",
+      "gradient_steps_pre_a9": 1000,
+      "recoverability_by_rung": {
+        "linear": 1.0,
+        "mlp_small": 1.0,
+        "mlp_large": 1.0,
+        "mlp_deep": 1.0
+      },
+      "test_accuracy_by_rung": {
+        "linear": 1.0,
+        "mlp_small": 1.0,
+        "mlp_large": 1.0,
+        "mlp_deep": 1.0
+      },
+      "top_rung_floor": 1.0,
+      "headroom_at_top": 0.0,
+      "saturated_at_linear": true,
+      "saturated_at_top": true,
+      "linear_rung_ladder_adam": 1.0,
+      "linear_rung_closed_form": 1.0,
+      "linear_rung_gap": 0.0,
+      "capacity_axis_flag": false,
+      "recoverability_per_seed": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 2000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 100,
+      "recoverability_by_rung": {
+        "linear": -0.3215,
+        "mlp_small": -0.3333,
+        "mlp_large": -0.3333,
+        "mlp_deep": -0.3333
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.0089,
+        "mlp_small": 0.0,
+        "mlp_large": 0.0,
+        "mlp_deep": 0.0
+      },
+      "top_rung_floor": -0.3333,
+      "headroom_at_top": 1.3333,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.3215,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.0118,
+      "capacity_axis_flag": false,
+      "recoverability_per_seed": [
+        [
+          -0.3281,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3069,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3296,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 2000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 100,
+      "recoverability_by_rung": {
+        "linear": -0.1997,
+        "mlp_small": -0.3279,
+        "mlp_large": -0.3322,
+        "mlp_deep": -0.1229
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.1002,
+        "mlp_small": 0.0041,
+        "mlp_large": 0.0009,
+        "mlp_deep": 0.1578
+      },
+      "top_rung_floor": -0.1229,
+      "headroom_at_top": 1.1229,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.1997,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.1336,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          -0.1997,
+          -0.3279,
+          -0.3322,
+          -0.1229
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 5000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 200,
+      "recoverability_by_rung": {
+        "linear": -0.3267,
+        "mlp_small": -0.3333,
+        "mlp_large": -0.3333,
+        "mlp_deep": -0.3333
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.005,
+        "mlp_small": 0.0,
+        "mlp_large": 0.0,
+        "mlp_deep": 0.0
+      },
+      "top_rung_floor": -0.3333,
+      "headroom_at_top": 1.3333,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.3267,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.0066,
+      "capacity_axis_flag": false,
+      "recoverability_per_seed": [
+        [
+          -0.3299,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3194,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3309,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 5000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 200,
+      "recoverability_by_rung": {
+        "linear": -0.2166,
+        "mlp_small": -0.3333,
+        "mlp_large": -0.1988,
+        "mlp_deep": -0.3333
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.0876,
+        "mlp_small": 0.0,
+        "mlp_large": 0.1009,
+        "mlp_deep": 0.0
+      },
+      "top_rung_floor": -0.3333,
+      "headroom_at_top": 1.3333,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.2166,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.1167,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          -0.2166,
+          -0.3333,
+          -0.1988,
+          -0.3333
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 10000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 300,
+      "recoverability_by_rung": {
+        "linear": -0.3279,
+        "mlp_small": -0.3333,
+        "mlp_large": -0.3333,
+        "mlp_deep": -0.3333
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.0041,
+        "mlp_small": 0.0,
+        "mlp_large": 0.0,
+        "mlp_deep": 0.0
+      },
+      "top_rung_floor": -0.3333,
+      "headroom_at_top": 1.3333,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.3279,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.0054,
+      "capacity_axis_flag": false,
+      "recoverability_per_seed": [
+        [
+          -0.3311,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3217,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3308,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 10000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 300,
+      "recoverability_by_rung": {
+        "linear": -0.2757,
+        "mlp_small": -0.3306,
+        "mlp_large": -0.152,
+        "mlp_deep": -0.3333
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.0432,
+        "mlp_small": 0.0021,
+        "mlp_large": 0.136,
+        "mlp_deep": 0.0
+      },
+      "top_rung_floor": -0.3333,
+      "headroom_at_top": 1.3333,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.2757,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.0577,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          -0.2757,
+          -0.3306,
+          -0.152,
+          -0.3333
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 40000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 1000,
+      "recoverability_by_rung": {
+        "linear": -0.33,
+        "mlp_small": -0.3333,
+        "mlp_large": -0.3333,
+        "mlp_deep": -0.3333
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.0025,
+        "mlp_small": 0.0,
+        "mlp_large": 0.0,
+        "mlp_deep": 0.0
+      },
+      "top_rung_floor": -0.3333,
+      "headroom_at_top": 1.3333,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.33,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.0033,
+      "capacity_axis_flag": false,
+      "recoverability_per_seed": [
+        [
+          -0.332,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3263,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ],
+        [
+          -0.3318,
+          -0.3333,
+          -0.3333,
+          -0.3333
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    },
+    {
+      "regime": "extrapolation",
+      "probe_train_size": 40000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "status": "DEGENERATE",
+      "gradient_steps_pre_a9": 1000,
+      "recoverability_by_rung": {
+        "linear": -0.3111,
+        "mlp_small": -0.2795,
+        "mlp_large": -0.2498,
+        "mlp_deep": -0.3333
+      },
+      "test_accuracy_by_rung": {
+        "linear": 0.0167,
+        "mlp_small": 0.0404,
+        "mlp_large": 0.0626,
+        "mlp_deep": 0.0
+      },
+      "top_rung_floor": -0.3333,
+      "headroom_at_top": 1.3333,
+      "saturated_at_linear": false,
+      "saturated_at_top": false,
+      "linear_rung_ladder_adam": -0.3111,
+      "linear_rung_closed_form": -0.3333,
+      "linear_rung_gap": -0.0222,
+      "capacity_axis_flag": true,
+      "recoverability_per_seed": [
+        [
+          -0.3111,
+          -0.2795,
+          -0.2498,
+          -0.3333
+        ]
+      ],
+      "degeneracy_note": "probe-test holds ONLY the 2 shape classes withheld from probe-train/val, so a 4-way classifier trained on the other 2 scores ~0 accuracy by construction; -0.3333 is the exact zero-accuracy floor of (acc - 0.25) / 0.75, not a measurement of the encoder"
+    }
+  ],
+  "recommended_config": null,
+  "verdict": "VOID — no probe configuration is pinned by this run. Cross-n headroom is confounded with optimizer budget (A9); the extrapolation regime is degenerate on a categorical anchor; the run's own recommendation (extrapolation, n=40000) is an artifact of the selection rule. The A8 §e cross-check FAILED at every random-encoder cell (linear-rung gap +0.065 to +0.161 against a 0.02 tolerance), so the capacity axis is optimizer-limited as measured. Re-run under the pinned step budget.",
+  "raw_record": "calibration_shapes3d.raw.json (unmodified run output)"
+}

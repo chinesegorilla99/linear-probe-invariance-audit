@@ -1,0 +1,1214 @@
+{
+  "kind": "instrument_calibration",
+  "amendment": "A8 \u00a7c (headroom) + A8 \u00a7e (capacity axis)",
+  "role": "diagnostic only \u2014 no decision rule, no confirmatory family",
+  "blind_guard": "scored on the 'shape' anchor only (\u00a75 gate factor)",
+  "dataset": "shapes3d",
+  "rungs": [
+    "linear",
+    "mlp_small",
+    "mlp_large",
+    "mlp_deep"
+  ],
+  "saturation_level": 0.9,
+  "regimes": [
+    "interpolation",
+    "composition"
+  ],
+  "composition_partner": "orientation",
+  "gap_tolerance": 0.02,
+  "results": [
+    {
+      "regime": "interpolation",
+      "probe_train_size": 2000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.7828740740740741,
+        0.8107407407407408,
+        0.8086666666666668,
+        0.8116444444444445
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8024444444444444,
+          0.8256888888888888,
+          0.8248000000000001,
+          0.838088888888889
+        ],
+        [
+          0.7632444444444445,
+          0.8056,
+          0.8016444444444444,
+          0.8070222222222222
+        ],
+        [
+          0.7829333333333334,
+          0.8009333333333334,
+          0.7995555555555556,
+          0.7898222222222223
+        ]
+      ],
+      "top_rung_floor": 0.8116444444444445,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.1883555555555555,
+      "linear_rung_ladder_adam": 0.7828740740740741,
+      "linear_rung_closed_form": 0.7926222222222221,
+      "linear_rung_gap": 0.009748148148148061,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 2000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.7937925925925925,
+        0.8148296296296297,
+        0.8141777777777778,
+        0.8258814814814815
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8145333333333333,
+          0.8296,
+          0.8343555555555556,
+          0.8449777777777778
+        ],
+        [
+          0.7801333333333332,
+          0.8126222222222222,
+          0.8008444444444445,
+          0.8154222222222223
+        ],
+        [
+          0.786711111111111,
+          0.8022666666666667,
+          0.8073333333333333,
+          0.8172444444444444
+        ]
+      ],
+      "top_rung_floor": 0.8258814814814815,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.17411851851851845,
+      "linear_rung_ladder_adam": 0.7937925925925925,
+      "linear_rung_closed_form": 0.7926222222222221,
+      "linear_rung_gap": -0.0011703703703703772,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 2000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.9940444444444445,
+        0.9884444444444443,
+        0.9913333333333334,
+        0.9926222222222223
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.9940444444444445,
+          0.9884444444444443,
+          0.9913333333333334,
+          0.9926222222222223
+        ]
+      ],
+      "top_rung_floor": 0.9926222222222223,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.007377777777777705,
+      "linear_rung_ladder_adam": 0.9940444444444445,
+      "linear_rung_closed_form": 0.9981777777777778,
+      "linear_rung_gap": 0.004133333333333322,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 2000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.9976444444444444,
+        0.9936444444444444,
+        0.9957777777777778,
+        0.9841333333333333
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.9976444444444444,
+          0.9936444444444444,
+          0.9957777777777778,
+          0.9841333333333333
+        ]
+      ],
+      "top_rung_floor": 0.9841333333333333,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.015866666666666696,
+      "linear_rung_ladder_adam": 0.9976444444444444,
+      "linear_rung_closed_form": 0.9981777777777778,
+      "linear_rung_gap": 0.0005333333333333856,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 5000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.8001333333333333,
+        0.8996740740740741,
+        0.9086074074074074,
+        0.9075407407407408
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8256,
+          0.9163111111111112,
+          0.9247111111111112,
+          0.9236444444444444
+        ],
+        [
+          0.7754666666666666,
+          0.8869777777777778,
+          0.8936444444444445,
+          0.8938222222222222
+        ],
+        [
+          0.7993333333333333,
+          0.8957333333333333,
+          0.9074666666666666,
+          0.9051555555555555
+        ]
+      ],
+      "top_rung_floor": 0.9075407407407408,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.09245925925925924,
+      "linear_rung_ladder_adam": 0.8001333333333333,
+      "linear_rung_closed_form": 0.851674074074074,
+      "linear_rung_gap": 0.051540740740740776,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 5000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.8363703703703703,
+        0.9135111111111112,
+        0.9188148148148149,
+        0.9123703703703704
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8588444444444444,
+          0.9245777777777778,
+          0.9305777777777777,
+          0.9299111111111111
+        ],
+        [
+          0.8203555555555555,
+          0.9021333333333333,
+          0.9070666666666667,
+          0.8978222222222222
+        ],
+        [
+          0.829911111111111,
+          0.9138222222222222,
+          0.9188000000000001,
+          0.9093777777777778
+        ]
+      ],
+      "top_rung_floor": 0.9123703703703704,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.08762962962962961,
+      "linear_rung_ladder_adam": 0.8363703703703703,
+      "linear_rung_closed_form": 0.851674074074074,
+      "linear_rung_gap": 0.015303703703703708,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 5000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.9999111111111111,
+        0.9987111111111111,
+        0.9988888888888888,
+        0.9988
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.9999111111111111,
+          0.9987111111111111,
+          0.9988888888888888,
+          0.9988
+        ]
+      ],
+      "top_rung_floor": 0.9988,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.0011999999999999789,
+      "linear_rung_ladder_adam": 0.9999111111111111,
+      "linear_rung_closed_form": 0.9999555555555556,
+      "linear_rung_gap": 4.4444444444513564e-05,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 5000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        1.0,
+        0.9995555555555556,
+        0.9998666666666667,
+        0.9969777777777779
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          1.0,
+          0.9995555555555556,
+          0.9998666666666667,
+          0.9969777777777779
+        ]
+      ],
+      "top_rung_floor": 0.9969777777777779,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.0030222222222221484,
+      "linear_rung_ladder_adam": 1.0,
+      "linear_rung_closed_form": 0.9999555555555556,
+      "linear_rung_gap": -4.444444444440254e-05,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 10000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.8208592592592593,
+        0.9448740740740741,
+        0.9530962962962963,
+        0.9465777777777777
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8427555555555556,
+          0.9523111111111112,
+          0.9592444444444445,
+          0.9536444444444445
+        ],
+        [
+          0.7992444444444445,
+          0.9341333333333334,
+          0.9420444444444445,
+          0.9357333333333333
+        ],
+        [
+          0.8205777777777779,
+          0.9481777777777777,
+          0.9580000000000001,
+          0.9503555555555555
+        ]
+      ],
+      "top_rung_floor": 0.9465777777777777,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.05342222222222226,
+      "linear_rung_ladder_adam": 0.8208592592592593,
+      "linear_rung_closed_form": 0.8750962962962964,
+      "linear_rung_gap": 0.054237037037037084,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 10000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.8576592592592593,
+        0.9564444444444445,
+        0.9614962962962963,
+        0.9569037037037037
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8758222222222223,
+          0.9628444444444444,
+          0.9664,
+          0.9664444444444444
+        ],
+        [
+          0.8439555555555556,
+          0.9460000000000001,
+          0.9541777777777778,
+          0.9424444444444444
+        ],
+        [
+          0.8532000000000001,
+          0.960488888888889,
+          0.963911111111111,
+          0.9618222222222222
+        ]
+      ],
+      "top_rung_floor": 0.9569037037037037,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.0430962962962963,
+      "linear_rung_ladder_adam": 0.8576592592592593,
+      "linear_rung_closed_form": 0.8750962962962964,
+      "linear_rung_gap": 0.01743703703703703,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 10000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        1.0,
+        0.9999555555555556,
+        0.9998666666666667,
+        0.999688888888889
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          1.0,
+          0.9999555555555556,
+          0.9998666666666667,
+          0.999688888888889
+        ]
+      ],
+      "top_rung_floor": 0.999688888888889,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.00031111111111103984,
+      "linear_rung_ladder_adam": 1.0,
+      "linear_rung_closed_form": 1.0,
+      "linear_rung_gap": 0.0,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 10000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        1.0,
+        1.0,
+        1.0,
+        0.9999555555555556
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.9999555555555556
+        ]
+      ],
+      "top_rung_floor": 0.9999555555555556,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 4.444444444440254e-05,
+      "linear_rung_ladder_adam": 1.0,
+      "linear_rung_closed_form": 1.0,
+      "linear_rung_gap": 0.0,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 40000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.8284592592592593,
+        0.9754666666666667,
+        0.9851259259259258,
+        0.983837037037037
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8503555555555556,
+          0.9800444444444444,
+          0.9883555555555555,
+          0.9866222222222222
+        ],
+        [
+          0.8048444444444445,
+          0.9680444444444444,
+          0.9796888888888889,
+          0.9793777777777778
+        ],
+        [
+          0.8301777777777778,
+          0.9783111111111111,
+          0.9873333333333334,
+          0.9855111111111111
+        ]
+      ],
+      "top_rung_floor": 0.983837037037037,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.016162962962963046,
+      "linear_rung_ladder_adam": 0.8284592592592593,
+      "linear_rung_closed_form": 0.893837037037037,
+      "linear_rung_gap": 0.06537777777777765,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 40000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.8679703703703705,
+        0.9894074074074074,
+        0.9918074074074074,
+        0.989674074074074
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8877777777777779,
+          0.991288888888889,
+          0.9929333333333333,
+          0.9900444444444445
+        ],
+        [
+          0.8542666666666667,
+          0.9861333333333334,
+          0.9899111111111111,
+          0.9880888888888889
+        ],
+        [
+          0.8618666666666667,
+          0.9908,
+          0.9925777777777777,
+          0.9908888888888888
+        ]
+      ],
+      "top_rung_floor": 0.989674074074074,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.01032592592592596,
+      "linear_rung_ladder_adam": 0.8679703703703705,
+      "linear_rung_closed_form": 0.893837037037037,
+      "linear_rung_gap": 0.025866666666666482,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 40000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        1.0,
+        1.0,
+        1.0,
+        0.9999555555555556
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.9999555555555556
+        ]
+      ],
+      "top_rung_floor": 0.9999555555555556,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 4.444444444440254e-05,
+      "linear_rung_ladder_adam": 1.0,
+      "linear_rung_closed_form": 1.0,
+      "linear_rung_gap": 0.0,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "interpolation",
+      "probe_train_size": 40000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        1.0,
+        1.0,
+        1.0,
+        0.9999111111111111
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.9999111111111111
+        ]
+      ],
+      "top_rung_floor": 0.9999111111111111,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 8.88888888889161e-05,
+      "linear_rung_ladder_adam": 1.0,
+      "linear_rung_closed_form": 1.0,
+      "linear_rung_gap": 0.0,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 2000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6131576988911215,
+        0.6334747339435887,
+        0.6432239339138199,
+        0.6605641140135446
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.6070551462379995,
+          0.6345166331770485,
+          0.6454565751283768,
+          0.6613083277517303
+        ],
+        [
+          0.6546104041080598,
+          0.677606608617995,
+          0.6722482697030587,
+          0.7084170573788793
+        ],
+        [
+          0.5778075463273051,
+          0.5883009600357223,
+          0.6119669569100245,
+          0.6119669569100245
+        ]
+      ],
+      "top_rung_floor": 0.6605641140135446,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.33943588598645535,
+      "linear_rung_ladder_adam": 0.6131576988911215,
+      "linear_rung_closed_form": 0.617474138572598,
+      "linear_rung_gap": 0.004316439681476547,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 2000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6191114087966065,
+        0.6428518270447272,
+        0.6548336682295156,
+        0.6629455979757386
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.6280419736548337,
+          0.63340031256977,
+          0.660861799508819,
+          0.6680062513954007
+        ],
+        [
+          0.655280196472427,
+          0.6798392498325518,
+          0.6822951551685644,
+          0.6927885688769814
+        ],
+        [
+          0.5740120562625587,
+          0.6153159187318598,
+          0.6213440500111632,
+          0.6280419736548337
+        ]
+      ],
+      "top_rung_floor": 0.6629455979757386,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.3370544020242614,
+      "linear_rung_ladder_adam": 0.6191114087966065,
+      "linear_rung_closed_form": 0.617474138572598,
+      "linear_rung_gap": -0.0016372702240085024,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 2000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.8294262112078589,
+        0.9419513284215227,
+        0.9104710872962715,
+        0.9647242688100022
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8294262112078589,
+          0.9419513284215227,
+          0.9104710872962715,
+          0.9647242688100022
+        ]
+      ],
+      "top_rung_floor": 0.9647242688100022,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.03527573118999783,
+      "linear_rung_ladder_adam": 0.8294262112078589,
+      "linear_rung_closed_form": 0.9598124581379772,
+      "linear_rung_gap": 0.13038624693011835,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 2000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.9187318597901317,
+        0.97052913596785,
+        0.9638312123241795,
+        0.9756642107613307
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.9187318597901317,
+          0.97052913596785,
+          0.9638312123241795,
+          0.9756642107613307
+        ]
+      ],
+      "top_rung_floor": 0.9756642107613307,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.024335789238669303,
+      "linear_rung_ladder_adam": 0.9187318597901317,
+      "linear_rung_closed_form": 0.9598124581379772,
+      "linear_rung_gap": 0.0410805983478455,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 5000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6171764530773238,
+        0.719133735208752,
+        0.7358041229441096,
+        0.756418843491851
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.6367492743916053,
+          0.7287340924313463,
+          0.7512837686983702,
+          0.7841035945523555
+        ],
+        [
+          0.6304978789908461,
+          0.7410136191114088,
+          0.7553025228845724,
+          0.7673587854431793
+        ],
+        [
+          0.58428220584952,
+          0.6876534940835008,
+          0.7008260772493861,
+          0.7177941504800178
+        ]
+      ],
+      "top_rung_floor": 0.756418843491851,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.24358115650814904,
+      "linear_rung_ladder_adam": 0.6171764530773238,
+      "linear_rung_closed_form": 0.6504428071742204,
+      "linear_rung_gap": 0.0332663540968966,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 5000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6503683858004018,
+        0.738929820644489,
+        0.7452556374190668,
+        0.7773312495348664
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.6684527796383121,
+          0.749274391605269,
+          0.7573118999776737,
+          0.7997320830542533
+        ],
+        [
+          0.6758204956463496,
+          0.7575351640991292,
+          0.7642330877427997,
+          0.7870060281312793
+        ],
+        [
+          0.6068318821165439,
+          0.7099799062290689,
+          0.714221924536727,
+          0.7452556374190668
+        ]
+      ],
+      "top_rung_floor": 0.7773312495348664,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.22266875046513357,
+      "linear_rung_ladder_adam": 0.6503683858004018,
+      "linear_rung_closed_form": 0.6504428071742204,
+      "linear_rung_gap": 7.44213738186339e-05,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 5000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.7939272158964054,
+        0.9691895512391159,
+        0.9671801741460148,
+        0.9857110962268364
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.7939272158964054,
+          0.9691895512391159,
+          0.9671801741460148,
+          0.9857110962268364
+        ]
+      ],
+      "top_rung_floor": 0.9857110962268364,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.014288903773163608,
+      "linear_rung_ladder_adam": 0.7939272158964054,
+      "linear_rung_closed_form": 0.9582496092877874,
+      "linear_rung_gap": 0.164322393391382,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 5000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.8935030140656397,
+        0.9729850413038625,
+        0.9796829649475329,
+        0.9988836793927215
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8935030140656397,
+          0.9729850413038625,
+          0.9796829649475329,
+          0.9988836793927215
+        ]
+      ],
+      "top_rung_floor": 0.9988836793927215,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.0011163206072785092,
+      "linear_rung_ladder_adam": 0.8935030140656397,
+      "linear_rung_closed_form": 0.9582496092877874,
+      "linear_rung_gap": 0.06474659522214765,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 10000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6365260102701495,
+        0.7768847212919551,
+        0.7935551090273126,
+        0.8047927364739152
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.6597454789015406,
+          0.7716008037508373,
+          0.8017414601473543,
+          0.8321053806653271
+        ],
+        [
+          0.6427774056709087,
+          0.7988390265684305,
+          0.8012949319044429,
+          0.8017414601473543
+        ],
+        [
+          0.6070551462379995,
+          0.7602143335565974,
+          0.7776289350301407,
+          0.7805313686090645
+        ]
+      ],
+      "top_rung_floor": 0.8047927364739152,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.19520726352608475,
+      "linear_rung_ladder_adam": 0.6365260102701495,
+      "linear_rung_closed_form": 0.6837835826449358,
+      "linear_rung_gap": 0.04725757237478623,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 10000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6755228101510755,
+        0.806355585324105,
+        0.8117139242390414,
+        0.8451291210835752
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.6959142665773611,
+          0.796383121232418,
+          0.8189327974994418,
+          0.8559946416610851
+        ],
+        [
+          0.6885465505693236,
+          0.8318821165438713,
+          0.8242911364143782,
+          0.8508595668676043
+        ],
+        [
+          0.6421076133065416,
+          0.7908015181960258,
+          0.7919178388033044,
+          0.8285331547220361
+        ]
+      ],
+      "top_rung_floor": 0.8451291210835752,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.15487087891642481,
+      "linear_rung_ladder_adam": 0.6755228101510755,
+      "linear_rung_closed_form": 0.6837835826449358,
+      "linear_rung_gap": 0.008260772493860258,
+      "capacity_axis_flag": false
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 10000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.8137977227059611,
+        0.9778968519758875,
+        0.9803527573119001,
+        0.9977673587854432
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.8137977227059611,
+          0.9778968519758875,
+          0.9803527573119001,
+          0.9977673587854432
+        ]
+      ],
+      "top_rung_floor": 0.9977673587854432,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.0022326412145567964,
+      "linear_rung_ladder_adam": 0.8137977227059611,
+      "linear_rung_closed_form": 0.9787899084617102,
+      "linear_rung_gap": 0.16499218575574914,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 10000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.9124804643893727,
+        0.9843715114981023,
+        0.9825853985264569,
+        0.9995534717570886
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.9124804643893727,
+          0.9843715114981023,
+          0.9825853985264569,
+          0.9995534717570886
+        ]
+      ],
+      "top_rung_floor": 0.9995534717570886,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.0004465282429113593,
+      "linear_rung_ladder_adam": 0.9124804643893727,
+      "linear_rung_closed_form": 0.9787899084617102,
+      "linear_rung_gap": 0.06630944407233752,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 40000,
+      "probe_steps": 1000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6327305202054031,
+        0.8125325593510455,
+        0.8405149959068244,
+        0.8501897745032373
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.6555034605938825,
+          0.8106720250055816,
+          0.845501227952668,
+          0.8624693011832999
+        ],
+        [
+          0.6380888591203394,
+          0.8126814020986828,
+          0.8298727394507702,
+          0.8526456798392498
+        ],
+        [
+          0.604599240901987,
+          0.8142442509488724,
+          0.8461710203170351,
+          0.8354543424871622
+        ]
+      ],
+      "top_rung_floor": 0.8501897745032373,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.1498102254967627,
+      "linear_rung_ladder_adam": 0.6327305202054031,
+      "linear_rung_closed_form": 0.7025377688472129,
+      "linear_rung_gap": 0.06980724864180976,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 40000,
+      "probe_steps": 4000,
+      "encoder_role": "random",
+      "n_seeds": 3,
+      "anchor_recoverability_mean": [
+        0.6761181811416238,
+        0.8609808737069287,
+        0.8685718538364218,
+        0.8849445560765052
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.7026121902210315,
+          0.8620227729403885,
+          0.8852422415717794,
+          0.9053360125027908
+        ],
+        [
+          0.6784996651038178,
+          0.8655949988836794,
+          0.8626925653047555,
+          0.8745255637419067
+        ],
+        [
+          0.6472426881000223,
+          0.8553248492967179,
+          0.8577807546327305,
+          0.8749720919848181
+        ]
+      ],
+      "top_rung_floor": 0.8849445560765052,
+      "saturated_at_top": false,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.11505544392349476,
+      "linear_rung_ladder_adam": 0.6761181811416238,
+      "linear_rung_closed_form": 0.7025377688472129,
+      "linear_rung_gap": 0.026419587705589054,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 40000,
+      "probe_steps": 1000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.820942174592543,
+        0.9732083054253181,
+        0.9734315695467739,
+        0.9622683634739898
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.820942174592543,
+          0.9732083054253181,
+          0.9734315695467739,
+          0.9622683634739898
+        ]
+      ],
+      "top_rung_floor": 0.9622683634739898,
+      "saturated_at_top": true,
+      "saturated_at_linear": false,
+      "headroom_at_top": 0.03773163652601019,
+      "linear_rung_ladder_adam": 0.820942174592543,
+      "linear_rung_closed_form": 0.9973208305425318,
+      "linear_rung_gap": 0.1763786559499888,
+      "capacity_axis_flag": true
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 40000,
+      "probe_steps": 4000,
+      "encoder_role": "pixels",
+      "n_seeds": 1,
+      "anchor_recoverability_mean": [
+        0.9321277070774726,
+        0.9910694351417727,
+        0.9917392275061397,
+        0.9837017191337352
+      ],
+      "anchor_recoverability_per_seed": [
+        [
+          0.9321277070774726,
+          0.9910694351417727,
+          0.9917392275061397,
+          0.9837017191337352
+        ]
+      ],
+      "top_rung_floor": 0.9837017191337352,
+      "saturated_at_top": true,
+      "saturated_at_linear": true,
+      "headroom_at_top": 0.016298280866264836,
+      "linear_rung_ladder_adam": 0.9321277070774726,
+      "linear_rung_closed_form": 0.9973208305425318,
+      "linear_rung_gap": 0.06519312346505923,
+      "capacity_axis_flag": true
+    }
+  ],
+  "recommended_config": {
+    "regime": "interpolation",
+    "probe_train_size": 2000,
+    "probe_steps": 1000,
+    "encoder_role": "random",
+    "n_seeds": 3,
+    "anchor_recoverability_mean": [
+      0.7828740740740741,
+      0.8107407407407408,
+      0.8086666666666668,
+      0.8116444444444445
+    ],
+    "anchor_recoverability_per_seed": [
+      [
+        0.8024444444444444,
+        0.8256888888888888,
+        0.8248000000000001,
+        0.838088888888889
+      ],
+      [
+        0.7632444444444445,
+        0.8056,
+        0.8016444444444444,
+        0.8070222222222222
+      ],
+      [
+        0.7829333333333334,
+        0.8009333333333334,
+        0.7995555555555556,
+        0.7898222222222223
+      ]
+    ],
+    "top_rung_floor": 0.8116444444444445,
+    "saturated_at_top": false,
+    "saturated_at_linear": false,
+    "headroom_at_top": 0.1883555555555555,
+    "linear_rung_ladder_adam": 0.7828740740740741,
+    "linear_rung_closed_form": 0.7926222222222221,
+    "linear_rung_gap": 0.009748148148148061,
+    "capacity_axis_flag": false
+  },
+  "headroom_only": [
+    {
+      "regime": "composition",
+      "probe_train_size": 5000,
+      "probe_steps": 1000,
+      "top_rung_floor": 0.756418843491851,
+      "linear_rung_gap": 0.0332663540968966
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 10000,
+      "probe_steps": 1000,
+      "top_rung_floor": 0.8047927364739152,
+      "linear_rung_gap": 0.04725757237478623
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 40000,
+      "probe_steps": 1000,
+      "top_rung_floor": 0.8501897745032373,
+      "linear_rung_gap": 0.06980724864180976
+    },
+    {
+      "regime": "composition",
+      "probe_train_size": 40000,
+      "probe_steps": 4000,
+      "top_rung_floor": 0.8849445560765052,
+      "linear_rung_gap": 0.026419587705589054
+    }
+  ],
+  "verdict": "pin probe_train=2000 steps=1000 under the interpolation regime"
+}

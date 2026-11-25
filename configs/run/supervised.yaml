@@ -1,0 +1,13 @@
+_base_: ../base.yaml
+
+data:
+  subset: 150000
+
+run:
+  device: null
+  amp: true
+  batch_size: 256
+  epochs: 15
+  lr: 0.001
+  weight_decay: 1.0e-4
+  seed: 0

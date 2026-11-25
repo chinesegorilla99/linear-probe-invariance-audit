@@ -1,0 +1,13 @@
+series,rung,G_mean,G_lo,G_hi
+object_hue (color_strong),linear,-0.9893,-1.007,-0.9695
+object_hue (color_strong),mlp_small,-1.2063,-1.2124,-1.1991
+object_hue (color_strong),mlp_large,-1.2068,-1.213,-1.1996
+object_hue (color_strong),mlp_deep,-1.2303,-1.2362,-1.2239
+pos_x (position_strong),linear,-0.8191,-0.8418,-0.7959
+pos_x (position_strong),mlp_small,-0.687,-0.7232,-0.6539
+pos_x (position_strong),mlp_large,-0.6567,-0.6914,-0.6244
+pos_x (position_strong),mlp_deep,-0.6846,-0.7167,-0.6533
+pos_y (position_strong),linear,-0.7981,-0.8201,-0.7774
+pos_y (position_strong),mlp_small,-0.6959,-0.7284,-0.6626
+pos_y (position_strong),mlp_large,-0.6703,-0.6999,-0.6369
+pos_y (position_strong),mlp_deep,-0.681,-0.711,-0.6467

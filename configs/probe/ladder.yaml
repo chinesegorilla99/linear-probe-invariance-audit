@@ -1,0 +1,15 @@
+_base_: ../base.yaml
+
+probe:
+  ladder: [linear, mlp_small, mlp_large, mlp_deep]
+  weight_decay_grid: [0.0, 1.0e-4, 1.0e-3, 1.0e-2]
+  epochs: 100
+  batch_size: 4096
+  lr: 1.0e-3
+  bootstrap: 2000
+  epsilon_alpha: 0.05
+
+validation:
+  subsample: 8000
+  epochs: 60
+  random_seeds: [0, 1, 2]

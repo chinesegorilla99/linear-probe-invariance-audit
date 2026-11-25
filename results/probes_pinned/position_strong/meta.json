@@ -1,0 +1,338 @@
+{
+  "dataset": "dsprites",
+  "condition": "position",
+  "strength": "strong",
+  "encoder_ckpts": [
+    {
+      "path": "results/encoders/position_strong_seed0/backbone.pt",
+      "seed": 0,
+      "sha256": "05fd632a271d0001a388f77b59aebb767fbe613a6f5ef90bae553c4ba28efeee"
+    },
+    {
+      "path": "results/encoders/position_strong_seed1/backbone.pt",
+      "seed": 1,
+      "sha256": "8af91f89cc06ec01dc8ea0639433fd1cac1eea0a664fc05f028aea8a6895b524"
+    },
+    {
+      "path": "results/encoders/position_strong_seed2/backbone.pt",
+      "seed": 2,
+      "sha256": "1c7b527a9a137fdf1dd7624ba3cc8be699370bfa2f0f17dbd7ffd06d835196bf"
+    },
+    {
+      "path": "results/encoders/position_strong_seed3/backbone.pt",
+      "seed": 3,
+      "sha256": "d2de162f7992cea405be3139cdbc919a1dcb659026b9074e07874a0b60d69a41"
+    },
+    {
+      "path": "results/encoders/position_strong_seed4/backbone.pt",
+      "seed": 4,
+      "sha256": "045398c1c5c13d8170e69bece9da5c3b3edb09c1e3d6f23fa6127b3f6c848fdb"
+    },
+    {
+      "path": "results/encoders/position_strong_seed5/backbone.pt",
+      "seed": 5,
+      "sha256": "0a7b10c19848a73cd753649557f4d983d467d5dc2f78867cf94f0b45cbb4d8c2"
+    },
+    {
+      "path": "results/encoders/position_strong_seed6/backbone.pt",
+      "seed": 6,
+      "sha256": "2dc067f4957efc2d6c1cf9f7e28513e05498a30b6869e9ac3b4ac6c0bd22a853"
+    },
+    {
+      "path": "results/encoders/position_strong_seed7/backbone.pt",
+      "seed": 7,
+      "sha256": "228e4b4bb0bb67a0f8cf8d833b9b89af755785327d480d3ddc970330f608cff3"
+    },
+    {
+      "path": "results/encoders/position_strong_seed8/backbone.pt",
+      "seed": 8,
+      "sha256": "9759344284ef3f60067505b46f18e1e92da480afcdea5138e0711e0124c136f7"
+    },
+    {
+      "path": "results/encoders/position_strong_seed9/backbone.pt",
+      "seed": 9,
+      "sha256": "3d162d13fe3467ff952a3811470bf1ae405a1a4f5754efd73fe9961adba3128a"
+    },
+    {
+      "path": "results/encoders/position_strong_seed10/backbone.pt",
+      "seed": 10,
+      "sha256": "b52f61a65be82c093bfba47b68dafa9a9f9ccdf7b8d8702f7e835822e0f97584"
+    },
+    {
+      "path": "results/encoders/position_strong_seed11/backbone.pt",
+      "seed": 11,
+      "sha256": "d5b77054e5918d02ff04ead4b89e399698ff3ff93dd997308e5ed026bd30b5ca"
+    }
+  ],
+  "factors": [
+    {
+      "name": "shape",
+      "kind": "categorical",
+      "index": 1,
+      "n_values": 3,
+      "cyclic": false
+    },
+    {
+      "name": "scale",
+      "kind": "continuous",
+      "index": 2,
+      "n_values": 6,
+      "cyclic": false
+    },
+    {
+      "name": "orientation",
+      "kind": "continuous",
+      "index": 3,
+      "n_values": 40,
+      "cyclic": true
+    },
+    {
+      "name": "pos_x",
+      "kind": "continuous",
+      "index": 4,
+      "n_values": 32,
+      "cyclic": false
+    },
+    {
+      "name": "pos_y",
+      "kind": "continuous",
+      "index": 5,
+      "n_values": 32,
+      "cyclic": false
+    }
+  ],
+  "rungs": [
+    "linear",
+    "mlp_small",
+    "mlp_large",
+    "mlp_deep"
+  ],
+  "rung_params_h": {
+    "shape": [
+      1539,
+      33027,
+      132099,
+      164611
+    ],
+    "scale": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "orientation": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "pos_x": [
+      513,
+      32897,
+      131585,
+      164353
+    ],
+    "pos_y": [
+      513,
+      32897,
+      131585,
+      164353
+    ]
+  },
+  "rung_params_projector": {
+    "shape": [
+      387,
+      8451,
+      33795,
+      66307
+    ],
+    "scale": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "orientation": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "pos_x": [
+      129,
+      8321,
+      33281,
+      66049
+    ],
+    "pos_y": [
+      129,
+      8321,
+      33281,
+      66049
+    ]
+  },
+  "projector_dim": 128,
+  "seeds": {
+    "trained": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "random": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "probe_train_size": 2000,
+  "probe_steps": 1000,
+  "probe_regime": "interpolation",
+  "quality_gate": {
+    "criteria": {
+      "shape_abs_min": 0.9,
+      "structure_margin": 0.02
+    },
+    "n_encoders": 12,
+    "n_passed": 12,
+    "failed_seed_indices": [],
+    "all_passed": true,
+    "per_seed": [
+      {
+        "seed_index": 0,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9896499999999998,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 1,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9807499999999998,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 2,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9890499999999999,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 3,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9855999999999999,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 4,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9974,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 5,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9962500000000001,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 6,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9904000000000001,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 7,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9892499999999999,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 8,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9958499999999998,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 9,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9938,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 10,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.9884,
+        "floor": 0.46902499999999997,
+        "passed": true
+      },
+      {
+        "seed_index": 11,
+        "structure_factor": "shape",
+        "shape_recoverability": 0.98785,
+        "floor": 0.46902499999999997,
+        "passed": true
+      }
+    ]
+  },
+  "schema": {
+    "stacks.npz": {
+      "trained": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "random": [
+        "S_random",
+        "F",
+        "R"
+      ],
+      "perm": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "projector": [
+        "S_trained",
+        "F",
+        "R"
+      ],
+      "random_projector": [
+        "S_random",
+        "F",
+        "R"
+      ]
+    },
+    "axis_order": {
+      "F": "meta.factors order",
+      "R": "meta.rungs order (linear->mlp_deep)"
+    },
+    "recoverability": "norm-acc (categorical) | unclipped R^2 (continuous)"
+  }
+}

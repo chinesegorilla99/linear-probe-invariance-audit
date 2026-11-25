@@ -1,0 +1,13 @@
+{
+  "run_id": "orientation_strong_seed1",
+  "seed": 1,
+  "final_loss": 4.949445985767939,
+  "nan_aborted": false,
+  "diagnostics": {
+    "feat_std": 0.4687868654727936,
+    "eff_rank": 236.3018035888672,
+    "alignment": 0.0003012628585565835,
+    "uniformity": -3.8796253204345703
+  },
+  "epochs_run": 50
+}

@@ -1,0 +1,13 @@
+{
+  "run_id": "color_strong_seed8",
+  "seed": 8,
+  "final_loss": 4.952793970499953,
+  "nan_aborted": false,
+  "diagnostics": {
+    "feat_std": 0.1994234174489975,
+    "eff_rank": 131.14369201660156,
+    "alignment": 6.195047171786427e-05,
+    "uniformity": -3.822713851928711
+  },
+  "epochs_run": 50
+}

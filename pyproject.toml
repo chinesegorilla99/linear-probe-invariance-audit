@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "probe-capacity-invariance"
+version = "0.0.0"
+description = "Controlled study of probe capacity vs. recoverability for contrastive (SimCLR-style) invariance on synthetic factor datasets."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "pandas",
+    "matplotlib",
+    "pyyaml",
+    "tqdm",
+    "h5py",
+]
+
+[tool.setuptools]
+py-modules = ["seeds"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]

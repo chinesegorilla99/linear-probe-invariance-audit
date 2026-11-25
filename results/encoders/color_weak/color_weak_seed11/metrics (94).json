@@ -1,0 +1,13 @@
+{
+  "run_id": "color_weak_seed11",
+  "seed": 11,
+  "final_loss": 4.949068722659594,
+  "nan_aborted": false,
+  "diagnostics": {
+    "feat_std": 0.19552111625671387,
+    "eff_rank": 271.2503356933594,
+    "alignment": 6.129456596681848e-05,
+    "uniformity": -3.8828718662261963
+  },
+  "epochs_run": 50
+}

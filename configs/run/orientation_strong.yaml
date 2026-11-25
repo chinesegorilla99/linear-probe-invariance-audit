@@ -1,0 +1,17 @@
+_base_: ../base.yaml
+
+data:
+  dataset: shapes3d
+  subset: 150000
+
+augmentation:
+  condition: orientation
+  strength: strong
+
+run:
+  device: cuda
+  amp: true
+  batch_size: 512
+  epochs: 50
+  warmup_epochs: 5
+  seed: 0
