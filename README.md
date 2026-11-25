@@ -2,7 +2,7 @@
 
 Code and results for the paper *What a Linear-Probe Verdict Cannot Tell Apart: A Measurement Audit of Self-Supervised Invariance*. We compare linear and MLP probes with paired counterfactual measurements on Shapes3D and dSprites.
 
-Zenodo reserved [10.5281/zenodo.24517813](https://doi.org/10.5281/zenodo.24517813) for the preprint.
+Read the [preprint on Zenodo](https://doi.org/10.5281/zenodo.24517813).
 
 ## Check the reported results
 
